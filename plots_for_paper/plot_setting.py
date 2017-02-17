@@ -17,9 +17,9 @@ file_format = [".png",".svg",".eps"] ## cycle through file formats and append to
 # base folder of simulation data (adjust for your local system)
 #sim_data_base_folder = "/media/fabian/Linux Mint 17.1 Cinnamon 64-bit/sim_data/" 
 #sim_data_base_folder = "/media/fabian/linux_drive2/sim_data/"
-#sim_data_base_folder = "/media/fabian/Ohne Titel1/sim_data/"
-sim_data_base_folder = "/home/fschubert/Master/sim_data/"
+sim_data_base_folder = "/media/fabian/Ohne Titel1/sim_data/"
+#sim_data_base_folder = "/home/fschubert/Master/sim_data/"
 #sim_data_base_folder = "/media/fschubert/Ohne Titel/sim_data/"
 
-#plots_base_folder = "/home/fabian/Uni/Neuro/plots/" # base folder of plots
-plots_base_folder = "/home/fschubert/Master/plots/"
+plots_base_folder = "/home/fabian/Uni/Neuro/plots/" # base folder of plots
+#plots_base_folder = "/home/fschubert/Master/plots/"

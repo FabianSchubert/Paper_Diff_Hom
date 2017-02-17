@@ -5,6 +5,7 @@ import cPickle as pickle
 import matplotlib.pyplot as plt
 import pdb
 from plot_setting import *
+import matplotlib.colors as colors
 
 savefolder = plots_base_folder + "paper/"
 plot_filename = "syn_lifetimes"
@@ -56,11 +57,13 @@ def analyze_and_plot(filename,pltlabel,ax):
 	fit = np.polyfit(np.log10(x[:fit_ind_max]),np.log10(y[:fit_ind_max]),deg=1)
 	print("Slope " + pltlabel + ": " + str(fit[0]))
 	#plt.plot(ones)
-	datplot = ax.plot(x,y,'.',label=pltlabel)
+	datplot, = ax.plot(x,y,'.',label=pltlabel)
 	#pdb.set_trace()
 	col = datplot.get_color()
-	pdb.set_trace()
-	fitplot = ax.plot(np.array([x[0],x[-1]]),10**(fit[0]*np.log10(np.array([x[0],x[-1]]))+fit[1]),c=datplot.get_color())
+	col = colors.colorConverter.to_rgb(col)
+	col = (col[0]*0.8,col[1]*0.8,col[2]*0.8)
+	#pdb.set_trace()
+	fitplot, = ax.plot(np.array([x[0],x[-1]]),10**(fit[0]*np.log10(np.array([x[0],x[-1]]))+fit[1]),c=col)
 	
 
 
