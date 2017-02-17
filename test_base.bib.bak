@@ -1,0 +1,1007 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
+
+
+@Article{Syn_Plast_Abbott,
+  Title                    = {Synaptic Plasticity: taming the beast},
+  Author                   = {Abbott, L. and Nelson, S. B.},
+  Journal                  = {Nature Neuroscience},
+  Year                     = {2000},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.20}
+}
+
+@Book{Bear_Exploring_the_Brain,
+  Title                    = {Neuroscience: Exploring the Brain},
+  Author                   = {Bear, Mark F. and Connors, B. W. and Paradiso, Michael A.},
+  Editor                   = {Emily Lupash},
+  Publisher                = {Lippincott Williams \& Wilki},
+  Year                     = {2007},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.20}
+}
+
+@Article{Benda_Herz_Spike_Frequ_Adaption,
+  Title                    = {A Universal Model for Spike-Frequency Adaption},
+  Author                   = {Benda, J. and Herz, A. V. M.},
+  Journal                  = {Neural Computation},
+  Year                     = {2003},
+  Number                   = {11},
+  Pages                    = {2523-2564},
+  Volume                   = {15},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.11}
+}
+
+@Article{Bi_Poo_STDP,
+  Title                    = {Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike Timing, Synaptic Strength, and Postsynaptic Cell Type},
+  Author                   = {Bi, G. and Poo, M.},
+  Journal                  = {The Journal of Neuroscience},
+  Year                     = {1998},
+  Number                   = {24},
+  Pages                    = {10464-10472},
+  Volume                   = {18},
+
+  Abstract                 = {In cultures of dissociated rat hippocampal neurons, persistent potentiation and depression of glutamatergic synapses were induced by correlated spiking of presynaptic and postsynaptic neurons. The relative timing between the presynaptic and postsynaptic spiking determined the direction and the extent of synaptic changes. Repetitive postsynaptic spiking within a time window of 20 msec after presynaptic activation resulted in long-term potentiation (LTP), whereas postsynaptic spiking within a window of 20 msec before the repetitive presynaptic activation led to long-term depression (LTD). Significant LTP occurred only at synapses with relatively low initial strength, whereas the extent of LTD did not show obvious dependence on the initial synaptic strength. Both LTP and LTD depended on the activation of NMDA receptors and were absent in cases in which the postsynaptic neurons were GABAergic in nature. Blockade of L-type calcium channels with nimodipine abolished the induction of LTD and reduced the extent of LTP. These results underscore the importance of precise spike timing, synaptic strength, and postsynaptic cell type in the activity-induced modification of central synapses and suggest that Hebb’s rule may need to incorporate a quantitative consideration of spike timing that reflects the narrow and asymmetric window for the induction of synaptic modification.},
+  Eprint                   = {http://www.jneurosci.org/content/18/24/10464.full.pdf+html},
+  Url                      = {http://www.jneurosci.org/content/18/24/10464.abstract}
+}
+
+@Article{Bredt_Snyder_NO,
+  Title                    = {Isolation of nitric oxide synthetase, a calmodulin-requiring enzyme},
+  Author                   = {Bredt, D. S. and Snyder, S. H.},
+  Journal                  = {Proceedings of the National Academy of Sciences},
+  Year                     = {1990},
+  Number                   = {2},
+  Pages                    = {682-685},
+  Volume                   = {87},
+
+  Abstract                 = {Nitric oxide mediates vascular relaxing effects of endothelial cells, cytotoxic actions of macrophages and neutrophils, and influences of excitatory amino acids on cerebellar cyclic GMP. Its enzymatic formation from arginine by a soluble enzyme associated with stoichiometric production of citrulline requires NADPH and Ca2+. We show that nitric oxide synthetase activity requires calmodulin. Utilizing a 2',5'-ADP affinity column eluted with NADPH, we have purified nitric oxide synthetase 6000-fold to homogeneity from rat cerebellum. The purified enzyme migrates as a single 150-kDa band on SDS/PAGE, and the native enzyme appears to be a monomer.},
+  Eprint                   = {http://www.pnas.org/content/87/2/682.full.pdf},
+  Url                      = {http://www.pnas.org/content/87/2/682.abstract}
+}
+
+@Misc{Briansim,
+  Title                    = {The Brian spiking neural network simulator (Version 1.0) [Computer Software]},
+
+  Author                   = {Brette, Romain and Goodman, Dan and Stirnberg, Marcel},
+  HowPublished             = {\url{http://www.briansimulator.org/}},
+  Year                     = {2016},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.06},
+  Url                      = {http://www.briansimulator.org/}
+}
+
+@Article{Brunel2000,
+  Title                    = {Dynamics of sparsely connected networks of excitatory and inhibitory spiking neurons.},
+  Author                   = {Brunel, N.},
+  Journal                  = {J Comput Neurosci},
+  Year                     = {2000},
+  Pages                    = {183--208},
+  Volume                   = {8},
+
+  Abstract                 = {The dynamics of networks of sparsely connected excitatory and inhibitory integrate-and-fire neurons are studied analytically. The analysis reveals a rich repertoire of states, including synchronous states in which neurons fire regularly; asynchronous states with stationary global activity and very irregular individual cell activity; and states in which the global activity oscillates but individual cells fire irregularly, typically at rates lower than the global oscillation frequency. The network can switch between these states, provided the external frequency, or the balance between excitation and inhibition, is varied. Two types of network oscillations are observed. In the fast oscillatory state, the network frequency is almost fully controlled by the synaptic time scale. In the slow oscillatory state, the network frequency depends mostly on the membrane time constant. Finite size effects in the asynchronous state are also discussed.},
+  File                     = {:home/pierre/Mendeley/Brunel - 2000.pdf:pdf},
+  Keywords                 = {Action Potentials; Biological Clocks; Brain; Corti,Neurological; Nerve Net; Neural Inhibition; Neural},
+  Pmid                     = {10809012}
+}
+
+@Article{Burrone_2003,
+  Title                    = {Synaptic gain control and homeostasis},
+  Author                   = {Burrone, J. and Murthy, V. N.},
+  Journal                  = {Current Opinion in Neurobiology },
+  Year                     = {2003},
+  Number                   = {5},
+  Pages                    = {560 - 567},
+  Volume                   = {13},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.conb.2003.09.007},
+  ISSN                     = {0959-4388},
+  Url                      = {//www.sciencedirect.com/science/article/pii/S0959438803001284}
+}
+
+@Article{Burrone_2002,
+  Title                    = {Multiple forms of synaptic plasticity triggered by selective supperssion of activity},
+  Author                   = {Burrone, J. and O'Byrne, M. and Murthy, V. N.},
+  Journal                  = {Nature},
+  Year                     = {2002},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.31}
+}
+
+@Article{Buzsaki_Fir_Rates_2014,
+  Title                    = {The log-dynamic brain: how skewed distributions affect network operations},
+  Author                   = {Buzsáki, G. and Mizuseki, K.},
+  Journal                  = {Nature Reviews Neuroscience},
+  Year                     = {2014},
+
+  Owner                    = {fabian},
+  Timestamp                = {2016.12.11}
+}
+
+@Book{Wisdom_of_the_Body_Cannon,
+  Title                    = {The Wisdom of the Body},
+  Author                   = {Cannon, W. B.},
+  Publisher                = {Norton \& Company},
+  Year                     = {1932},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.20}
+}
+
+@Article{Connors_Gutnick_Spike_Patterns,
+  Title                    = {Intrinsic firing patterns of diverse neocortical neurons },
+  Author                   = {Connors, B. W. and Gutnick, M. J.},
+  Journal                  = {Trends in Neurosciences },
+  Year                     = {1990},
+  Number                   = {3},
+  Pages                    = {99 - 104},
+  Volume                   = {13},
+
+  Doi                      = {http://dx.doi.org/10.1016/0166-2236(90)90185-D},
+  ISSN                     = {0166-2236},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/016622369090185D}
+}
+
+@Article{Helmholtz_Solution_2d,
+  Title                    = {Green's functions for the wave, Helmholtz and Poisson equations in a two-dimensional boundless domain},
+  Author                   = {Couto, R. T.},
+  Journal                  = {Revista Brasileira de Ensino Física},
+  Year                     = {2013},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.10}
+}
+
+@Book{Cybernetik_Systems_Cruse_2006,
+  Title                    = {Neural Networks as Cybernetic Systems},
+  Author                   = {Cruse, H.},
+  Publisher                = {Brains, Minds \& Media},
+  Year                     = {2006},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.30}
+}
+
+@Article{Desai_2003,
+  Title                    = {Homeostatic plasticity in the CNS: synaptic and intrinsic forms },
+  Author                   = {Niraj S. D},
+  Journal                  = {Journal of Physiology-Paris },
+  Year                     = {2003},
+  Note                     = {Neuroscience and Computation },
+  Number                   = {4–6},
+  Pages                    = {391 - 402},
+  Volume                   = {97},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.jphysparis.2004.01.005},
+  ISSN                     = {0928-4257},
+  Keywords                 = {Experience-dependent plasticity},
+  Url                      = {//www.sciencedirect.com/science/article/pii/S0928425704000166}
+}
+
+@Book{Theor_Neur_Dayan,
+  Title                    = {Theoretical Neuroscience},
+  Author                   = {Dayan, P. and Abbott, L.F.},
+  Publisher                = {MIT Press},
+  Year                     = {2001},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.04.12}
+}
+
+@Article{Desai_IP,
+  Title                    = {Plasticity in the intrinsic Excitability of Cortical Pyramidal Neurons},
+  Author                   = {Desai, N. S. and Rutherford, L. C. and Turrigiano, G. G.},
+  Journal                  = {Nature Neuroscience},
+  Year                     = {1999},
+  Pages                    = {515-520},
+  Volume                   = {2},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.11}
+}
+
+@Article{Dragoi_2003,
+  Title                    = {Place Representation within Hippocampal Networks Is Modified by Long-Term Potentiation},
+  Author                   = {Dragoi, G. and Harris, K. D. and Buzsáki, G.},
+  Journal                  = {Neuron },
+  Year                     = {2003},
+  Number                   = {5},
+  Pages                    = {843 - 853},
+  Volume                   = {39},
+
+  Doi                      = {http://dx.doi.org/10.1016/S0896-6273(03)00465-3},
+  ISSN                     = {0896-6273},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0896627303004653}
+}
+
+@Article{Eckmann_Leader_Neurons_2008,
+  Title                    = {Leader neurons in population bursts of 2D living neural networks},
+  Author                   = {Eckmann, J.P. and Jacobi, S. and Marom, S. and Moses, E. and Zbinden, C.},
+  Journal                  = {New Journal of Physics},
+  Year                     = {2008},
+  Volume                   = {10},
+
+  Doi                      = {10.1088/1367-2630/10/1/015011},
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.22}
+}
+
+@Article{Effenberger_2015,
+  Title                    = {Self-Organization in Balanced State Networks by STDP and Homeostatic Plasticity},
+  Author                   = {Effenberger, F. and Jost, J.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2015},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.22}
+}
+
+@Article{Feldman_STDP_2012,
+  Title                    = {The Spike-Timing Dependence of Plasticity},
+  Author                   = {Feldman, D.},
+  Journal                  = {Neuron},
+  Year                     = {2012},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.22}
+}
+
+@Article{Froemke_STDP,
+  Title                    = {Spike-timing-dependent synaptic plasticity depends on dendritic location},
+  Author                   = {Froemke, R. C. and Poo, M. and Dan, Y.},
+  Journal                  = {Nature},
+  Year                     = {2005},
+
+  Month                    = mar,
+  Number                   = {7030},
+  Pages                    = {221--225},
+  Volume                   = {434},
+
+  __markedentry            = {[fschubert:6]},
+  Comment                  = {10.1038/nature03366},
+  ISSN                     = {0028-0836},
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.06},
+  Url                      = {http://dx.doi.org/10.1038/nature03366}
+}
+
+@Article{Gerstner_Pop_Act,
+  Title                    = {Time structure of the activity in neural network models},
+  Author                   = {Gerstner, W.},
+  Journal                  = {Phys. Rev. E},
+  Year                     = {1995},
+
+  Month                    = {Jan},
+  Pages                    = {738--758},
+  Volume                   = {51},
+
+  Doi                      = {10.1103/PhysRevE.51.738},
+  Issue                    = {1},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevE.51.738}
+}
+
+@Book{Spiking_Gerstner,
+  Title                    = {Spiking Neuron Models. Single Neurons, Populations, Plasticity.},
+  Author                   = {Gerstner, W. and Kistler, W. M.},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2002},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.04.12}
+}
+
+@Article{NOS_Bacteria,
+  Title                    = {NO-mediated Cytoprotection: Instant Adaptation to Oxidative Stress in Bacteria},
+  Author                   = {Gusarov, I. and Nudler, E.},
+  Journal                  = {Proceedings of the National Academy of Sciences of the United States of America},
+  Year                     = {2005},
+  Number                   = {102},
+  Pages                    = {13855-13860},
+  Volume                   = {102},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.12}
+}
+
+@Article{Haider_2006,
+  Title                    = {Neocortical Network Activity In Vivo Is Generated through a Dynamic Balance of Excitation and Inhibition},
+  Author                   = {Haider, B. and Duque, A. and Hasenstaub, A. R. and McCormick, D. A.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2006},
+  Number                   = {17},
+  Pages                    = {4535--4545},
+  Volume                   = {26},
+
+  Abstract                 = {The recurrent excitatory and inhibitory connections between and within layers of the cerebral cortex are fundamental to the operation of local cortical circuits. Models of cortical function often assume that recurrent excitation and inhibition are balanced, and we recently demonstrated that spontaneous network activity in vitro contains a precise balance of excitation and inhibition; however, the existence of a balance between excitation and inhibition in the intact and spontaneously active cerebral cortex has not been directly tested. We examined this hypothesis in the prefrontal cortex in vivo, during the slow (\&lt;1 Hz) oscillation in ketamine{\textendash}xylazine-anesthetized ferrets. We measured persistent network activity (Up states) with extracellular multiple unit and local field potential recording, while simultaneously recording synaptic currents in nearby cells. We determined the reversal potential and conductance change over time during Up states and found that the body of Up state activity exhibited a steady reversal potential (-37 mV on average) for hundreds of milliseconds, even during substantial (21 nS on average) changes in membrane conductance. Furthermore, we found that both the initial and final segments of the Up state were characterized by significantly more depolarized reversal potentials and concomitant increases in excitatory conductance, compared with the stable middle portions of Up states. This ongoing temporal evolution between excitation and inhibition, which exhibits remarkable proportionality within and across neurons in active local networks, may allow for rapid transitions between relatively stable network states, permitting the modulation of neuronal responsiveness in a behaviorally relevant manner.},
+  Doi                      = {10.1523/JNEUROSCI.5297-05.2006},
+  Eprint                   = {http://www.jneurosci.org/content/26/17/4535.full.pdf},
+  ISSN                     = {0270-6474},
+  Publisher                = {Society for Neuroscience},
+  Url                      = {http://www.jneurosci.org/content/26/17/4535}
+}
+
+@Article{Stability_Homeostasis_Harnack_2015,
+  Title                    = {Stability of Neuronal Networks with Homeostatic Regulation},
+  Author                   = {Harnack, D. and Pelko, M. and Chaillet, A. and Chitour, Y. and van Rossum, M. C. W.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2015},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.17}
+}
+
+@Article{Hartmann_2016,
+  Title                    = {Where’s the Noise? Key Features of Spontaneous Activity and Neural Variability Arise through Learning in a Deterministic Network},
+  Author                   = {Hartmann, C. and Lazar, A. and Nessler, B. and Triesch, J.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2016},
+
+  Month                    = {12},
+  Number                   = {12},
+  Pages                    = {1-35},
+  Volume                   = {11},
+
+  Abstract                 = {Author Summary Neural recordings seem very noisy. If the exact same stimulus is shown to an animal multiple times, the neural response will vary substantially. In fact, the activity of a single neuron shows many features of a random process. Furthermore, the spontaneous activity occurring in the absence of any sensory stimulus, which is usually considered a kind of background noise, often has a magnitude comparable to the activity evoked by stimulus presentation and interacts with sensory inputs in interesting ways. Here we show that the key features of neural variability and spontaneous activity can all be accounted for by a simple and completely deterministic neural network learning a predictive model of its sensory inputs. The network’s deterministic dynamics give rise to structured but variable responses matching key experimental findings obtained in different mammalian species with different recording techniques. Our results suggest that the notorious variability of neural recordings and the complex features of spontaneous brain activity could reflect the dynamics of a largely deterministic but highly adaptive network learning a predictive model of its sensory environment.},
+  Doi                      = {10.1371/journal.pcbi.1004640},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1004640}
+}
+
+@Article{Hill_Equ,
+  Title                    = {The possible effects of the aggregation of the molecules of haemoglobin on its dissociation curves.},
+  Author                   = {Hill, AV.},
+  Journal                  = {The Journal of Physiology},
+  Year                     = {1910},
+  Pages                    = {iv---vii},
+  Volume                   = {40},
+
+  Doi                      = {10.1113/jphysiol.1910.sp001389},
+  ISSN                     = {1469-7793},
+  Url                      = {http://dx.doi.org/10.1113/jphysiol.1910.sp001389}
+}
+
+@Book{Hille_Ion_Channels,
+  Title                    = {Ionic Channels of Excitable Membranes},
+  Author                   = {Hille, B.},
+  Publisher                = {Sinauer Associates},
+  Year                     = {2001},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.12}
+}
+
+@Article{Hodgkin_Huxley_1952,
+  Title                    = {A quantitative description of membrane current and its application to conduction and excitation in nerve},
+  Author                   = {Hodgkin, A. L. and Huxley, A. F.},
+  Journal                  = {The Journal of Physiology},
+  Year                     = {1952},
+
+  Month                    = aug,
+  Number                   = {4},
+  Pages                    = {500--544},
+  Volume                   = {117},
+
+  Comment                  = {12991237[pmid] 12991237[pmid]},
+  ISSN                     = {1469-7793},
+  Url                      = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/}
+}
+
+@Article{Ivenshitz_2010,
+  Title                    = {Neuronal Density Determines Network Connectivity and Spontaneous Activity in Cultured Hippocampus},
+  Author                   = {Ivenshitz, M. and Segal, M.},
+  Journal                  = {Journal of Neurophysiology},
+  Year                     = {2010},
+  Number                   = {2},
+  Pages                    = {1052--1060},
+  Volume                   = {104},
+
+  Abstract                 = {The effects of neuronal density on morphological and functional attributes of the evolving networks were studied in cultured dissociated hippocampal neurons. Plating at different densities affected connectivity among the neurons, such that sparse networks exhibited stronger synaptic connections between pairs of recorded neurons. This was associated with different patterns of spontaneous network activity with enhanced burst size but reduced burst frequency in the sparse cultures. Neuronal density also affected the morphology of the dendrites and spines of these neurons, such that sparse neurons had a simpler dendritic tree and fewer dendritic spines. Additionally, analysis of neurons transfected with PSD95 revealed that in sparse cultures the synapses are formed on the dendritic shaft, whereas in dense cultures the synapses are formed primarily on spine heads. These experiments provide important clues on the role of neuronal density in population activity and should yield new insights into the rules governing neuronal network connectivity.},
+  Doi                      = {10.1152/jn.00914.2009},
+  Eprint                   = {http://jn.physiology.org/content/104/2/1052.full.pdf},
+  ISSN                     = {0022-3077},
+  Publisher                = {American Physiological Society},
+  Url                      = {http://jn.physiology.org/content/104/2/1052}
+}
+
+@Book{Izhikevich_Dynsys,
+  Title                    = {Dynamical Systems in Neuroscience - The Geometry of Excitability and Bursting},
+  Author                   = {Izhikevich, E. M.},
+  Publisher                = {The MIT Press},
+  Year                     = {2007},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.11}
+}
+
+@Article{NOS_Mammals,
+  Title                    = {Nitrix Oxide Synthases in Mammals},
+  Author                   = {Knowles, R. G. and Moncada, S.},
+  Journal                  = {Biochemical Journal},
+  Year                     = {1994},
+  Pages                    = {249-258},
+  Volume                   = {298(Pt 2)},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.12}
+}
+
+@Article{Knowles_Ca_nNOS,
+  Title                    = {Formation of nitric oxide from L-arginine in the central nervous system: a transduction mechanism for stimulation of the soluble guanylate cyclase},
+  Author                   = {Knowles, R. G. and Palacios, M. and Palmer, R. M. J. and Moncada, S.},
+  Journal                  = {Proceedings of the National Academy of Sciences},
+  Year                     = {1989},
+  Pages                    = {5159-5162},
+  Volume                   = {86},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.12}
+}
+
+@Article{Lancaster_1994,
+  Title                    = {Simulation of the diffusion and reaction of endogenously produced nitric oxide.},
+  Author                   = {Lancaster, J. R.},
+  Journal                  = {Proceedings of the National Academy of Sciences of the United States of America},
+  Year                     = {1994},
+
+  Month                    = aug,
+  Number                   = {17},
+  Pages                    = {8137--8141},
+  Volume                   = {91},
+
+  Abstract                 = {In spite of intense recent investigation of the physiological and pathophysiological roles of endogenously produced nitric oxide (.NO) in mammalian systems, little quantitative information exists concerning the diffusion of this small nonelectrolyte from its source (NO synthase) to its targets of action. I present here a conceptual framework for analyzing the intracellular and intercellular diffusion and reaction of free .NO, using kinetic modeling and calculations of the diffusibility of .NO and its reactions in aqueous solution based on published data. If the half-life of .NO is greater than approximately 25 msec and the rates of reaction of .NO with its targets are slower than its diffusion or reaction with O2 (for which there is experimental evidence in at least some systems), then (i) .NO acts in vivo in a mostly paracrine fashion for a collection of .NO-producing cells, (ii) .NO diffuses to significant concentrations at distances relatively far removed from a single .NO-producing cell, and (iii) localized sites of vascularization will scavenge .NO (and thus decrease its actions) at distances many cell diameters away from that site. These conclusions have important implications with regard to the mechanism of endothelium-dependent relaxation, the autocrine vs. paracrine actions of .NO, and the role of the spatial relationship between specific sites of .NO formation and neighboring blood vessels in .NO-effected and -affected neuronal signal transmission.},
+  Comment                  = {8058769[pmid] 8058769[pmid]},
+  ISSN                     = {1091-6490},
+  Url                      = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC44560/}
+}
+
+@Article{Lazar_2009,
+  Title                    = {SORN: a self-organizing recurrent neural network},
+  Author                   = {Lazar, A. and Pipa, G. and Triesch, J.},
+  Journal                  = {Frontiers in Computational Neuroscience},
+  Year                     = {2009},
+  Volume                   = {3},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.16}
+}
+
+@Article{LeMasson_1993,
+  Title                    = {Activity-dependent regulation of conductances in model neurons},
+  Author                   = {LeMasson, G. and Marder, E. and Abbott, L. F.},
+  Journal                  = {Science},
+  Year                     = {1993},
+  Number                   = {5103},
+  Pages                    = {1915--1917},
+  Volume                   = {259},
+
+  Abstract                 = {Neurons maintain their electrical activity patterns despite channel turnover, cell growth, and variable extracellular conditions. A model is presented in which maximal conductances of ionic currents depend on the intracellular concentration of calcium ions and so, indirectly, on activity. Model neurons with activity-dependent maximal conductances modify their conductances to maintain a given behavior when perturbed. Moreover, neurons that are described by identical sets of equations can develop different properties in response to different patterns of presynaptic activity.},
+  Doi                      = {10.1126/science.8456317},
+  Eprint                   = {http://science.sciencemag.org/content/259/5103/1915.full.pdf},
+  ISSN                     = {0036-8075},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://science.sciencemag.org/content/259/5103/1915}
+}
+
+@Article{Lever_Long_Term_Plast_2002,
+  Title                    = {Long-term plasticity in hippocampal place-cell representation of environmental geometry},
+  Author                   = {Lever, C. and Wills, T. and Cacucci, F. and Burgess, N. and O'Keefe, J.},
+  Journal                  = {Nature},
+  Year                     = {2002},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.17}
+}
+
+@Article{Lisman_Synapses_1993,
+  Title                    = {Quantal analysis and synaptic anatomy — integrating two views of hippocampal plasticity },
+  Author                   = {Lisman, J. E. and Harris, K. M.},
+  Journal                  = {Trends in Neurosciences },
+  Year                     = {1993},
+  Number                   = {4},
+  Pages                    = {141 - 147},
+  Volume                   = {16},
+
+  Doi                      = {http://dx.doi.org/10.1016/0166-2236(93)90122-3},
+  ISSN                     = {0166-2236},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/0166223693901223}
+}
+
+@Article{Loewenstein_Spine_Sizes,
+  Title                    = {Multiplicative Dynamics Underlie the Emergence of the Log-Normal Distribution of Spine Sizes in the Neocortex In Vivo},
+  Author                   = {Loewenstein, Y. and Kuras, A. and Rumpel, S.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2011},
+  Number                   = {26},
+  Pages                    = {9481--9488},
+  Volume                   = {31},
+
+  Abstract                 = {What fundamental properties of synaptic connectivity in the neocortex stem from the ongoing dynamics of synaptic changes? In this study, we seek to find the rules shaping the stationary distribution of synaptic efficacies in the cortex. To address this question, we combined chronic imaging of hundreds of spines in the auditory cortex of mice in vivo over weeks with modeling techniques to quantitatively study the dynamics of spines, the morphological correlates of excitatory synapses in the neocortex. We found that the stationary distribution of spine sizes of individual neurons can be exceptionally well described by a log-normal function. We furthermore show that spines exhibit substantial volatility in their sizes at timescales that range from days to months. Interestingly, the magnitude of changes in spine sizes is proportional to the size of the spine. Such multiplicative dynamics are in contrast with conventional models of synaptic plasticity, learning, and memory, which typically assume additive dynamics. Moreover, we show that the ongoing dynamics of spine sizes can be captured by a simple phenomenological model that operates at two timescales of days and months. This model converges to a log-normal distribution, bridging the gap between synaptic dynamics and the stationary distribution of synaptic efficacies.},
+  Doi                      = {10.1523/JNEUROSCI.6130-10.2011},
+  Eprint                   = {http://www.jneurosci.org/content/31/26/9481.full.pdf},
+  ISSN                     = {0270-6474},
+  Publisher                = {Society for Neuroscience},
+  Url                      = {http://www.jneurosci.org/content/31/26/9481}
+}
+
+@Article{Marder_2006,
+  Title                    = {Variability, compensation and homeostasis in neuron and network function},
+  Author                   = {Marder, E. and Goaillard, J.},
+  Journal                  = {Nature Reviews Neuroscience},
+  Year                     = {2006},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.29}
+}
+
+@Article{Markram_Connections_1997,
+  Title                    = {A network of tufted layer 5 pyramidal neurons.},
+  Author                   = {Markram, H.},
+  Journal                  = {Cerebral Cortex},
+  Year                     = {1997},
+  Number                   = {6},
+  Pages                    = {523-533},
+  Volume                   = {7},
+
+  Abstract                 = {Tufted layer 5 (TL5) pyramidal neurons are important projection neurons from the cerebral cortex to subcortical areas. Recent and ongoing experiments aimed at understanding the computational analysis performed by a network of synaptically connected TL5 neurons are reviewed here. The experiments employed dual and triple whole-cell patch clamp recordings from visually identified and preselected neurons in brain slices of somatosensory cortex of young (14- to 16-day-old) rats. These studies suggest that a local network of TL5 neurons within a cortical module of diameter 300 microns consists of a few hundred neurons that are extensively inter-connected with reciprocal feedback from at least first-, second- and third-order target neurons. A statistical analysis of synaptic innervation suggests that this recurrent network is not randomly arranged and hence each neuron could be functionally unique. Synaptic transmission between these neurons is characterized by use-dependent synaptic depression which confers novel properties to this recurrent network of neurons. First, a range of rates of depression for different synaptic connections enable each TL5 neuron to receive a unique mixture of information about the average firing rates and the temporally correlated action potential (AP) activity in the population of presynaptic TL5 neurons. Second, each AP generated by any neuron in the network induces a change (defined as an iteration step) in the functional coupling of the neurons in the network (defined as network configuration). It is proposed that the network configuration is iterated during a stimulus to achieve an optimally orchestrated network response. Hebbian, anti-Hebbian and neuromodulatory-induced modifications of neurotransmitter release probability change the rates of synaptic depression and thereby alter the iteration step size. These data may be important to understand the dynamics of electrical activity within the network.},
+  Doi                      = {10.1093/cercor/7.6.523},
+  Eprint                   = {http://cercor.oxfordjournals.org/content/7/6/523.full.pdf+html},
+  Url                      = {http://cercor.oxfordjournals.org/content/7/6/523.abstract}
+}
+
+@Article{Markram_STP,
+  Title                    = {Differential signaling via the same axon of neocortical pyramidal neurons},
+  Author                   = {Markram, H. and Wang, Y. and Tsodyks, M.},
+  Journal                  = {Proceedings of the National Academy of Sciences},
+  Year                     = {1998},
+  Number                   = {9},
+  Pages                    = {5323-5328},
+  Volume                   = {95},
+
+  Abstract                 = {The nature of information stemming from a single neuron and conveyed simultaneously to several hundred target neurons is not known. Triple and quadruple neuron recordings revealed that each synaptic connection established by neocortical pyramidal neurons is potentially unique. Specifically, synaptic connections onto the same morphological class differed in the numbers and dendritic locations of synaptic contacts, their absolute synaptic strengths, as well as their rates of synaptic depression and recovery from depression. The same axon of a pyramidal neuron innervating another pyramidal neuron and an interneuron mediated frequency-dependent depression and facilitation, respectively, during high frequency discharges of presynaptic action potentials, suggesting that the different natures of the target neurons underlie qualitative differences in synaptic properties. Facilitating-type synaptic connections established by three pyramidal neurons of the same class onto a single interneuron, were all qualitatively similar with a combination of facilitation and depression mechanisms. The time courses of facilitation and depression, however, differed for these convergent connections, suggesting that different pre-postsynaptic interactions underlie quantitative differences in synaptic properties. Mathematical analysis of the transfer functions of frequency-dependent synapses revealed supra-linear, linear, and sub-linear signaling regimes in which mixtures of presynaptic rates, integrals of rates, and derivatives of rates are transferred to targets depending on the precise values of the synaptic parameters and the history of presynaptic action potential activity. Heterogeneity of synaptic transfer functions therefore allows multiple synaptic representations of the same presynaptic action potential train and suggests that these synaptic representations are regulated in a complex manner. It is therefore proposed that differential signaling is a key mechanism in neocortical information processing, which can be regulated by selective synaptic modifications.},
+  Eprint                   = {http://www.pnas.org/content/95/9/5323.full.pdf},
+  Url                      = {http://www.pnas.org/content/95/9/5323.abstract}
+}
+
+@Article{Marsat_2010,
+  Title                    = {Neural Heterogeneity and Efficient Population Codes for Communication Signals},
+  Author                   = {Marsat, G. and Maler, L.},
+  Journal                  = {Journal of Neurophysiology},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {2543--2555},
+  Volume                   = {104},
+
+  Abstract                 = {Efficient sensory coding implies that populations of neurons should represent information-rich aspects of a signal with little redundancy. Recent studies have shown that neural heterogeneity in higher brain areas enhances the efficiency of encoding by reducing redundancy across the population. Here, we study how neural heterogeneity in the early stages of sensory processing influences the efficiency of population codes. Through the analysis of in vivo recordings, we contrast the encoding of two types of communication signals of electric fishes in the most peripheral sensory area of the CNS, the electrosensory lateral line lobe (ELL). We show that communication signals used during courtship (big chirps) and during aggressive encounters (small chirps) are encoded by different populations of ELL pyramidal cells, namely I-cells and E-cells, respectively. Most importantly, we show that the encoding strategy differs for the two signals and we argue that these differences allow these cell types to encode specifically information-rich features of the signals. Small chirps are detected, and their timing is accurately signaled through stereotyped spike bursts, whereas the shape of big chirps is accurately represented by variable increases in firing rate. Furthermore, we show that the heterogeneity across I-cells enhances the efficiency of the population code and thus permits the accurate discrimination of different quality courtship signals. Our study shows the importance of neural heterogeneity early in a sensory system and that it initiates the sparsification of sensory representation thereby contributing to the efficiency of the neural code.},
+  Doi                      = {10.1152/jn.00256.2010},
+  Eprint                   = {http://jn.physiology.org/content/104/5/2543.full.pdf},
+  ISSN                     = {0022-3077},
+  Publisher                = {American Physiological Society},
+  Url                      = {http://jn.physiology.org/content/104/5/2543}
+}
+
+@Article{SORN_Paper,
+  Title                    = {Plasticity-Driven Self-Organization under Topological Constraints Accounts for Non-Random Features of Cortical Synaptic Wiring.},
+  Author                   = {Miner, D. and Triesch, J.},
+  Journal                  = {PLoS Computational Biology},
+  Year                     = {2016},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.04.11}
+}
+
+@Article{Mizuseki_2013,
+  Title                    = {Preconfigured, skewed distribution of firing rates in the hippocampus and entorhinal cortex},
+  Author                   = {Mizuseki, K. and Buzsáki, G.},
+  Journal                  = {Cell Reports},
+  Year                     = {2013},
+  Volume                   = {4}
+}
+
+@Article{Naude_2013,
+  Title                    = {Effects of Cellular Homeostatic Intrinsic Plasticity on Dynamical and Computational Properties of Biological Recurrent Neural Networks},
+  Author                   = {Naud{\'e}, J. and Cessac, B. and Berry, H. and Delord, B.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2013},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.27}
+}
+
+@Article{OConnor_2010,
+  Title                    = {Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object Localization in Mice},
+  Author                   = {O'Connor, D. H, and Peron, S. P. and Huber, D. and Svoboda, K.},
+  Journal                  = {Neuron},
+  Year                     = {2010},
+  Volume                   = {67},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.15}
+}
+
+@Article{Ostojic2011,
+  Title                    = {Interspike interval distributions of spiking neurons driven by fluctuating inputs},
+  Author                   = {Ostojic, S.},
+  Journal                  = {Journal of Neurophysiology},
+  Year                     = {2011},
+  Number                   = {1},
+  Pages                    = {361--373},
+  Volume                   = {106},
+
+  Abstract                 = {Interspike interval (ISI) distributions of cortical neurons exhibit a range of different shapes. Wide ISI distributions are believed to stem from a balance of excitatory and inhibitory inputs that leads to a strongly fluctuating total drive. An important question is whether the full range of experimentally observed ISI distributions can be reproduced by modulating this balance. To address this issue, we investigate the shape of the ISI distributions of spiking neuron models receiving fluctuating inputs. Using analytical tools to describe the ISI distribution of a leaky integrate-and-fire (LIF) neuron, we identify three key features: 1) the ISI distribution displays an exponential decay at long ISIs independently of the strength of the fluctuating input; 2) as the amplitude of the input fluctuations is increased, the ISI distribution evolves progressively between three types, a narrow distribution (suprathreshold input), an exponential with an effective refractory period (subthreshold but suprareset input), and a bursting exponential (subreset input); 3) the shape of the ISI distribution is approximately independent of the mean ISI and determined only by the coefficient of variation. Numerical simulations show that these features are not specific to the LIF model but are also present in the ISI distributions of the exponential integrate-and-fire model and a Hodgkin-Huxley-like model. Moreover, we observe that for a fixed mean and coefficient of variation of ISIs, the full ISI distributions of the three models are nearly identical. We conclude that the ISI distributions of spiking neurons in the presence of fluctuating inputs are well described by gamma distributions.},
+  Doi                      = {10.1152/jn.00830.2010},
+  Eprint                   = {http://jn.physiology.org/content/106/1/361.full.pdf},
+  ISSN                     = {0022-3077},
+  Publisher                = {American Physiological Society},
+  Url                      = {http://jn.physiology.org/content/106/1/361}
+}
+
+@Article{Pape_NO,
+  Title                    = {Nitric Oxide Controls Oscillatory Activity in Thalamocortical Neurons},
+  Author                   = {Pape, H.-C. and Mager, R.},
+  Journal                  = {Neuron},
+  Year                     = {1992},
+  Pages                    = {441-448},
+  Volume                   = {9},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.12}
+}
+
+@Article{Philippides_2000,
+  Title                    = {Four-Dimensional Neuronal Signaling by Nitric Oxide: A Computational Analysis},
+  Author                   = {Philippides, A. and Husbands, P. and O{\textquoteright}Shea, M.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2000},
+  Number                   = {3},
+  Pages                    = {1199--1207},
+  Volume                   = {20},
+
+  Abstract                 = {Nitric oxide (NO) is now recognized as a transmitter of neurons that express the neuronal isoform of the enzyme nitric oxide synthase. NO, however, violates some of the key tenets of chemical transmission, which is classically regarded as occurring at points of close apposition between neurons. It is the ability of NO to diffuse isotropically in aqueous and lipid environments that has suggested a radically different form of signaling in which the transmitter acts four-dimensionally in space and time, affecting volumes of the brain containing many neurons and synapses. Although {\textquotedblleft}volume signaling{\textquotedblright} clearly challenges simple connectionist models of neural processing, crucial to its understanding are the spatial and temporal dynamics of the spread of NO within the brain. Existing models of NO diffusion, however, have serious shortcomings because they represent solutions for {\textquotedblleft}point-sources,{\textquotedblright} which have no physical dimensions. Methods for overcoming these difficulties are presented here, and results are described that show how NO spreads from realistic neural architectures with both simple symmetrical and irregular shapes. By highlighting the important influence of the geometry of NO sources, our results provide insights into the four-dimensional spread of a diffusing messenger. We show for example that reservoirs of NO that accumulate in volumes of the nervous system where NO is not synthesized contribute significantly to the temporal and spatial dynamics of NO spread.},
+  Eprint                   = {http://www.jneurosci.org/content/20/3/1199.full.pdf},
+  ISSN                     = {0270-6474},
+  Publisher                = {Society for Neuroscience},
+  Url                      = {http://www.jneurosci.org/content/20/3/1199}
+}
+
+@Article{Philippides_2005,
+  Title                    = {Modeling Cooperative Volume Signaling in a Plexus of Nitric Oxide Synthase-Expressing Neurons},
+  Author                   = {Philippides, A. and Ott, S. R. and Husbands, P. and Lovick, T. A. and O{\textquoteright}Shea, M.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2005},
+  Number                   = {28},
+  Pages                    = {6520--6532},
+  Volume                   = {25},
+
+  Abstract                 = {In vertebrate and invertebrate brains, nitric oxide (NO) synthase (NOS) is frequently expressed in extensive meshworks (plexuses) of exceedingly fine fibers. In this paper, we investigate the functional implications of this morphology by modeling NO diffusion in fiber systems of varying fineness and dispersal. Because size severely limits the signaling ability of an NO-producing fiber, the predominance of fine fibers seems paradoxical. Our modeling reveals, however, that cooperation between many fibers of low individual efficacy can generate an extensive and strong volume signal. Importantly, the signal produced by such a system of cooperating dispersed fibers is significantly more homogeneous in both space and time than that produced by fewer larger sources. Signals generated by plexuses of fine fibers are also better centered on the active region and less dependent on their particular branching morphology. We conclude that an ultrafine plexus is configured to target a volume of the brain with a homogeneous volume signal. Moreover, by translating only persistent regional activity into an effective NO volume signal, dispersed sources integrate neural activity over both space and time. In the mammalian cerebral cortex, for example, the NOS plexus would preferentially translate persistent regional increases in neural activity into a signal that targets blood vessels residing in the same region of the cortex, resulting in an increased regional blood flow. We propose that the fineness-dependent properties of volume signals may in part account for the presence of similar NOS plexus morphologies in distantly related animals.},
+  Doi                      = {10.1523/JNEUROSCI.1264-05.2005},
+  Eprint                   = {http://www.jneurosci.org/content/25/28/6520.full.pdf},
+  ISSN                     = {0270-6474},
+  Publisher                = {Society for Neuroscience},
+  Url                      = {http://www.jneurosci.org/content/25/28/6520}
+}
+
+@Article{Homeostasis_Queenan_2012,
+  Title                    = {Where Art Thou, Homeo(stasis)? Functional Diversity in Homeostatic Synaptic Plasticity},
+  Author                   = {Queenan, B. N. and Lee, K. J. and Pak, D. T. S.},
+  Journal                  = {Neural Plasticity},
+  Year                     = {2012},
+  Volume                   = {2012},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.20}
+}
+
+@Article{Roxin_Firing_Rate_Distribution,
+  Title                    = {On the Distribution of Firing Rates in Networks of Cortical Neurons},
+  Author                   = {Roxin, A. and Brunel, N. and Hansel, D. and Mongillo, G. and van Vreeswijk, C.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2011},
+  Number                   = {45},
+  Pages                    = {16217--16226},
+  Volume                   = {31},
+
+  Abstract                 = {The distribution of in vivo average firing rates within local cortical networks has been reported to be highly skewed and long tailed. The distribution of average single-cell inputs, conversely, is expected to be Gaussian by the central limit theorem. This raises the issue of how a skewed distribution of firing rates might result from a symmetric distribution of inputs. We argue that skewed rate distributions are a signature of the nonlinearity of the in vivo f{\textendash}I curve. During in vivo conditions, ongoing synaptic activity produces significant fluctuations in the membrane potential of neurons, resulting in an expansive nonlinearity of the f{\textendash}I curve for low and moderate inputs. Here, we investigate the effects of single-cell and network parameters on the shape of the f{\textendash}I curve and, by extension, on the distribution of firing rates in randomly connected networks.},
+  Doi                      = {10.1523/JNEUROSCI.1677-11.2011},
+  Eprint                   = {http://jneurosci.org/content/31/45/16217.full.pdf},
+  ISSN                     = {0270-6474},
+  Owner                    = {fabian},
+  Publisher                = {Society for Neuroscience},
+  Timestamp                = {2016.10.18},
+  Url                      = {http://jneurosci.org/content/31/45/16217}
+}
+
+@Article{Savin_2010,
+  Title                    = {Independent Component Analysis in Spiking Neurons},
+  Author                   = {Savin, Cristina AND Joshi, Prashant AND Triesch, Jochen},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2010},
+
+  Month                    = {04},
+  Number                   = {4},
+  Pages                    = {1-10},
+  Volume                   = {6},
+
+  Abstract                 = {Author Summary How the brain learns to encode and represent sensory information has been a longstanding question in neuroscience. Computational theories predict that sensory neurons should reduce redundancies between their responses to a given stimulus set in order to maximize the amount of information they can encode. Specifically, a powerful set of learning algorithms called Independent Component Analysis (ICA) and related models, such as sparse coding, have emerged as a standard for learning efficient codes for sensory information. These algorithms have been able to successfully explain several aspects of sensory representations in the brain, such as the shape of receptive fields of neurons in primary visual cortex. Unfortunately, it remains unclear how networks of spiking neurons can implement this function and, even more difficult, how they can learn to do so using known forms of neuronal plasticity. This paper solves this problem by presenting a model of a network of spiking neurons that performs ICA-like learning in a biologically plausible fashion, by combining three different forms of neuronal plasticity. We demonstrate the model's effectiveness on several standard sensory learning problems. Our results highlight the importance of studying the interaction of different forms of neuronal plasticity for understanding learning processes in the brain.},
+  Doi                      = {10.1371/journal.pcbi.1000757},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1000757}
+}
+
+@Article{Siegert_First_Passage_Time,
+  Title                    = {On the First Passage Time Probability Problem},
+  Author                   = {Siegert, A. J. F.},
+  Journal                  = {Phys. Rev.},
+  Year                     = {1951},
+
+  Month                    = {Feb},
+  Pages                    = {617--623},
+  Volume                   = {81},
+
+  Doi                      = {10.1103/PhysRev.81.617},
+  Issue                    = {4},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRev.81.617}
+}
+
+@Article{Sjoestroem_Syn_Plasticity_2001,
+  Title                    = {Rate, Timing, and Cooperativity Jointly Determine Cortical Synaptic Plasticity},
+  Author                   = {Sj\"ostr\"om, P. J. and Turrigiano, G. G.},
+  Journal                  = {Neuron},
+  Year                     = {2001},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.22}
+}
+
+@Article{STDP,
+  Title                    = {Competitive Hebbian learning through spike-timing-dependent synaptic plasticity},
+  Author                   = {Song, S. and Miller, K. D. and Abbott, L. F.},
+  Journal                  = {Nature Neuroscience},
+  Year                     = {2000},
+  Number                   = {9},
+  Pages                    = {919-926},
+  Volume                   = {3}
+}
+
+@Article{Song_Connectivity_2005,
+  Title                    = {Highly Nonrandom Features of Synaptic Connectivity in Local Cortical Circuits},
+  Author                   = {Song, S. and Sj\"ostr\"om, P. J. and Reigl, M. and Nelson, S. and Chklovskii, D. B.},
+  Journal                  = {PLOS Biology},
+  Year                     = {2005},
+
+  Month                    = {03},
+  Number                   = {3},
+  Volume                   = {3},
+
+  Abstract                 = {A dataset of hundreds of recordings in which four neurons were simultaneously monitored reveals clustered connectivity patterns among cortical neurons.},
+  Doi                      = {10.1371/journal.pbio.0030068},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pbio.0030068}
+}
+
+@Article{Statman_Synapses_2014,
+  Title                    = {Synaptic Size Dynamics as an Effectively Stochastic Process},
+  Author                   = {Statman, A. and Kaufman, M. and Minerbi, A. and Ziv, N. E. and Brenner, N.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2014},
+
+  Month                    = {10},
+  Number                   = {10},
+  Pages                    = {1-17},
+  Volume                   = {10},
+
+  Abstract                 = {Author Summary Synapses are specialized sites of cell–cell contact that serve to transmit signals between neurons and their targets, most commonly other neurons. It is widely believed that changes in synaptic properties, driven by prior activity or by other physiological signals, represent a major cellular mechanism by which neuronal networks are modified. Recent experiments show that in addition to directed changes, synaptic sizes also change spontaneously, with dynamics that seem to have strong stochastic components. In spite of these dynamics, however, population distributions of synaptic sizes are remarkably stable, and scale smoothly in response to various perturbations. In this study we show that fundamental aspects of synapse size dynamics are captured remarkably well by a simple statistical model known as the Kesten process: the random-like nature of synaptic size changes; the stability and shape of synaptic size distributions; their scaling following various perturbations; and the kinetics of new synapse formation. These findings indicate that the multiple microscopic processes involved in determining synaptic size combine in such a way that their collective behavior buffers many of the underlying details. The simplicity of the model and its robustness provide a new route for understanding the emergence of invariants at the level of the synaptic population.},
+  Doi                      = {10.1371/journal.pcbi.1003846},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1003846}
+}
+
+@Article{Steinert_NO,
+  Title                    = {Nitric Oxide Is a Volume Transmitter Regulating Postsynaptic Excitability at a Glutamatergic Synapse},
+  Author                   = {Steinert, J. and Kopp-Scheinpflug, C. and Baker, C. and Challiss, R. J. and Mistry, R. and Haustein, M. and Griffin, S. J. and Tong, H. and Graham, B. P. and Forsythe, I. D.},
+  Journal                  = {Neuron},
+  Year                     = {2008},
+  Number                   = {4},
+  Pages                    = {642 - 656},
+  Volume                   = {60},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.neuron.2008.08.025},
+  ISSN                     = {0896-6273},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0896627308007587}
+}
+
+@Article{Steinert_NO_2011,
+  Title                    = {Nitric Oxide is an Activity-Dependent Regulator of Target Neuron Intrinsic Excitability},
+  Author                   = {Steinert, J. and Robinson, S. and Tong, H. and Haustein, M. and Kopp-Scheinpflug, C. and Forsythe, I.},
+  Journal                  = {Neuron},
+  Year                     = {2011},
+  Number                   = {2},
+  Pages                    = {291-305},
+  Volume                   = {71},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.19}
+}
+
+@Article{Sweeney_Paper,
+  Title                    = {A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and Responsiveness in Cortical Networks},
+  Author                   = {Sweeney, Y. and Kotaleski, J. H. and Hennig, M. H.},
+  Journal                  = {PLoS Computational Biology},
+  Year                     = {2015},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.04.11}
+}
+
+@Article{Tetzlaff_2012,
+  Title                    = {Analysis of Synaptic Scaling in Combination with Hebbian Plasticity in Several Simple Networks},
+  Author                   = {Tetzlaff, C. and Kolodziejski, C. and Timme, M. and W\"org\"otter, F.},
+  Journal                  = {Frontiers in Computational Neuroscience},
+  Year                     = {2012},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.16}
+}
+
+@Article{Turrigiano_2011,
+  Title                    = {Too Many Cooks? Intrinsic and Synaptic Homeostatic Mechanisms in Cortical Circuit Refinement},
+  Author                   = {Turrigiano, G. G.},
+  Journal                  = {Annual Review of Neuroscience},
+  Year                     = {2011},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.01.28}
+}
+
+@Article{Turrigiano_2008,
+  Title                    = {The Self-Tuning Neuron: Synaptic Scaling of Excitatory Synapses},
+  Author                   = {Turrigiano, G. G.},
+  Journal                  = {Cell},
+  Year                     = {2008},
+  Volume                   = {135},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.16}
+}
+
+@Article{Turrigiano_1994,
+  Title                    = {Activity-dependent changes in the intrinsic properties of cultured neurons},
+  Author                   = {Turrigiano, G. G. and Abbott, L. F. and Marder, E.},
+  Journal                  = {Science},
+  Year                     = {1994},
+  Number                   = {5161},
+  Pages                    = {974--977},
+  Volume                   = {264},
+
+  Abstract                 = {Learning and memory arise through activity-dependent modifications of neural circuits. Although the activity dependence of synaptic efficacy has been studied extensively, less is known about how activity shapes the intrinsic electrical properties of neurons. Lobster stomatogastric ganglion neurons fire in bursts when receiving synaptic and modulatory input but fire tonically when pharmacologically isolated. Long-term isolation in culture changed their intrinsic activity from tonic firing to burst firing. Rhythmic stimulation reversed this transition through a mechanism that was mediated by a rise in intracellular calcium concentration. These data suggest that neurons regulate their conductances to maintain stable activity patterns and that the intrinsic properties of a neuron depend on its recent history of activation.},
+  Doi                      = {10.1126/science.8178157},
+  Eprint                   = {http://science.sciencemag.org/content/264/5161/974.full.pdf},
+  ISSN                     = {0036-8075},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://science.sciencemag.org/content/264/5161/974}
+}
+
+@Article{Vogels_2011,
+  Title                    = {Inhibitory Plasticity Balances Excitation and Inhibition in Sensory Pathways and Memory Networks},
+  Author                   = {Vogels, T. P. and Sprekeler, H. and Zenke, F. and Clopath, C. and Gerstner, W.},
+  Journal                  = {Science},
+  Year                     = {2011},
+  Number                   = {6062},
+  Pages                    = {1569--1573},
+  Volume                   = {334},
+
+  Abstract                 = {Cortical neurons receive balanced excitatory and inhibitory synaptic currents. Such a balance could be established and maintained in an experience-dependent manner by synaptic plasticity at inhibitory synapses. We show that this mechanism provides an explanation for the sparse firing patterns observed in response to natural stimuli and fits well with a recently observed interaction of excitatory and inhibitory receptive field plasticity. The introduction of inhibitory plasticity in suitable recurrent networks provides a homeostatic mechanism that leads to asynchronous irregular network states. Further, it can accommodate synaptic memories with activity patterns that become indiscernible from the background state but can be reactivated by external stimuli. Our results suggest an essential role of inhibitory plasticity in the formation and maintenance of functional cortical circuitry.},
+  Doi                      = {10.1126/science.1211095},
+  Eprint                   = {http://science.sciencemag.org/content/334/6062/1569.full.pdf},
+  ISSN                     = {0036-8075},
+  Publisher                = {American Association for the Advancement of Science},
+  Url                      = {http://science.sciencemag.org/content/334/6062/1569}
+}
+
+@Article{Vreeswijk1998,
+  Title                    = {Chaotic Balanced State in a Model of Cortical Circuits},
+  Author                   = {van Vreeswijk, C. and Sompolinsky, H.},
+  Journal                  = {Neural Computation},
+  Year                     = {1998},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.01.17}
+}
+
+@Article{Vreeswijk1996,
+  Title                    = {Chaos in neuronal networks with balanced excitatory and inhibitory activity.},
+  Author                   = {van Vreeswijk, C. and Sompolinsky, H.},
+  Journal                  = {Science},
+  Year                     = {1996},
+  Pages                    = {1724--1726},
+  Volume                   = {274},
+
+  Abstract                 = {Neurons in the cortex of behaving animals show temporally irregular spiking patterns. The origin of this irregularity and its implications for neural processing are unknown. The hypothesis that the temporal variability in the firing of a neuron results from an approximate balance between its excitatory and inhibitory inputs was investigated theoretically. Such a balance emerges naturally in large networks of excitatory and inhibitory neuronal populations that are sparsely connected by relatively strong synapses. The resulting state is characterized by strongly chaotic dynamics, even when the external inputs to the network are constant in time. Such a network exhibits a linear response, despite the highly nonlinear dynamics of single neurons, and reacts to changing external stimuli on time scales much smaller than the integration time constant of a single neuron.},
+  Keywords                 = {Animals; Cerebral Cortex; Haplorhini; Models,Neurological; Nerve Net; Neurons; Nonlinear Dynami},
+  Pmid                     = {8939866}
+}
+
+@Article{Wohrer_Fir_Rates_2012,
+  Title                    = {Population-wide distributions of neural activity during perceptual decision-making},
+  Author                   = {Wohrer, A. and Humphries, M. D. and Machens, C.},
+  Journal                  = {Progress in Neurobiology},
+  Year                     = {2012},
+
+  Owner                    = {fabian},
+  Timestamp                = {2016.12.11}
+}
+
+@Article{Yassin_Subnetworks_2010,
+  Title                    = {An Embedded Subnetwork of Highly Active Neurons in the Neocortex },
+  Author                   = {Yassin, L. and Benedetti, B. L. and Jouhanneau, J.-S. and Wen, J. A. and Poulet, J. F. and Barth, A. L.},
+  Journal                  = {Neuron },
+  Year                     = {2010},
+  Number                   = {6},
+  Pages                    = {1043 - 1050},
+  Volume                   = {68},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.neuron.2010.11.029},
+  ISSN                     = {0896-6273},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0896627310009712}
+}
+
+@Article{Yasumatsu_Synapses_2008,
+  Title                    = {Principles of Long-Term Dynamics of Dendritic Spines},
+  Author                   = {Yasumatsu, N. and Matsuzaki, M. and Miyazaki, T. and Noguchi, J. and Kasai, H.},
+  Journal                  = {Journal of Neuroscience},
+  Year                     = {2008},
+  Number                   = {50},
+  Pages                    = {13592--13608},
+  Volume                   = {28},
+
+  Abstract                 = {Long-term potentiation of synapse strength requires enlargement of dendritic spines on cerebral pyramidal neurons. Long-term depression is linked to spine shrinkage. Indeed, spines are dynamic structures: they form, change their shapes and volumes, or can disappear in the space of hours. Do all such changes result from synaptic activity, or do some changes result from intrinsic processes? How do enlargement and shrinkage of spines relate to elimination and generation of spines, and how do these processes contribute to the stationary distribution of spine volumes? To answer these questions, we recorded the volumes of many individual spines daily for several days using two-photon imaging of CA1 pyramidal neurons in cultured slices of rat hippocampus between postnatal days 17 and 23. With normal synaptic transmission, spines often changed volume or were created or eliminated, thereby showing activity-dependent plasticity. However, we found that spines changed volume even after we blocked synaptic activity, reflecting a native instability of these small structures over the long term. Such {\textquotedblleft}intrinsic fluctuations{\textquotedblright} showed unique dependence on spine volume. A mathematical model constructed from these data and the theory of random fluctuations explains population behaviors of spines, such as rates of elimination and generation, stationary distribution of volumes, and the long-term persistence of large spines. Our study finds that generation and elimination of spines are more prevalent than previously believed, and spine volume shows significant correlation with its age and life expectancy. The population dynamics of spines also predict key psychological features of memory.},
+  Doi                      = {10.1523/JNEUROSCI.0603-08.2008},
+  Eprint                   = {http://www.jneurosci.org/content/28/50/13592.full.pdf},
+  ISSN                     = {0270-6474},
+  Publisher                = {Society for Neuroscience},
+  Url                      = {http://www.jneurosci.org/content/28/50/13592}
+}
+
+@Article{Zhang_STDP,
+  Title                    = {A critical window for cooperation and competition among developing retinotectal synapses},
+  Author                   = {Zhang, L. I. and Tao, H. W. and Holt, C. E. and Harris, W. A. and Poo, M.},
+  Journal                  = {Nature},
+  Year                     = {1998},
+  Pages                    = {37-44},
+  Volume                   = {395},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.10.06}
+}
+
+@Article{Pengsheng_2013,
+  Title                    = {Network Self-Organization Explains the Statistics and Dynamics of Synaptic Connection Strength in Cortex},
+  Author                   = {Zheng, P. and Dimitrakakis, C. and Triesch, J.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2013},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.12.20}
+}
+
+@Book{Dyn_Sys_Hirsch,
+  Title                    = {Differential Equations, Dynamical Systems, and Linear Algebra},
+  Editor                   = {Hirsch, M. W. and Smale, S.},
+  Publisher                = {Elsevier},
+  Year                     = {1974},
+  Series                   = {Pure and Applied Mathematics},
+  Volume                   = {60},
+
+  Owner                    = {fabian},
+  Timestamp                = {2016.10.18}
+}
+

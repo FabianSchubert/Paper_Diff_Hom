@@ -373,7 +373,7 @@ $\mathrm{\tau_{Ca^{2+}}}$ &  $\mathrm{10\;ms}$ \\
 \hline
 $\mathrm{\tau_{nNOS}}$ & $\mathrm{100\;ms}$ \\
 \hline
-$\mathrm{D}$ & default: 10000 $\mathrm{\mu m^2 s^{-1}}$ \\
+$\mathrm{D}$ & default: 10 $\mathrm{\mu m^2 ms^{-1}}$ \\
 \hline 
 $\mathrm{\lambda}$ & $\mathrm{0.1\;s^{-1}}$ \\
 \hline
@@ -431,7 +431,7 @@ Achieving a broad distribution of firing rates among excitatory neurons was the 
 %%% plot_frequ_dist_mult_sets.py
 \includegraphics[width=\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_e_compare.png}
 \includegraphics[width=\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_i_compare.png}
-\caption{Histograms of mean firing rates over the excitatory/inhibitory population in regular (A/A*) and logarithmic space (B/B*). For diffusive homeostasis ($\mathrm{D=1000\, \mu m^2 s^{-1}}$), the distribution was generated from 10 simulation runs, 1 simulation was used for non-diffusive homeostasis. Mean firing rates were calculated from spikes within $\mathrm{t=1000-1500\,s}$.}
+\caption{Histograms of mean firing rates over the excitatory/inhibitory population in regular (A/A*) and logarithmic space (B/B*). For diffusive homeostasis ($\mathrm{D=10\, \mu m^2 ms^{-1}}$), the distribution was generated from 10 simulation runs, 1 simulation was used for non-diffusive homeostasis. Mean firing rates were calculated from spikes within $\mathrm{t=1000-1500\,s}$.}
 \label{Fir_Rate_Dist_Compare}
 \end{figure}
 
@@ -450,6 +450,16 @@ Sweeney et al. found that diffusive homeostasis maintains broadness of firing ra
 \end{figure}
 We also investigated the influence of the diffusion constant onto the distribution's skewness, shown in Figure \ref{Fir_Rate_Dist_Width_Skewness_vs_D} (B), to further quantify this dependence. Compared to the standard deviation, we saw a similar but not as clear trend with a drop for very small diffusion constants, even occasionally resulting in a left-skewed distribution (negative D-values).
 
+A naturally emerging question when altering the diffusion constant is how the firing rate behaves in the absolute limit of infinitely fast diffusion. In fact, this case is quite easy to implement simulation-wise: One simply has to feed all NO-sources into a single scalar variable of NO concentration. This will provide the same NO readout for all excitatory neurons, which means that all excitatory thresholds change at the same rate all the time, only shifting their initial random distribution. Figure \ref{Fir_Rate_Dist_Instant_compare} shows the distribution for this special limiting case. The standard deviation for the excitatory population was $\mathrm{\sigma_{inst} = 1.79\, Hz}$ and the skewness $\mathrm{v_{inst} = 1.51}$ ($\mathrm{v_{inst,log} = -0.52}$), which makes the asymmetry slightly more pronounced than in Figure \ref{Fir_Rate_Dist_Compare}.  
+\begin{figure}
+%%% frequ_dist_instant_diff.py
+\includegraphics[width=\textwidth]{../../plots/firing_rate_dists/instant_diff_fir_dist_e.png}
+\includegraphics[width=\textwidth]{../../plots/firing_rate_dists/instant_diff_fir_dist_i.png}
+\caption{Distribution of firing rates for instantaneous diffusion for excitatory (A,B) and inhibitory (A*,B*) population. Data was taken from 10 simulations and $\mathrm{t=1000-1500\,s}$.}
+\label{Fir_Rate_Dist_Instant_compare}
+\end{figure}
+\subsection{Previously reported features of network topology and dynamics are preserved}
+While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. 
 
 
 \section*{Discussion}

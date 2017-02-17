@@ -1,0 +1,172 @@
+\begin{thebibliography}{10}
+
+\bibitem{Lazar_2009}
+Lazar A, Pipa G, Triesch J.
+\newblock SORN: a self-organizing recurrent neural network.
+\newblock Frontiers in Computational Neuroscience. 2009;3.
+
+\bibitem{Savin_2010}
+Savin C, Joshi P, Triesch J.
+\newblock Independent Component Analysis in Spiking Neurons.
+\newblock PLOS Computational Biology. 2010;6(4):1--10.
+\newblock doi:{10.1371/journal.pcbi.1000757}.
+
+\bibitem{Tetzlaff_2012}
+Tetzlaff C, Kolodziejski C, Timme M, W\"org\"otter F.
+\newblock Analysis of Synaptic Scaling in Combination with Hebbian Plasticity
+  in Several Simple Networks.
+\newblock Frontiers in Computational Neuroscience. 2012;.
+
+\bibitem{Effenberger_2015}
+Effenberger F, Jost J.
+\newblock Self-Organization in Balanced State Networks by STDP and Homeostatic
+  Plasticity.
+\newblock PLOS Computational Biology. 2015;.
+
+\bibitem{Zhang_STDP}
+Zhang LI, Tao HW, Holt CE, Harris WA, Poo M.
+\newblock A critical window for cooperation and competition among developing
+  retinotectal synapses.
+\newblock Nature. 1998;395:37--44.
+
+\bibitem{Turrigiano_2008}
+Turrigiano GG.
+\newblock The Self-Tuning Neuron: Synaptic Scaling of Excitatory Synapses.
+\newblock Cell. 2008;135.
+
+\bibitem{Haider_2006}
+Haider B, Duque A, Hasenstaub AR, McCormick DA.
+\newblock Neocortical Network Activity In Vivo Is Generated through a Dynamic
+  Balance of Excitation and Inhibition.
+\newblock Journal of Neuroscience. 2006;26(17):4535--4545.
+\newblock doi:{10.1523/JNEUROSCI.5297-05.2006}.
+
+\bibitem{Vogels_2011}
+Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.
+\newblock Inhibitory Plasticity Balances Excitation and Inhibition in Sensory
+  Pathways and Memory Networks.
+\newblock Science. 2011;334(6062):1569--1573.
+\newblock doi:{10.1126/science.1211095}.
+
+\bibitem{Syn_Plast_Abbott}
+Abbott L, Nelson SB.
+\newblock Synaptic Plasticity: taming the beast.
+\newblock Nature Neuroscience. 2000;.
+
+\bibitem{LeMasson_1993}
+LeMasson G, Marder E, Abbott LF.
+\newblock Activity-dependent regulation of conductances in model neurons.
+\newblock Science. 1993;259(5103):1915--1917.
+\newblock doi:{10.1126/science.8456317}.
+
+\bibitem{SORN_Paper}
+Miner D, Triesch J.
+\newblock Plasticity-Driven Self-Organization under Topological Constraints
+  Accounts for Non-Random Features of Cortical Synaptic Wiring.
+\newblock PLoS Computational Biology. 2016;.
+
+\bibitem{Pengsheng_2013}
+Zheng P, Dimitrakakis C, Triesch J.
+\newblock Network Self-Organization Explains the Statistics and Dynamics of
+  Synaptic Connection Strength in Cortex.
+\newblock PLOS Computational Biology. 2013;.
+
+\bibitem{Markram_Connections_1997}
+Markram H.
+\newblock A network of tufted layer 5 pyramidal neurons.
+\newblock Cerebral Cortex. 1997;7(6):523--533.
+\newblock doi:{10.1093/cercor/7.6.523}.
+
+\bibitem{Song_Connectivity_2005}
+Song S, Sj\"ostr\"om PJ, Reigl M, Nelson S, Chklovskii DB.
+\newblock Highly Nonrandom Features of Synaptic Connectivity in Local Cortical
+  Circuits.
+\newblock PLOS Biology. 2005;3(3).
+\newblock doi:{10.1371/journal.pbio.0030068}.
+
+\bibitem{Hartmann_2016}
+Hartmann C, Lazar A, Nessler B, Triesch J.
+\newblock Where’s the Noise? Key Features of Spontaneous Activity and Neural
+  Variability Arise through Learning in a Deterministic Network.
+\newblock PLOS Computational Biology. 2016;11(12):1--35.
+\newblock doi:{10.1371/journal.pcbi.1004640}.
+
+\bibitem{Buzsaki_Fir_Rates_2014}
+Buzsáki G, Mizuseki K.
+\newblock The log-dynamic brain: how skewed distributions affect network
+  operations.
+\newblock Nature Reviews Neuroscience. 2014;.
+
+\bibitem{Wohrer_Fir_Rates_2012}
+Wohrer A, Humphries MD, Machens C.
+\newblock Population-wide distributions of neural activity during perceptual
+  decision-making.
+\newblock Progress in Neurobiology. 2012;.
+
+\bibitem{Sweeney_Paper}
+Sweeney Y, Kotaleski JH, Hennig MH.
+\newblock A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and
+  Responsiveness in Cortical Networks.
+\newblock PLoS Computational Biology. 2015;.
+
+\bibitem{Briansim}
+Brette R, Goodman D, Stirnberg M. The Brian spiking neural network simulator
+  (Version 1.0) [Computer Software]; 2016.
+\newblock \url{http://www.briansimulator.org/}.
+\newblock Available from: \url{http://www.briansimulator.org/}.
+
+\bibitem{Bi_Poo_STDP}
+Bi G, Poo M.
+\newblock Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on
+  Spike Timing, Synaptic Strength, and Postsynaptic Cell Type.
+\newblock The Journal of Neuroscience. 1998;18(24):10464--10472.
+
+\bibitem{Froemke_STDP}
+Froemke RC, Poo M, Dan Y.
+\newblock Spike-timing-dependent synaptic plasticity depends on dendritic
+  location.
+\newblock Nature. 2005;434(7030):221--225.
+
+\bibitem{Markram_STP}
+Markram H, Wang Y, Tsodyks M.
+\newblock Differential signaling via the same axon of neocortical pyramidal
+  neurons.
+\newblock Proceedings of the National Academy of Sciences.
+  1998;95(9):5323--5328.
+
+\bibitem{Connors_Gutnick_Spike_Patterns}
+Connors BW, Gutnick MJ.
+\newblock Intrinsic firing patterns of diverse neocortical neurons.
+\newblock Trends in Neurosciences. 1990;13(3):99 -- 104.
+\newblock doi:{http://dx.doi.org/10.1016/0166-2236(90)90185-D}.
+
+\bibitem{Benda_Herz_Spike_Frequ_Adaption}
+Benda J, Herz AVM.
+\newblock A Universal Model for Spike-Frequency Adaption.
+\newblock Neural Computation. 2003;15(11):2523--2564.
+
+\bibitem{Desai_IP}
+Desai NS, Rutherford LC, Turrigiano GG.
+\newblock Plasticity in the intrinsic Excitability of Cortical Pyramidal
+  Neurons.
+\newblock Nature Neuroscience. 1999;2:515--520.
+
+\bibitem{Theor_Neur_Dayan}
+Dayan P, Abbott LF.
+\newblock Theoretical Neuroscience.
+\newblock MIT Press; 2001.
+
+\bibitem{Hill_Equ}
+Hill A.
+\newblock The possible effects of the aggregation of the molecules of
+  haemoglobin on its dissociation curves.
+\newblock The Journal of Physiology. 1910;40:iv---vii.
+\newblock doi:{10.1113/jphysiol.1910.sp001389}.
+
+\bibitem{Philippides_2000}
+Philippides A, Husbands P, O{\textquoteright}Shea M.
+\newblock Four-Dimensional Neuronal Signaling by Nitric Oxide: A Computational
+  Analysis.
+\newblock Journal of Neuroscience. 2000;20(3):1199--1207.
+
+\end{thebibliography}

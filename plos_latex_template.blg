@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: plos_latex_template.aux
+The style file: plos2015.bst
+Database file #1: test_base.bib
+Warning--I didn't find a database entry for "bib3"
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 28 entries,
+            3058 wiz_defined-function locations,
+            847 strings with 10653 characters,
+and the built_in function-call counts, 38698 in all, are:
+= -- 5046
+> -- 316
+< -- 0
++ -- 255
+- -- 79
+* -- 3071
+:= -- 4263
+add.period$ -- 119
+call.type$ -- 28
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 3701
+empty$ -- 3585
+format.name$ -- 104
+if$ -- 9062
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 224
+newline$ -- 152
+num.names$ -- 28
+pop$ -- 397
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 374
+stack$ -- 0
+substring$ -- 6719
+swap$ -- 533
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 236
+width$ -- 30
+write$ -- 319
+(There was 1 warning)
