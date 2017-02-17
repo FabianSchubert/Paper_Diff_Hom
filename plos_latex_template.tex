@@ -412,16 +412,7 @@ NO_{-1,i} &= NO_{1,i} \label{Neumann_Cond_4}
 3.) Dirichlet boundary conditions with $NO = NO_{bound}$ at the boundaries.\\
 Neumann boundary conditions were used for most of the simulations if not explicitly marked differently. This decision relates to the previously described mechanism of synaptic growth: Neurons placed close to the edge of the sheet have a lower connection probability due to the absence of neighboring neurons in the direction perpendicular to the close-by border. It therefore models the synaptic growth within a square "cutout" of neural tissue. The Neumann boundary condition fits into this picture since it allows a zero-flux condition at the borders. This is a reasonable assumption, because NO molecules cannot diffuse out of the tissue (unless they were placed in a fluid surrounding).
 
-Equation \eqref{NO_dyn} describes the influx of NO as a sum of scaled and spatially shifted Dirac functions. Apart from the question whether this source term results in a well defined, finite solution at the neurons' positions (see section \ref{Matrix_Diff_Model_Section}), it can only be modeled to a certain degree of accuracy depending on the resolution of the numeric grid. In practice, we approximated the point sources of NO as an insertions at individual grid cells at a rate of $nNOS_i(t) / h^2$, where the normalizing divisor $h^2$ ensured the desired total influx per neuron. This numeric implementation required two additional constraints: First, all random neuron positions were confined to integer multiples of $h$ in x- and y-direction. Second, to avoid redundancy and for physiological reasons, each grid cell could only hold one neuron at maximum. Figure \ref{diff_test_plot} shows an example of the resulting NO density throughout a simulation. 
-\begin{figure}[h!]
-%% density_plot.py
-\begin{center}
-\includegraphics[width=0.7\textwidth]{../../plots/density_plots/density_plot.png}
-\end{center}
-\caption{Example of NO-diffusion with 400 point sources of excitatory neurons.}
-\label{diff_test_plot}
-\end{figure}
-
+Equation \eqref{NO_dyn} describes the influx of NO as a sum of scaled and spatially shifted Dirac functions. Apart from the question whether this source term results in a well defined, finite solution at the neurons' positions (see section \ref{Matrix_Diff_Model_Section}), it can only be modeled to a certain degree of accuracy depending on the resolution of the numeric grid. In practice, we approximated the point sources of NO as an insertions at individual grid cells at a rate of $nNOS_i(t) / h^2$, where the normalizing divisor $h^2$ ensured the desired total influx per neuron. This numeric implementation required two additional constraints: First, all random neuron positions were confined to integer multiples of $h$ in x- and y-direction. Second, to avoid redundancy and for physiological reasons, each grid cell could only hold one neuron at maximum.
 
 % Results and Discussion can be combined.
 \section*{Results}
@@ -429,22 +420,26 @@ Equation \eqref{NO_dyn} describes the influx of NO as a sum of scaled and spatia
 Achieving a broad distribution of firing rates among excitatory neurons was the core motivation for the implementation of diffusive homeostasis. Figure \ref{Fir_Rate_Dist_Compare} shows a first result, comparing both homeostatic mechanisms. As expected, non-diffusive homeostasis leads to a sharp distribution of firing rates at 3 Hz. Diffusive homeostasis indeed results in a much broader distribution of mean firing rates. As mentioned in the introduction, a large number of experimental studies have found that distributions of firing rates are not only broadly distributed but well described by a log-normal distribution, which has a non-zero third moment or skewness. By definition, the logarithm of the random variable in question is thus again normally distributed. We plotted the the distribution of decadic logarithms of firing rates in Figure \ref{Fir_Rate_Dist_Compare} (B) to check for this property. In (A), we found a skewness of $\mathrm{v_{Diff} = 0.765}$, in (B) $\mathrm{v_{Diff,log} = -0.488}$. Though this told us that the distribution is "more symmetric" on a logarithmic scale, it should rather be seen as being neither strictly normally or log-normally distributed.  
 \begin{figure}
 %%% plot_frequ_dist_mult_sets.py
-\includegraphics[width=\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_e_compare.png}
-\includegraphics[width=\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_i_compare.png}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_e_compare.png}
+\includegraphics[width=0.7\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_i_compare.png}
+\end{center}
 \caption{Histograms of mean firing rates over the excitatory/inhibitory population in regular (A/A*) and logarithmic space (B/B*). For diffusive homeostasis ($\mathrm{D=10\, \mu m^2 ms^{-1}}$), the distribution was generated from 10 simulation runs, 1 simulation was used for non-diffusive homeostasis. Mean firing rates were calculated from spikes within $\mathrm{t=1000-1500\,s}$.}
 \label{Fir_Rate_Dist_Compare}
 \end{figure}
 
 Sweeney et al. found that diffusive homeostasis maintains broadness of firing rates across a wide range of diffusion constants but rapidly approaching zero for small values \cite[p. 6]{Sweeney_Paper}. We were able to reproduce this result, see Figure \ref{Fir_Rate_Dist_Width_Skewness_vs_D} (A). Homeostasis reaches a point of saturation, where faster diffusion has no effect on the heterogeneity of firing rates. 
 \begin{figure}
-\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{minipage}{0.4\textwidth}
 %%% freq_dist_width_vs_D.py
 \includegraphics[width=\textwidth]{../../plots/firing_rate_dists/std_dev_vs_D_neumann.png}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.4\textwidth}
 %%% freq_dist_skew_vs_D.py
 \includegraphics[width=\textwidth]{../../plots/firing_rate_dists/skew_vs_D_neumann.png}
 \end{minipage}
+\end{center}
 \caption{Standard deviation (A) and skewness (B) of firing rate distribution of excitatory neurons (Neumann boundary conditions).}
 \label{Fir_Rate_Dist_Width_Skewness_vs_D}
 \end{figure}
@@ -460,6 +455,11 @@ A naturally emerging question when altering the diffusion constant is how the fi
 \end{figure}
 \subsection{Previously reported features of network topology and dynamics are preserved}
 While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. 
+
+\begin{figure}
+\includegraphics[width=\textwidth]{../../plots/paper/syn_topology_comp.png}
+\end{figure}
+
 
 
 \section*{Discussion}

@@ -39,7 +39,7 @@ for k in xrange(4):
 
 t = range(CF[0][0].shape[0])
 
-fig = plt.figure(figsize=(default_fig_width*0.5,default_fig_width*0.5))
+fig = plt.figure(figsize=(default_fig_width*0.5,default_fig_width*0.3))
 
 for k in xrange(4):
 	plt.fill_between(t,CF[k][0]-CF[k][1],CF[k][0]+CF[k][1],color=mpl.rcParams['axes.color_cycle'][k])

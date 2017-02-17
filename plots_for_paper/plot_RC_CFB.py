@@ -39,7 +39,7 @@ for k in xrange(4):
 
 t = range(RC_CFB[0][0].shape[0])
 
-fig = plt.figure(figsize=(default_fig_width*0.5,default_fig_width*0.5))
+fig = plt.figure(figsize=(default_fig_width*0.5,default_fig_width*0.3))
 
 for k in xrange(4):
 	plt.fill_between(t,RC_CFB[k][0]-RC_CFB[k][1],RC_CFB[k][0]+RC_CFB[k][1],color=mpl.rcParams['axes.color_cycle'][k])
@@ -48,7 +48,7 @@ for k in xrange(4):
 
 
 plt.xlabel("t [s]")
-plt.ylabel("Ratio/Chance of Bidirectional Connections")
+plt.ylabel("Ratio/Chance Bid. Conn.")
 plt.xlim([t[0],t[-1]])
 plt.ylim([0.,4.])
 #plt.legend()
