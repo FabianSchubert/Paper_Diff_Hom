@@ -169,4 +169,27 @@ Philippides A, Husbands P, O{\textquoteright}Shea M.
   Analysis.
 \newblock Journal of Neuroscience. 2000;20(3):1199--1207.
 
+\bibitem{Hoffmann_2017}
+Hoffmann FZ, Triesch J.
+\newblock Non-random network connectivity comes in pairs.
+\newblock Network Neuroscience. 2017;.
+
+\bibitem{Yassin_Subnetworks_2010}
+Yassin L, Benedetti BL, Jouhanneau JS, Wen JA, Poulet JF, Barth AL.
+\newblock An Embedded Subnetwork of Highly Active Neurons in the Neocortex.
+\newblock Neuron. 2010;68(6):1043 -- 1050.
+\newblock doi:{http://dx.doi.org/10.1016/j.neuron.2010.11.029}.
+
+\bibitem{Eckmann_Leader_Neurons_2008}
+Eckmann JP, Jacobi S, Marom S, Moses E, Zbinden C.
+\newblock Leader neurons in population bursts of 2D living neural networks.
+\newblock New Journal of Physics. 2008;10.
+\newblock doi:{10.1088/1367-2630/10/1/015011}.
+
+\bibitem{Helmholtz_Solution_2d}
+Couto RT.
+\newblock Green's functions for the wave, Helmholtz and Poisson equations in a
+  two-dimensional boundless domain.
+\newblock Revista Brasileira de Ensino Física. 2013;.
+
 \end{thebibliography}

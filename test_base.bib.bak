@@ -168,9 +168,19 @@
   Timestamp                = {2017.01.30}
 }
 
+@Book{Theor_Neur_Dayan,
+  Title                    = {Theoretical Neuroscience},
+  Author                   = {Dayan, P. and Abbott, L.F.},
+  Publisher                = {MIT Press},
+  Year                     = {2001},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2016.04.12}
+}
+
 @Article{Desai_2003,
   Title                    = {Homeostatic plasticity in the CNS: synaptic and intrinsic forms },
-  Author                   = {Niraj S. D},
+  Author                   = {Desai, N. S.},
   Journal                  = {Journal of Physiology-Paris },
   Year                     = {2003},
   Note                     = {Neuroscience and Computation },
@@ -182,16 +192,6 @@
   ISSN                     = {0928-4257},
   Keywords                 = {Experience-dependent plasticity},
   Url                      = {//www.sciencedirect.com/science/article/pii/S0928425704000166}
-}
-
-@Book{Theor_Neur_Dayan,
-  Title                    = {Theoretical Neuroscience},
-  Author                   = {Dayan, P. and Abbott, L.F.},
-  Publisher                = {MIT Press},
-  Year                     = {2001},
-
-  Owner                    = {fschubert},
-  Timestamp                = {2016.04.12}
 }
 
 @Article{Desai_IP,

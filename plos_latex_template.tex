@@ -275,7 +275,7 @@ conduction delay & $1.5 ms$ & $0.5 ms$ & $1.0 ms$ & $1.0 ms$ \\
 \label{syn_conn_params}
 \end{table}
 \newpage
-\subsubsection{Synaptic Plasticity}
+\subsubsection{Synaptic Plasticity}\label{Section_Methods_Syn_Plast}
 \textbf{Synaptic Growth:} The random, distance dependent generation of new EE synapses was carried out n times once per second, where n is taken from a normal distribution with mean 920 and standard deviation $\sqrt{920}$. This constant growth rate was tuned to achieve the desired target concentration of 0.1 (see \ref{syn_conn_params}).
 
 \textbf{Synaptic Pruning:} At the same rate of 1/sec, EE synapses below a threshold of 0.000001 mV were removed, thus being added again to the set of "potential" connections from which the growth process draws new connections.
@@ -448,12 +448,93 @@ We also investigated the influence of the diffusion constant onto the distributi
 A naturally emerging question when altering the diffusion constant is how the firing rate behaves in the absolute limit of infinitely fast diffusion. In fact, this case is quite easy to implement simulation-wise: One simply has to feed all NO-sources into a single scalar variable of NO concentration. This will provide the same NO readout for all excitatory neurons, which means that all excitatory thresholds change at the same rate all the time, only shifting their initial random distribution. Figure \ref{Fir_Rate_Dist_Compare} also shows the distribution for this special limiting case. The standard deviation for the excitatory population was $\mathrm{\sigma_{inst} = 1.79\, Hz}$ and the skewness $\mathrm{v_{inst} = 1.51}$ ($\mathrm{v_{inst,log} = -0.52}$), which makes the asymmetry slightly more pronounced.  
 
 \subsection{Previously reported features of network topology and dynamics are preserved}
-While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. 
-
+While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. Figure \ref{Syn_Topology_Features} summarizes features that we found to be preserved for diffusive homeostasis. Diffusive homeostasis leads to the same stable level of recurrent excitatory connection fraction, as well as the observation that a non-uniform connection profile is required to allow for an over-representation of bidirectional connections, as reported previously \cite{SORN_Paper}. A more general discussion on this issue was given by Hoffmann and Triesch \cite{Hoffmann_2017}. Figure \ref{Syn_Topology_Features},C shows that a log-normal like distribution of excitatory weights is preserved under diffusive homeostasis, though a broader shape could be observed. Figure \ref{Syn_Topology_Features},D illustrates the preservation of a distribution of recurrent excitatory synaptic lifetimes during the steady phase of connectivity, resembling a power-law. Given the assertion that the slope of this distribution is linked to the overall balance of synaptic potentiation and depression \cite{SORN_Paper}, we can assume that both types of homeostasis result in a similar net difference between potentiation and depression.
 \begin{figure}
-\includegraphics[width=\textwidth]{../../plots/paper/syn_topology_comp.png}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/paper/syn_topology_comp.png}
+\end{center}
+\caption{A: Evolution of recurrent excitatory connection fraction. \textit{Topology} refers to the presence or absence of a gaussian connection profile (see Section \ref{Section_Methods_Syn_Plast}). B: Ratio of bidirectional connections relative to a random Erd\H{o}s-Renyi graph. C: Distribution of excitatory recurrent weights after 1500 s. Solid curves are gaussian fits. D: Distribution of recurrent excitatory synaptic lifetimes. Solid lines are linear fits, giving a slope of $\mathrm{-1.871}$ for diffusive homeostasis and $\mathrm{-1.676}$ for non-diffusive homeostasis.}
+\label{Syn_Topology_Features}
+\end{figure}
+\subsection{Broadness of Firing Rate leads to the Emergence of Highly Influential Excitatory Neurons}
+Having reproduced these results of the previous model, we further sought for possible differences within our network topology as a result of diffusive homeostasis. Since we only implemented synaptic normalization for the sum of ingoing weights, the total or average strength of \emph{outgoing} connections may vary from cell to cell. In a sense, the strength of outgoing connections per neuron can be regarded as a measure of how influential a neuron's activity is with respect to other neurons in the network. Effenberger et al. have shown in computational studies that these "driver neurons" form highly active and interconnected subnetworks \cite{Effenberger_2015}, an observation that is backed up by experimental studies \cite{Yassin_Subnetworks_2010,Eckmann_Leader_Neurons_2008}. Figure \ref{Out_Weight_Mean_Quantile} shows that diffusive homeostasis allows for the emergence of a small group of highly influential neurons, which reproduces the findings in \cite{Effenberger_2015}. A comparison of statistics generated with shuffled versions of the weight matrices illustrates that above-chance exceptionally strong outgoing weights were indeed present.
+\begin{figure}
+%%% plot_sum_outgoing_weights_dist.py
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/syn_topology/outgoing_weights_distribution.png}
+\end{center}
+\caption{Mean of outgoing weights of excitatory neurons in order sorted by magnitude. Dashed lines are means obtained by randomly shuffling synaptic weights. Data was taken from 25 weight matrices per line, representing weights within $\mathrm{t=1000-1500\,s}$.}
+\label{Out_Weight_Mean_Quantile}
 \end{figure}
 
+\subsection{Spatial Configuration of Neurons allows for the precise Prediction of Firing Rates}
+After having analyzed the distribution of firing rates resulting from the implementation of diffusive homeostasis, we were interested in how strongly the actual positioning of excitatory neurons influences the resulting statistics of firing activity. To do so, we assumed that the spontaneous firing measured during the "stable phase" of the network, characterized by a constant excitatory connectivity, can be regarded as a homeostatic steady state. Given no sudden strong changes of neural input, the homeostatic feedback levels out the error to approximately zero, since Equation \ref{Theta_dyn} is a realization of an integral control. Our search for the steady-state configuration of firing rates thus reduced to finding a set of firing rates that led to a concentration level of $NO_0$ at every excitatory neuron's position:
+\begin{equation}
+NO(\mathbf{x}_{neur,i}) = NO_0 \:, \: \forall i \; .
+\label{NO_equil_cond}
+\end{equation}
+Furthermore, we found that the nonlinearity between spiking activity and NO synthesis could be well approximated by a linear relation between average firing rate $r_i$ and rate of NO-synthesis $nNOS_i$ by
+\begin{equation}
+nNOS_i = \frac{{Ca^{2+}_{spike}}^3 \tau_{Ca^{2+}}ln(2)}{3} \cdot r_i \equiv \gamma r_i \; .
+\label{simpl_nNOS}
+\end{equation}
+See Appendix ??? for a derivation of the proportionality factor. Given this simplification, the steady state of NO concentration is thus defined by the solution of
+\begin{align}
+0 &=-\lambda NO + D \nabla^2 NO + \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{neur,i})\cdot \gamma \cdot r_i \label{simple_NO_dyn_with_diff} \\
+\left(\nabla^2 + \left( i\sqrt{\frac{\lambda}{D}}\right)^2\right) NO &= \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{neur,i})\cdot \frac{- \gamma \cdot r_i}{D}
+\label{simple_NO_dyn_with_diff_equil_helmholtz}
+\end{align}
+which is a two-dimensional Helmholtz equation. Its Green's function is
+\begin{equation}
+NO(\mathbf{x}) = \frac{r_i \gamma}{2 \pi D} K_0 \left(|\mathbf{x}|\sqrt{\frac{\lambda}{D}} \right) \equiv r_i \cdot \psi_{point}(|\mathbf{x}|)
+\label{solution_diff_equil_bessel}
+\end{equation}
+where $\mathrm{K_0}$ is the zeroth modified Bessel function of the second kind \cite{Helmholtz_Solution_2d}.  This solution reveals a fundamental problem of modeling the sources of NO-production as point sources: the fact that $\mathrm{K_0(x)}$ diverges to infinity for $\mathrm{x\rightarrow 0}$. It is merely due to the finite density of the numeric grid used for the simulation of diffusion that allows for a finite target value of concentration.
+
+Generally speaking, no matter how the actual shape of the numeric solution in the equilibrium at a constant production rate looks like, it must be of the form
+\begin{align}
+NO_i(\mathbf{x}) &= r_i \cdot \psi (d(\mathbf{x}_{neur,i},\mathbf{x})) \label{general_diff_interaction} \\
+d(\mathbf{x},\mathbf{y}) &\equiv |\mathbf{x}-\mathbf{y}| \; . \label{eucl_dist}
+\end{align}
+The full solution is then
+\begin{equation}
+NO(\mathbf{x}) = \sum_i NO_i(\mathbf{x})\;.
+\label{full_sol_diff_equil}
+\end{equation}
+By defining
+\begin{equation}
+\psi_{ij} \equiv \psi_{ij} \equiv \psi (d(\mathbf{x}_{neur,i},\mathbf{x}_{neur,i}))
+\label{interact_matrix_elements}
+\end{equation}
+we could express the condition \eqref{NO_equil_cond} as
+\begin{equation}
+\sum_j \psi_{ij}\cdot r_j = NO_0
+\label{NO_equil_cond_interact_matrix}
+\end{equation}
+or, as an operator
+\begin{align}
+\hat{\psi}\mathbf{r} &= NO_0 \mathbf{n} \label{NO_equil_cond_interact_matrix_operator} \\
+\mathbf{n}&\equiv (1,1,...,1) \; .
+\end{align}
+The problem of finding the steady-state solution of the homeostatic constraint thus reduced to inverting $\hat{\psi}$:
+\begin{equation}
+\mathbf{r} = NO_0 \hat{\psi}^{-1} \mathbf{n}
+\label{NO_euqil_cond_interact_matrix_operator_solve}
+\end{equation}
+
+Still, we had to find a modified, non-diverging version of $\mathrm{\psi (d(\mathbf{x}_{neur,i},\mathbf{x}))}$ to acquire any prediction from this model. It had to retain the shape given by \eqref{solution_diff_equil_bessel} for larger distances but approach the correct numeric error value at the origin, determined by the spacing of the numeric grid. We solved this problem by the following expression:
+\begin{equation}
+\psi_{approx.} \equiv \frac{1}{\left(\frac{1}{\psi_0^\varepsilon} + \frac{1}{\psi_{point}^\varepsilon}\right)^{\frac{1}{\varepsilon}}}
+\label{Numeric_Solution_Expression_Trick}
+\end{equation}
+where $\mathrm{\varepsilon}$ determines the "smoothness" of transition between $\mathrm{\psi}$ and the cutoff value $\mathrm{\psi_0}$. We chose $\mathrm{\varepsilon=10}$ for all further calculations. We took the simple approach of interpreting this value as a mean of the analytic solution across the area covered by the corresponding grid cell to find an expression for $\mathrm{\psi_0}$. As an additional simplification, we substituted the necessary integration over the square grid cell by a circular area of equal size around the source. This calculation yielded
+\begin{equation}
+\psi_0 = \gamma \frac{1-h\sqrt{\frac{\lambda}{\pi D}} K_1\left( h\sqrt{\frac{\lambda}{\pi D}}\right) }{h^2 \lambda}
+\label{Numeric_Grid_Bessel_Approx}
+\end{equation}
+where $\mathrm{h}$ is the spatial resolution of the grid cells.
+
+By simply calculating all matrix elements of $\mathrm{\hat{\psi}}$ by means of Equation \eqref{interact_matrix_elements}, one would neglect the finite boundaries of the system, which would cause neurons close to the edge to "bleed" into empty space. We accommodated for zero-flux Neumann boundary conditions by adding appropriately mirrored copies of the neurons' positions, canceling the orthogonal component of the gradient at the boundaries. 
 
 
 \section*{Discussion}
