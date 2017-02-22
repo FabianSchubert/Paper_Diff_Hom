@@ -186,10 +186,76 @@ Eckmann JP, Jacobi S, Marom S, Moses E, Zbinden C.
 \newblock New Journal of Physics. 2008;10.
 \newblock doi:{10.1088/1367-2630/10/1/015011}.
 
+\bibitem{Sjoestroem_Syn_Plasticity_2001}
+Sj\"ostr\"om PJ, Turrigiano GG.
+\newblock Rate, Timing, and Cooperativity Jointly Determine Cortical Synaptic
+  Plasticity.
+\newblock Neuron. 2001;.
+
+\bibitem{Feldman_STDP_2012}
+Feldman D.
+\newblock The Spike-Timing Dependence of Plasticity.
+\newblock Neuron. 2012;.
+
 \bibitem{Helmholtz_Solution_2d}
 Couto RT.
 \newblock Green's functions for the wave, Helmholtz and Poisson equations in a
   two-dimensional boundless domain.
 \newblock Revista Brasileira de Ensino Física. 2013;.
+
+\bibitem{Roxin_Firing_Rate_Distribution}
+Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
+\newblock On the Distribution of Firing Rates in Networks of Cortical Neurons.
+\newblock Journal of Neuroscience. 2011;31(45):16217--16226.
+\newblock doi:{10.1523/JNEUROSCI.1677-11.2011}.
+
+\bibitem{Vreeswijk1998}
+van Vreeswijk C, Sompolinsky H.
+\newblock Chaotic Balanced State in a Model of Cortical Circuits.
+\newblock Neural Computation. 1998;.
+
+\bibitem{Koulakov_2009}
+Koulakov AA, Hrom\'{a}dka T, Zador AM.
+\newblock Correlated Connectivity and the Distribution of Firing Rates in the
+  Neocortex.
+\newblock The Journal of Neuroscience. 2009;.
+
+\bibitem{OConnor_2010}
+O'Connor DH, Peron SP, Huber D, Svoboda K.
+\newblock Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object
+  Localization in Mice.
+\newblock Neuron. 2010;67.
+
+\bibitem{Mizuseki_2013}
+Mizuseki K, Buzsáki G.
+\newblock Preconfigured, skewed distribution of firing rates in the hippocampus
+  and entorhinal cortex.
+\newblock Cell Reports. 2013;4.
+
+\bibitem{Philippides_2005}
+Philippides A, Ott SR, Husbands P, Lovick TA, O{\textquoteright}Shea M.
+\newblock Modeling Cooperative Volume Signaling in a Plexus of Nitric Oxide
+  Synthase-Expressing Neurons.
+\newblock Journal of Neuroscience. 2005;25(28):6520--6532.
+\newblock doi:{10.1523/JNEUROSCI.1264-05.2005}.
+
+\bibitem{Gilson_2011}
+Gilson M, Fukai T.
+\newblock Stability versus Neuronal Specialization for STDP: Long-Tail Weight
+  Distributions Solve the Dilemma.
+\newblock PLOS ONE. 2011;6(10):1--18.
+\newblock doi:{10.1371/journal.pone.0025339}.
+
+\bibitem{Luz_2012}
+Luz Y, Shamir M.
+\newblock Balancing Feed-Forward Excitation and Inhibition via Hebbian
+  Inhibitory Synaptic Plasticity.
+\newblock PLOS Computational Biology. 2012;8(1):1--12.
+\newblock doi:{10.1371/journal.pcbi.1002334}.
+
+\bibitem{Savin_2008}
+Savin C, Triesch J, Meyer-Hermann M.
+\newblock Epileptogenesis due to glia-mediated synaptic scaling.
+\newblock Journal of the Royal Society Interface. 2008;.
 
 \end{thebibliography}

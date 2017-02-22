@@ -447,7 +447,7 @@ We also investigated the influence of the diffusion constant onto the distributi
 
 A naturally emerging question when altering the diffusion constant is how the firing rate behaves in the absolute limit of infinitely fast diffusion. In fact, this case is quite easy to implement simulation-wise: One simply has to feed all NO-sources into a single scalar variable of NO concentration. This will provide the same NO readout for all excitatory neurons, which means that all excitatory thresholds change at the same rate all the time, only shifting their initial random distribution. Figure \ref{Fir_Rate_Dist_Compare} also shows the distribution for this special limiting case. The standard deviation for the excitatory population was $\mathrm{\sigma_{inst} = 1.79\, Hz}$ and the skewness $\mathrm{v_{inst} = 1.51}$ ($\mathrm{v_{inst,log} = -0.52}$), which makes the asymmetry slightly more pronounced.  
 
-\subsection{Previously reported features of network topology and dynamics are preserved}
+\subsection{Previously reported features of network topology and dynamics are preserved}\label{Section_Topol_Preservation}
 While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. Figure \ref{Syn_Topology_Features} summarizes features that we found to be preserved for diffusive homeostasis. Diffusive homeostasis leads to the same stable level of recurrent excitatory connection fraction, as well as the observation that a non-uniform connection profile is required to allow for an over-representation of bidirectional connections, as reported previously \cite{SORN_Paper}. A more general discussion on this issue was given by Hoffmann and Triesch \cite{Hoffmann_2017}. Figure \ref{Syn_Topology_Features},C shows that a log-normal like distribution of excitatory weights is preserved under diffusive homeostasis, though a broader shape could be observed. Figure \ref{Syn_Topology_Features},D illustrates the preservation of a distribution of recurrent excitatory synaptic lifetimes during the steady phase of connectivity, resembling a power-law. Given the assertion that the slope of this distribution is linked to the overall balance of synaptic potentiation and depression \cite{SORN_Paper}, we can assume that both types of homeostasis result in a similar net difference between potentiation and depression.
 \begin{figure}
 \begin{center}
@@ -456,8 +456,8 @@ While we explicitly intended altering the statistics of excitatory firing rates 
 \caption{A: Evolution of recurrent excitatory connection fraction. \textit{Topology} refers to the presence or absence of a gaussian connection profile (see Section \ref{Section_Methods_Syn_Plast}). B: Ratio of bidirectional connections relative to a random Erd\H{o}s-Renyi graph. C: Distribution of excitatory recurrent weights after 1500 s. Solid curves are gaussian fits. D: Distribution of recurrent excitatory synaptic lifetimes. Solid lines are linear fits, giving a slope of $\mathrm{-1.871}$ for diffusive homeostasis and $\mathrm{-1.676}$ for non-diffusive homeostasis.}
 \label{Syn_Topology_Features}
 \end{figure}
-\subsection{Broadness of Firing Rate leads to the Emergence of Highly Influential Excitatory Neurons}
-Having reproduced these results of the previous model, we further sought for possible differences within our network topology as a result of diffusive homeostasis. Since we only implemented synaptic normalization for the sum of ingoing weights, the total or average strength of \emph{outgoing} connections may vary from cell to cell. In a sense, the strength of outgoing connections per neuron can be regarded as a measure of how influential a neuron's activity is with respect to other neurons in the network. Effenberger et al. have shown in computational studies that these "driver neurons" form highly active and interconnected subnetworks \cite{Effenberger_2015}, an observation that is backed up by experimental studies \cite{Yassin_Subnetworks_2010,Eckmann_Leader_Neurons_2008}. Figure \ref{Out_Weight_Mean_Quantile} shows that diffusive homeostasis allows for the emergence of a small group of highly influential neurons, which reproduces the findings in \cite{Effenberger_2015}. A comparison of statistics generated with shuffled versions of the weight matrices illustrates that above-chance exceptionally strong outgoing weights were indeed present.
+\subsection{Heterogeneity of Firing Rate leads to the Emergence of Strongly Influential Excitatory Neurons}\label{Section_Mean_outgoing_Weights}
+Having reproduced these results of the previous model, we further sought for possible differences within our network topology as a result of diffusive homeostasis. Since we only implemented synaptic normalization for the sum of ingoing weights, the total or average strength of \emph{outgoing} connections may vary from cell to cell. In a sense, the strength of outgoing connections per neuron can be regarded as a measure of how influential a neuron's activity is with respect to other neurons in the network. Effenberger et al. have shown in computational studies that these "driver neurons" form highly active and interconnected subnetworks \cite{Effenberger_2015}, an observation that is backed up by experimental studies \cite{Yassin_Subnetworks_2010,Eckmann_Leader_Neurons_2008}. Figure \ref{Out_Weight_Mean_Quantile} shows that diffusive homeostasis allows for the emergence of a small group of highly influential neurons, which resembles the findings in \cite{Effenberger_2015}. A comparison of statistics generated with shuffled versions of the weight matrices illustrates that above-chance exceptionally strong mean outgoing weights were indeed present.
 \begin{figure}
 %%% plot_sum_outgoing_weights_dist.py
 \begin{center}
@@ -467,7 +467,18 @@ Having reproduced these results of the previous model, we further sought for pos
 \label{Out_Weight_Mean_Quantile}
 \end{figure}
 
-\subsection{Spatial Configuration of Neurons allows for the precise Prediction of Firing Rates}
+Synapses between highly active presynaptic cells and postsynaptic neurons with lower activity are known to be subject to long-term potentiation \cite{Sjoestroem_Syn_Plasticity_2001,Feldman_STDP_2012}. With this causal relations in mind, we can argue that diffusive homeostasis effectively embodies a similar functional role as inhibitory STDP in \cite{Effenberger_2015} by allowing for the presence of excitatory cells with above-average activity. We tested this relationship by plotting the mean outgoing weights against the average firing rate, see Figure \ref{Out_Weight_vs_F}. A strong heterogeneity of firing rates allows for the development of few neurons with comparably strong mean outgoing weights, while the distribution of mean weights resulting from a narrow distribution is limited to a smaller range. We also tested the case of instant diffusion. Though firing rates span across a similar range, mean weights do not reach as high values as in the case of diffusion at a finite rate.
+\begin{figure}
+%%% out_weight_vs_f.py
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/syn_topology/mean_out_weights_vs_rate.png}
+\end{center}
+\caption{Mean of outgoing excitatory weights at $\mathrm{t=1500\,s}$ plotted against mean presynaptic firing rate (averaged over $\mathrm{t=700-1000\,s}$) in regular (A) and logarithmic space (B). Each plot corresponds to a presynaptic excitatory cell.}
+\label{Out_Weight_vs_F}
+\end{figure}
+
+
+\subsection{Spatial Configuration of Neurons allows for the precise Prediction of Firing Rates}\label{Section_Rand_Mat_vs_Sim}
 After having analyzed the distribution of firing rates resulting from the implementation of diffusive homeostasis, we were interested in how strongly the actual positioning of excitatory neurons influences the resulting statistics of firing activity. To do so, we assumed that the spontaneous firing measured during the "stable phase" of the network, characterized by a constant excitatory connectivity, can be regarded as a homeostatic steady state. Given no sudden strong changes of neural input, the homeostatic feedback levels out the error to approximately zero, since Equation \ref{Theta_dyn} is a realization of an integral control. Our search for the steady-state configuration of firing rates thus reduced to finding a set of firing rates that led to a concentration level of $NO_0$ at every excitatory neuron's position:
 \begin{equation}
 NO(\mathbf{x}_{neur,i}) = NO_0 \:, \: \forall i \; .
@@ -492,10 +503,9 @@ NO(\mathbf{x}) = \frac{r_i \gamma}{2 \pi D} K_0 \left(|\mathbf{x}|\sqrt{\frac{\l
 where $\mathrm{K_0}$ is the zeroth modified Bessel function of the second kind \cite{Helmholtz_Solution_2d}.  This solution reveals a fundamental problem of modeling the sources of NO-production as point sources: the fact that $\mathrm{K_0(x)}$ diverges to infinity for $\mathrm{x\rightarrow 0}$. It is merely due to the finite density of the numeric grid used for the simulation of diffusion that allows for a finite target value of concentration.
 
 Generally speaking, no matter how the actual shape of the numeric solution in the equilibrium at a constant production rate looks like, it must be of the form
-\begin{align}
-NO_i(\mathbf{x}) &= r_i \cdot \psi (d(\mathbf{x}_{neur,i},\mathbf{x})) \label{general_diff_interaction} \\
-d(\mathbf{x},\mathbf{y}) &\equiv |\mathbf{x}-\mathbf{y}| \; . \label{eucl_dist}
-\end{align}
+\begin{equation}
+NO_i(\mathbf{x}) = r_i \cdot \psi (|\mathbf{x}_{neur,i}-\mathbf{x}|) \;  . \label{general_diff_interaction}
+\end{equation}
 The full solution is then
 \begin{equation}
 NO(\mathbf{x}) = \sum_i NO_i(\mathbf{x})\;.
@@ -503,10 +513,10 @@ NO(\mathbf{x}) = \sum_i NO_i(\mathbf{x})\;.
 \end{equation}
 By defining
 \begin{equation}
-\psi_{ij} \equiv \psi_{ij} \equiv \psi (d(\mathbf{x}_{neur,i},\mathbf{x}_{neur,i}))
+\psi_{ij} \equiv \psi_{ij} \equiv \psi (|\mathbf{x}_{neur,i}-\mathbf{x}_{neur,j}|)
 \label{interact_matrix_elements}
 \end{equation}
-we could express the condition \eqref{NO_equil_cond} as
+we could express condition \eqref{NO_equil_cond} as
 \begin{equation}
 \sum_j \psi_{ij}\cdot r_j = NO_0
 \label{NO_equil_cond_interact_matrix}
@@ -536,44 +546,88 @@ where $\mathrm{h}$ is the spatial resolution of the grid cells.
 
 By simply calculating all matrix elements of $\mathrm{\hat{\psi}}$ by means of Equation \eqref{interact_matrix_elements}, one would neglect the finite boundaries of the system, which would cause neurons close to the edge to "bleed" into empty space. We accommodated for zero-flux Neumann boundary conditions by adding appropriately mirrored copies of the neurons' positions, canceling the orthogonal component of the gradient at the boundaries. 
 
+After having worked out the analytical basis, we compared the prediction obtained from numerically solving \eqref{NO_equil_cond_interact_matrix_operator} for certain spatial configurations of neurons to the steady-state firing rates of the full spiking network with the same spatial structure. We were particularly interested in the quality of the predictions with respect to the choice of diffusion constant. Figure \ref{Rand_Matrix_Sol_vs_Sim} shows three examples: For $\mathrm{D=10\, \mu m^2 ms^{-1}}$, the correlation between measured and predicted firing rates is very good. In contrast, we included the - obviously unsuccessful - attempt to predict firing rates for a simulation with instant diffusion based on the spatial structure by setting D to a relatively high value of $\mathrm{D=100\, \mu m^2 ms^{-1}}$. This represented a limiting case where our analytic model could not make any meaningful predictions, since instant diffusion overrides any spatial inhomogeneities. The outcome of the third case shown in the plot, $\mathrm{D=0}$, is correctly predicted by the analytic model. In general, instant diffusion as well as $\mathrm{D=0}$ overrode the effects of spatial heterogeneity onto firing rates. 
+\begin{figure}
+%% plot_rand_matrix_sol_vs_sim.py
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/rates_matrix_prediction_vs_sim.png}
+\end{center}
+\caption{Measured firing rates (t=1200-1500 s) versus predicted firing rates based on the solution of Equation \eqref{NO_equil_cond_interact_matrix_operator}. For $\mathrm{D=\infty}$ (instant diffusion in the full simulation), the analytic prediction was calculated with a comparably large diffusion constant of $\mathrm{D=100\, \mu m^2 ms^{-1}}$.}
+\label{Rand_Matrix_Sol_vs_Sim}
+\end{figure}
+As Figure \ref{Fir_Rate_Dist_Sim_vs_Mat} shows, the actual shape of the distribution was also well predicted by the solution of the linear system.
+\begin{figure}
+\begin{center}
+%% fir_dist_shape_sim_matrix_compare.py
+\includegraphics[width=0.7\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_sim_vs_mat.png}
+\end{center}
+\caption{Distribution of firing rates for $\mathrm{D=10\, \mu m^2 ms^{-1}}$, full simulation and analytic prediction. Data was taken from 10 simulation runs.}
+\label{Fir_Rate_Dist_Sim_vs_Mat}
+\end{figure}
+
+These observations naturally led us to the question of how the correlation between predicted measured firing rates behaves in between the aforementioned limits. Especially, we were interested in the range of the diffusion constant for which our model provides a good description of the full spiking network's activity. Figure \ref{Corr_Coeff_vs_D} depicts the Pearson correlation coefficient of $\mathrm{f_{matrix, predict}}$ and $\mathrm{f_{sim}}$ against the diffusion constant used in the simulation. A relatively high correlation was obtained for a wide range of diffusion constants. However, we could see a general decline of correlation for larger diffusion constants. This trend was in line with the aforementioned limit of instant diffusion, namely a complete decorrelation between prediction and measurement, as well as the good agreement for $\mathrm{D= 10\, \mu m^2 ms^{-1}}$ shown in Figure \ref{Fir_Rate_Dist_Sim_vs_Mat}.
+\begin{figure}
+%% sim_vs_matrix_solve_corr_vs_D.py
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/sim_vs_matrix_solve_corr_vs_D.png}
+\end{center}
+\caption{Pearson correlation coefficient of predicted and measured firing rates (see Figure \ref{Rand_Matrix_Sol_vs_Sim}) versus diffusion constant. Line width depicts standard error.}
+\label{Corr_Coeff_vs_D}
+\end{figure}
+
+\subsection{Low-Density Neighborhoods correlate with strong outgoing Connections}
+In Section \ref{Section_Mean_outgoing_Weights} we stated that diffusive homeostasis allowed the network do develop few neurons with exceptionally strong outgoing weights. We found this effect to be present in neurons with an highly above-average firing rate. Moreover, the outcomes presented in Section \ref{Section_Rand_Mat_vs_Sim} suggest that the steady state of firing rates is strongly influenced by the spatial structure of excitatory neurons. Combining these two qualities led us the conclusion that one should be able to observe some relation between spatial structure and the emergence of "driver neurons". More specific, regions of neurons with above average firing rates should develop stronger outgoing connections. We approximated the local neuron density by means of a a Gaussian kernel with $\mathrm{\sigma = 50\, \mu m}$ to test this hypothesis. Figure \ref{Inverse_Dens_vs_Sum_Out_Weights} shows the results. Despite a certain amount of randomness, our prediction was indeed verified. 
+\begin{figure}
+%% density_vs_sum_out_weights.py
+\begin{center}
+\includegraphics[width=0.7\textwidth]{../../plots/scatter_density_out_weights.png}
+%% density_vs_sum_out_weights_points.py
+\includegraphics[width=0.7\textwidth]{../../plots/scatter_density_out_weights_points.png}
+\end{center}
+\caption{(A) and (B): Scatter-plot of inverse of local neuron density (calculated by convolution with a gaussian kernel with $\mathrm{\sigma = 50\, \mu m}$) and decadic logarithm of outgoing excitatory weights. Note the spatial correlation in high/low-density regions. (C) and (D): The decadic logarithm of outgoing weights correlates with inverse neuron density (corr. coeff. of 0.513).}
+\label{Inverse_Dens_vs_Sum_Out_Weights}
+\end{figure}
 
 \section*{Discussion}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero~\cite{bib3}.
+By implementing diffusive homeostasis into the LIF-SORN model we managed to achieve a broader, skewed firing rate distribution while preserving appreciated features of network topology. In order to acquire a deeper understanding of the mechanisms that determine these statistics we developed an analytical expression that allowed us to reliably predict the steady-state of firing rates based on the spatial structure of excitatory neurons. We would like to emphasize that this explanation differs from common approaches of understanding the emergence of heavy-tailed statistics of firing rates in recurrent networks. Theoretical studies on the behavior of recurrent networks are largely based on the assumption that the excitability of neurons is not individually fine-tuned but rather randomly distributed and adjusted globally to achieve a desired mean firing rate. Predictions about the resulting activity are then made based on (potentially simplified) statistical features of recurrent connectivity and/or the specific form of the neuronal transfer function used in the model, see e.g. \cite{Roxin_Firing_Rate_Distribution,Vreeswijk1998,Koulakov_2009}. Our interpretation of our results leads to the conclusion that this approach matches the limiting case of instant diffusion: While Figure \ref{Fir_Rate_Dist_Compare} did not reveal many differences between finite-velocity and instant diffusion in terms of overall statistics, the decorrelation discussed in Section \ref{Section_Rand_Mat_vs_Sim} and plotted in Figure \ref{Corr_Coeff_vs_D} suggests that increasing the diffusion constant goes along with a transition between a spatially determined configuration of excitatory firing rates and a network topology-determined behavior.
 
+By analyzing network activity based on our analytic model we found that indeed only a single homeostatic fixed point exists for finite diffusion constants. On a practical level though, the gradual decorrelation with this theoretical state of activity upon larger values of $\mathrm{D}$ was presumably caused by synaptic turnovers which change the synaptic input, which means that fluctuations in activity were more slowly and less accurately compensated in the case of larger diffusion constants. However, for the standard choice of parameters (being roughly based on experimental data) the resulting activity was indeed strongly bound to the spatial structure of excitatory cells. Naturally, this raises the question of biological plausibility. To our knowledge, no experimental study exists that relates measurements of spontaneous activity to local fluctuations of neuronal densities. Interestingly, measurements in the barrel cortex and hippocampus have found that firing rates during exploration or task performance are significantly correlated with those found for spontaneous, baseline activity \cite{OConnor_2010,Mizuseki_2013}. This suggests that the same set of neurons tend to be relatively active or inactive under different stimuli and changing environments. In the light of these observations, one might speculate whether random spatial positioning might at least partially act as a determinant of these individual homeostatic working points of firing activity. A possible reason for the strong influence of spatial structure in the implemented model could be the fact that cells were modeled as approximate point sources. This allowed for a clear distinction between individual cells, even in close vicinity. While Sweeney et al. argued that the size of the studied tissue is large compared to the size of individual somata (which, apparently, they claim to be the main source of nitric oxide) Philippides et al. reported that NO is often synthesized in a more delocalized way by means of fine fibers exceeding the soma \cite{Philippides_2005}. The diameter of these "production areas" is on the order of $\mathrm{10-100 \mu m}$. This might explain why in reality diffusive homeostasis may not act as much as a precise tuner of single neuron activities as found in the computational model.
+
+Despite these considerations regarding the effects of spatial structure onto individual firing rates, our modifications seem to be a plausible way of giving rise to many features of cortical structure and activity. Apart from the previously discussed properties of spiking activity, the results presented in Section \ref{Section_Topol_Preservation} have shown that important features of synaptic topology and plasticity found in earlier research are compatible with diffusive homeostasis. We thereby created a model, which combines the here presented features of cortical structure and activity based on biologically realistic mechanisms. This was achieved without specific modifications of hebbian plastic rules, which have also been proposed as an explanation for log-normally distributed synaptic weights \cite{Koulakov_2009,Gilson_2011,Effenberger_2015}. Recent studies have brought up inhibitory-to-excitatory STDP with respect to stabilizing network activity \cite{Vogels_2011,Luz_2012}. Results similar to ours concerning network topology have also been achieved with inhibitory STDP \cite{Effenberger_2015}. In terms of their functional role of stabilizing network activity, it is reasonable to assume that both, diffusive homeostasis and inhibitory STDP, can simultaneously act in a biological system. 
+
+Future theoretical and experimental should clarify the role of spatial structure onto diffusive communication pathways. Savin et al. showed that local lesions in a network subject to diffusive synaptic homeostasis can lead to significantly different, bursting network behavior \cite{Savin_2008}. This, as well as our findings, indicates that the locality of diffusive processes indeed can not be neglected in favor of a reduced model of global adjustment of activity. More precise models of the shape, location and spreading of diffusive neurotransmitters, as well as a more detailed modeling of their effect onto neural excitation could improve understanding on a theoretical level.  
 \section*{Conclusion}
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
 
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Appendix}.
 
 \section*{Supporting information}
 
 % Include only the SI item label in the paragraph heading. Use the \nameref{label} command to cite SI items in the text.
 \paragraph*{S1 Fig.}
 \label{S1_Fig}
-{\bf Bold the title sentence.} Add descriptive text after the title of the item (optional).
+
 
 \paragraph*{S2 Fig.}
 \label{S2_Fig}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 
 \paragraph*{S1 File.}
 \label{S1_File}
-{\bf Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 
 \paragraph*{S1 Video.}
 \label{S1_Video}
-{\bf Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 
 \paragraph*{S1 Appendix.}
 \label{S1_Appendix}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 
 \paragraph*{S1 Table.}
 \label{S1_Table}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 
 \section*{Acknowledgments}
-Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam id pretium nisi. Sed ac quam id nisi malesuada congue. Sed interdum aliquet augue, at pellentesque quam rhoncus vitae.
+
 
 \nolinenumbers
 

@@ -298,6 +298,23 @@
   Timestamp                = {2016.04.12}
 }
 
+@Article{Gilson_2011,
+  Title                    = {Stability versus Neuronal Specialization for STDP: Long-Tail Weight Distributions Solve the Dilemma},
+  Author                   = {Gilson, M. and Fukai, T.},
+  Journal                  = {PLOS ONE},
+  Year                     = {2011},
+
+  Month                    = {10},
+  Number                   = {10},
+  Pages                    = {1-18},
+  Volume                   = {6},
+
+  Abstract                 = {Spike-timing-dependent plasticity (STDP) modifies the weight (or strength) of synaptic connections between neurons and is considered to be crucial for generating network structure. It has been observed in physiology that, in addition to spike timing, the weight update also depends on the current value of the weight. The functional implications of this feature are still largely unclear. Additive STDP gives rise to strong competition among synapses, but due to the absence of weight dependence, it requires hard boundaries to secure the stability of weight dynamics. Multiplicative STDP with linear weight dependence for depression ensures stability, but it lacks sufficiently strong competition required to obtain a clear synaptic specialization. A solution to this stability-versus-function dilemma can be found with an intermediate parametrization between additive and multiplicative STDP. Here we propose a novel solution to the dilemma, named log-STDP, whose key feature is a sublinear weight dependence for depression. Due to its specific weight dependence, this new model can produce significantly broad weight distributions with no hard upper bound, similar to those recently observed in experiments. Log-STDP induces graded competition between synapses, such that synapses receiving stronger input correlations are pushed further in the tail of (very) large weights. Strong weights are functionally important to enhance the neuronal response to synchronous spike volleys. Depending on the input configuration, multiple groups of correlated synaptic inputs exhibit either winner-share-all or winner-take-all behavior. When the configuration of input correlations changes, individual synapses quickly and robustly readapt to represent the new configuration. We also demonstrate the advantages of log-STDP for generating a stable structure of strong weights in a recurrently connected network. These properties of log-STDP are compared with those of previous models. Through long-tail weight distributions, log-STDP achieves both stable dynamics for and robust competition of synapses, which are crucial for spike-based information processing.},
+  Doi                      = {10.1371/journal.pone.0025339},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pone.0025339}
+}
+
 @Article{NOS_Bacteria,
   Title                    = {NO-mediated Cytoprotection: Instant Adaptation to Oxidative Stress in Bacteria},
   Author                   = {Gusarov, I. and Nudler, E.},
@@ -394,6 +411,16 @@
   Url                      = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/}
 }
 
+@Article{Hoffmann_2017,
+  Title                    = {Non-random network connectivity comes in pairs},
+  Author                   = {Hoffmann, F. Z. and Triesch, J.},
+  Journal                  = {Network Neuroscience},
+  Year                     = {2017},
+
+  Owner                    = {fabian},
+  Timestamp                = {2017.02.20}
+}
+
 @Article{Ivenshitz_2010,
   Title                    = {Neuronal Density Determines Network Connectivity and Spontaneous Activity in Cultured Hippocampus},
   Author                   = {Ivenshitz, M. and Segal, M.},
@@ -443,6 +470,17 @@
 
   Owner                    = {fschubert},
   Timestamp                = {2016.10.12}
+}
+
+@Article{Koulakov_2009,
+  Title                    = {Correlated Connectivity and the Distribution of Firing Rates
+in the Neocortex},
+  Author                   = {Koulakov, A. A. and Hrom\'{a}dka, T. and Zador, A. M.},
+  Journal                  = {The Journal of Neuroscience},
+  Year                     = {2009},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.22}
 }
 
 @Article{Lancaster_1994,
@@ -531,6 +569,23 @@
   Url                      = {http://www.jneurosci.org/content/31/26/9481}
 }
 
+@Article{Luz_2012,
+  Title                    = {Balancing Feed-Forward Excitation and Inhibition via Hebbian Inhibitory Synaptic Plasticity},
+  Author                   = {Luz, Y. AND Shamir, M.},
+  Journal                  = {PLOS Computational Biology},
+  Year                     = {2012},
+
+  Month                    = {01},
+  Number                   = {1},
+  Pages                    = {1-12},
+  Volume                   = {8},
+
+  Abstract                 = {Author Summary One of the longstanding enigmas in neuroscience is the origin of inherent neural noise. It has been suggested that this noise results from a careful balance of excitatory and inhibitory inputs to neurons. Obtaining this balance requires fine tuning of the relative strengths of the inhibitory and excitatory inputs to each cell. However the mechanism that enables this fine tuning of parameters remains unclear. We suggest that a balance of excitatory and inhibitory inputs can be achieved via a process of unsupervised learning of the inhibitory synaptic strengths. We find that whereas Hebbian learning induces strong positive feedback on excitatory inputs that acts as a force that pulls them towards their boundaries, Hebbian learning of inhibition induces negative feedback. This negative feedback acts to balance the average excitatory input to the cell and makes the learning process less sensitive to the statistics of the inhibitory inputs. Surprisingly, this balance increases the sensitivity of learning to the statistics of the excitatory inputs. Thus, the balance of feed-forward excitation and inhibition emerges as a natural outcome of Hebbian learning applied to the inhibitory inputs to the cell.},
+  Doi                      = {10.1371/journal.pcbi.1002334},
+  Publisher                = {Public Library of Science},
+  Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1002334}
+}
+
 @Article{Marder_2006,
   Title                    = {Variability, compensation and homeostasis in neuron and network function},
   Author                   = {Marder, E. and Goaillard, J.},
@@ -617,7 +672,7 @@
 
 @Article{OConnor_2010,
   Title                    = {Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object Localization in Mice},
-  Author                   = {O'Connor, D. H, and Peron, S. P. and Huber, D. and Svoboda, K.},
+  Author                   = {O'Connor, D. H. and Peron, S. P. and Huber, D. and Svoboda, K.},
   Journal                  = {Neuron},
   Year                     = {2010},
   Volume                   = {67},
