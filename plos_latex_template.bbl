@@ -251,11 +251,23 @@ Gilson M, Fukai T.
 \newblock PLOS ONE. 2011;6(10):1--18.
 \newblock doi:{10.1371/journal.pone.0025339}.
 
+\bibitem{Dragoi_2003}
+Dragoi G, Harris KD, Buzsáki G.
+\newblock Place Representation within Hippocampal Networks Is Modified by
+  Long-Term Potentiation.
+\newblock Neuron. 2003;39(5):843 -- 853.
+\newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
+
 \bibitem{Luz_2012}
 Luz Y, Shamir M.
 \newblock Balancing Feed-Forward Excitation and Inhibition via Hebbian
   Inhibitory Synaptic Plasticity.
 \newblock PLOS Computational Biology. 2012;8(1):1--12.
 \newblock doi:{10.1371/journal.pcbi.1002334}.
+
+\bibitem{Luetcke_2011}
+Lütcke H, Helmchen F.
+\newblock Two-photon imaging and analysis of neural network dynamics.
+\newblock Reports on Progress in Physics. 2011;74(8):086602.
 
 \end{thebibliography}

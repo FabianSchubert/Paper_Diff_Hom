@@ -3,50 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: plos_latex_template.aux
 The style file: plos2015.bst
 Database file #1: test_base.bib
-Warning--I didn't find a database entry for "Luetcke_2011"
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 43 entries,
+You've used 45 entries,
             3058 wiz_defined-function locations,
-            943 strings with 13751 characters,
-and the built_in function-call counts, 60230 in all, are:
-= -- 7856
-> -- 496
+            957 strings with 14199 characters,
+and the built_in function-call counts, 62848 in all, are:
+= -- 8195
+> -- 516
 < -- 0
-+ -- 406
-- -- 124
-* -- 4794
-:= -- 6625
-add.period$ -- 185
-call.type$ -- 43
++ -- 422
+- -- 129
+* -- 5000
+:= -- 6915
+add.period$ -- 194
+call.type$ -- 45
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 5746
-empty$ -- 5575
-format.name$ -- 162
-if$ -- 14099
+cite$ -- 45
+duplicate$ -- 5998
+empty$ -- 5819
+format.name$ -- 169
+if$ -- 14713
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 342
-newline$ -- 233
-num.names$ -- 43
-pop$ -- 616
+int.to.str$ -- 45
+missing$ -- 359
+newline$ -- 244
+num.names$ -- 45
+pop$ -- 641
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 582
+skip$ -- 608
 stack$ -- 0
-substring$ -- 10520
-swap$ -- 799
+substring$ -- 10960
+swap$ -- 845
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 363
-width$ -- 45
-write$ -- 489
-(There was 1 warning)
+while$ -- 380
+width$ -- 47
+write$ -- 513
