@@ -473,8 +473,7 @@
 }
 
 @Article{Koulakov_2009,
-  Title                    = {Correlated Connectivity and the Distribution of Firing Rates
-in the Neocortex},
+  Title                    = {Correlated Connectivity and the Distribution of Firing Rates in the Neocortex},
   Author                   = {Koulakov, A. A. and Hrom\'{a}dka, T. and Zador, A. M.},
   Journal                  = {The Journal of Neuroscience},
   Year                     = {2009},
@@ -567,6 +566,18 @@ in the Neocortex},
   ISSN                     = {0270-6474},
   Publisher                = {Society for Neuroscience},
   Url                      = {http://www.jneurosci.org/content/31/26/9481}
+}
+
+@Article{0034-4885-74-8-086602,
+  Title                    = {Two-photon imaging and analysis of neural network dynamics},
+  Author                   = {Lütcke, H. and Helmchen, F.},
+  Journal                  = {Reports on Progress in Physics},
+  Year                     = {2011},
+  Number                   = {8},
+  Pages                    = {086602},
+  Volume                   = {74},
+
+  Url                      = {http://stacks.iop.org/0034-4885/74/i=8/a=086602}
 }
 
 @Article{Luz_2012,
@@ -788,6 +799,16 @@ in the Neocortex},
   Doi                      = {10.1371/journal.pcbi.1000757},
   Publisher                = {Public Library of Science},
   Url                      = {http://dx.doi.org/10.1371%2Fjournal.pcbi.1000757}
+}
+
+@Article{Savin_2008,
+  Title                    = {Epileptogenesis due to glia-mediated synaptic scaling},
+  Author                   = {Savin, C. and Triesch, J. and Meyer-Hermann, M.},
+  Journal                  = {Journal of the Royal Society Interface},
+  Year                     = {2008},
+
+  Owner                    = {fschubert},
+  Timestamp                = {2017.02.22}
 }
 
 @Article{Siegert_First_Passage_Time,

@@ -239,6 +239,11 @@ Philippides A, Ott SR, Husbands P, Lovick TA, O{\textquoteright}Shea M.
 \newblock Journal of Neuroscience. 2005;25(28):6520--6532.
 \newblock doi:{10.1523/JNEUROSCI.1264-05.2005}.
 
+\bibitem{Savin_2008}
+Savin C, Triesch J, Meyer-Hermann M.
+\newblock Epileptogenesis due to glia-mediated synaptic scaling.
+\newblock Journal of the Royal Society Interface. 2008;.
+
 \bibitem{Gilson_2011}
 Gilson M, Fukai T.
 \newblock Stability versus Neuronal Specialization for STDP: Long-Tail Weight
@@ -252,10 +257,5 @@ Luz Y, Shamir M.
   Inhibitory Synaptic Plasticity.
 \newblock PLOS Computational Biology. 2012;8(1):1--12.
 \newblock doi:{10.1371/journal.pcbi.1002334}.
-
-\bibitem{Savin_2008}
-Savin C, Triesch J, Meyer-Hermann M.
-\newblock Epileptogenesis due to glia-mediated synaptic scaling.
-\newblock Journal of the Royal Society Interface. 2008;.
 
 \end{thebibliography}
