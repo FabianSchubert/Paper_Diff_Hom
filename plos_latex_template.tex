@@ -597,13 +597,13 @@ As mentioned previously, the SORN has also proven its capabilities in associativ
 We would like to derive a linear relation between mean firing rate  and the mean rate of NO synthesis. One could naively replace the sum of Dirac functions in \eqref{Ca_dyn} by a continuous inflow $Ca^{2+}_{spike} r(t)$. This approximation would indeed allow for the correct calculation of a linear relation between mean firing rate and NO production if \eqref{nNOS_dyn} was a linear homogeneous differential equation. The cubic dependence on $Ca^{2+}$ breaks this simplicity. We note the following in order to derive an approximate description: The target firing rate of 3 Hz and the corresponding mean interspike interval of 0.33...s is large compared to the decay constant of calcium, $\tau_{Ca^{2+}} = \mathrm{0.01\,s}$. Consequently, it is very unlikely that one spike event will fall into a region where the calcium concentration, decaying from the instant jump of the previous spike event, is still significantly larger than zero. As such, one can justify
 \begin{equation}
 \begin{split}
-{Ca^{2+}}^3(t) &= \left[ Ca^{2+}_{spike} \sum_{i} \theta(t-t^i_{spike}) exp(-(t-t^i_{spike})/\tau_{Ca^{2+}}) \right]^3 \\
-&\approx {Ca^{2+}_{spike}}^3 \sum_{i} \theta(t-t^i_{spike}) exp(-3(t-t^i_{spike})/\tau_{Ca^{2+}})
+{Ca^{2+}}^3(t) &= \left[ Ca^{2+}_{\rm spike} \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \mathrm{exp} \left( - \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) \right]^3 \\
+&\approx {Ca_{\rm spike}^{2+}}^3 \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \mathrm{exp} \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) 
 \end{split} \label{cubic_approx_1}			
 \end{equation}
 with $\theta(x)$ being the Heaviside step function. By the same argument
 \begin{equation}
-\frac{{Ca^{2+}}^3(t)}{{Ca^{2+}}^3(t)+1} \approx \sum_{i} \theta(t-t^i_{spike}) \frac{exp(-3(t-t^i_{spike})/\tau_{Ca^{2+}})}{exp(-3(t-t^i_{spike})/\tau_{Ca^{2+}}) + \frac{1}{{Ca^{2+}_{spike}}^3}} \; .
+\frac{{Ca^{2+}}^3(t)}{{Ca^{2+}}^3(t)+1} \approx \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \frac{ \mathrm{exp} \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) }{\mathrm{exp} \left( -3 \left( t-t^i_{spike} \right) /\tau_{Ca^{2+}} \right) + \frac{1}{{Ca_{\rm spike}^{2+}}^3}} \; .
 \end{equation}
 Therefore, the resulting rate of NO synthesis can be decomposed into a sum of time shifted responses onto a single kernel of calcium concentration as a result of a spike. For a spike at $t_{spike}=0$, the solution of \eqref{nNOS_dyn} can be calculated by
 \begin{equation}
