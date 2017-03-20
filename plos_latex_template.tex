@@ -78,6 +78,9 @@
 % amsmath and amssymb packages, useful for mathematical formulas and symbols
 \usepackage{amsmath,amssymb}
 
+% proper font greek letters
+\usepackage{upgreek}
+
 % Use adjustwidth environment to exceed column width (see example table in text)
 \usepackage{changepage}
 
@@ -232,7 +235,7 @@ Many theoretical studies in recent years have addressed the question how cortica
 
 As mentioned above, previous versions of our recurrent network model regulated activity by fixing excitatory firing rates to a predefined target value. However, strong evidence exists for a log-normal like distribution of cortical firing rates \cite{Buzsaki_Fir_Rates_2014,Wohrer_Fir_Rates_2012}. Experimental and theoretical studies have suggested that the presence of both slow- and fast-firing cells is not to be regarded as an ignorable, mere side effect of brain dynamics. It rather seems to be that skewed and heavy-tailed firing rate statistics are necessary with respect to the preservation of stable synaptic structures being related to long-term memory, while still allowing synaptic rewiring in order to adapt to changes in external stimuli \cite{Buzsaki_Fir_Rates_2014}. A realistic network model of neural activity and plasticity should therefore allow for a broad distribution of firing rates to cope with these functional aspects.
 
-In this paper we examine \textit{diffusive homeostasis} as a possible candidate to replace a previously used model of single-cell intrinsic plasticity. The idea and modeling of diffusive homeostasis was adopted from a paper by Sweeney et al. \cite{Sweeney_Paper}, which models neural tissue as a two-dimensional surface and a set of points representing the neurons' positions. The group of excitatory neurons acted as a point-source of nitric oxide (NO) as well as as a sensor for the NO-concentration at each individual position. The production and sensing of NO forms the basis of a feedback loop: The individual NO-readout is fed into a comparator which causes an appropriate change within the internal firing threshold of the neuron, in turn altering the neuron's firing rate. The control system is then closed by linking the rate of NO-production to the neuron's firing rate. The results by Sweeney et al. suggest that diffusive signaling could resolve the dichotomy between overall stability of firing activity and the need to allow flexibility among individual neurons' activities. Through the diffusive signal, each neurons receives - intuitively speaking - a mixture of its own activity and its neighboring neurons. Individual tuning of firing rates is thereby suppressed while the overall population activity is kept at a constant level.
+In this paper we examine \textit{diffusive homeostasis} as a possible candidate to replace a previously used model of single-cell intrinsic plasticity. The idea and modeling of diffusive homeostasis was adopted from a paper by Sweeney et al. \cite{Sweeney_Paper}, which models neural tissue as a two-dimensional surface and a set of points representing the neurons' positions. The group of excitatory neurons acted as a point-source of nitric oxide (NO) as well as as a sensor for the NO concentration at each individual position. The production and sensing of NO forms the basis of a feedback loop: The individual NO readout is fed into a comparator which causes an appropriate change within the internal firing threshold of the neuron, in turn altering the neuron's firing rate. The control system is then closed by linking the rate of NO production to the neuron's firing rate. The results by Sweeney et al. suggest that diffusive signaling could resolve the dichotomy between overall stability of firing activity and the need to allow flexibility among individual neurons' activities. Through the diffusive signal, each neurons receives - intuitively speaking - a mixture of its own activity and its neighboring neurons. Individual tuning of firing rates is thereby suppressed while the overall population activity is kept at a constant level.
 
 Key aspects of this paper include an analysis of the stability of the homeostatic control, followed by a comparison of features of the original LIF-SORN and the diffusive variant. We expected to observe a preservation of non-random features that have been found in the original LIF-SORN while incorporating a stronger variance within neural activity which has previously been suppressed by single-cell homeostasis. Furthermore, we predicted excitatory activity on the level of individual cells by an analytic approach, thereby gaining an understanding of the relation between spatial structure and firing rates. In the face of possible new features within the network's structure, we clarify the causal relation between diffusive spatial interaction and synaptic topology.
 \section*{Materials and methods}
@@ -240,45 +243,45 @@ Key aspects of this paper include an analysis of the stability of the homeostati
 
 The Neural Network was simulated with the code used in \cite{SORN_Paper}, which makes use of the BRIAN spiking neural network simulator \cite{Briansim}. All following explanations regarding the simulation of neurons and mechanisms of synaptic plasticity are thus based on the methods described in the aforementioned paper.
 
-400 excitatory LIF neurons and 80 inhibitory LIF neurons were assigned random positions across a square area of 1000 $\times$ 1000 $\mu m$. All but recurrent excitatory synapses were randomly generated before the start of the simulation until a desired connection fraction was reached. The connection probability between two neurons was calculated from a distant dependent Gaussian function with a standard deviation of 200 $\mu m$. For excitatory to inhibitory (EI) and inhibitory to excitatory (IE) synapses, the connection fraction was set to 0.1, and 0.5 for recurrent inhibitory synapses (II). These connections were kept at a fixed connection strength throughout the simulation. Furthermore, all synapses were simulated with a fixed (distance independent) conduction delay. See table \ref{syn_conn_params} for a summary of parameters.
+400 excitatory LIF neurons and 80 inhibitory LIF neurons were assigned random positions across a square area of $\rm 1000$ $\times$  $1000 \rm \upmu m$. All but recurrent excitatory synapses were randomly generated before the start of the simulation until a desired connection fraction was reached. The connection probability between two neurons was calculated from a distant dependent Gaussian function with a standard deviation of $\rm 200 \upmu m$. For excitatory to inhibitory (EI) and inhibitory to excitatory (IE) synapses, the connection fraction was set to 0.1, and 0.5 for recurrent inhibitory synapses (II). These connections were kept at a fixed connection strength throughout the simulation. Furthermore, all synapses were simulated with a fixed (distance independent) conduction delay. See table \ref{syn_conn_params} for a summary of parameters.
 
 Recurrent excitatory synapses were subject to a number of plastic mechanisms to be described in the following. 
 
 \begin{table}
+\caption{Parameters of synaptic connections.}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 \textbf{parameter} & \textbf{EE} & \textbf{EI} & \textbf{IE} & \textbf{II} \\ \hline
 connection fraction & $\rightarrow 0.1$ & $0.1$ & $0.1$ & $0.5$ \\ \hline
-initial connection strength & $0.0001 mV$ & $1.5 mV$ & $-1.5 mV$ & $-1.5 mV$ \\ \hline
-conduction delay & $1.5 ms$ & $0.5 ms$ & $1.0 ms$ & $1.0 ms$ \\
+initial connection strength & $\rm 0.0001\, mV$ & $\rm 1.5\, mV$ & $\rm -1.5\, mV$ & $\rm -1.5\, mV$ \\ \hline
+conduction delay & $\rm 1.5\, ms$ & $\rm 0.5\, ms$ & $\rm 1.0\, ms$ & $\rm 1.0\, ms$ \\
 \hline
 \end{tabular}
-\caption{Parameters of synaptic connections.}
 \label{syn_conn_params}
 \end{table}
 \newpage
-\subsubsection*{Synaptic Plasticity}\label{Section_Methods_Syn_Plast}
+\subsubsection*{Synaptic plasticity}\label{Section_Methods_Syn_Plast}
 \textbf{Synaptic Growth:} The random, distance dependent generation of new EE synapses was carried out n times once per second, where n is taken from a normal distribution with mean 920 and standard deviation $\sqrt{920}$. This constant growth rate was tuned to achieve the desired target concentration of 0.1 (see \ref{syn_conn_params}).
 
 \textbf{Synaptic Pruning:} At the same rate of 1/sec, EE synapses below a threshold of 0.000001 mV were removed, thus being added again to the set of ``potential" connections from which the growth process draws new connections.
 
-\textbf{Spike Timing Dependent Plasticity:} An additive STDP rule was used as described e.g. in \cite{Zhang_STDP}. The change of weight between two neurons due to a pre- and postsynaptic spike (i $\rightarrow$ j) is defined as:
+\textbf{Spike Timing Dependent Plasticity:} An additive STDP rule was used as described e.g. in \cite{Zhang_STDP}. The change of weight between two neurons due to a pre- and postsynaptic spike ($i$ $\rightarrow$ $j$) is defined as:
 \begin{align}
 \Delta w_{ji} &= \sum_k \sum_l W(t_j^l - t_i^k) \label{STDP_rule} \\
-W(\Delta t) &= A_{+} exp(-\Delta t / \tau_{+}), & \Delta t > 0 \label{STDP_pos} \\
-W(\Delta t) &= A_{-} exp(\Delta t / \tau_{-}), & \Delta t < 0 \label{STDP_neg}
+W(\Delta t) &= A_{+} \exp(-\Delta t / \tau_{+}), & \Delta t \geq 0 \label{STDP_pos} \\
+W(\Delta t) &= A_{-} \exp(\Delta t / \tau_{-}), & \Delta t < 0 \label{STDP_neg}
 \end{align}
-Indexes k and l refer to the k-th and l-th pre- and postsynaptic spike respectively. Parameters were chosen to approximate data from \cite{Bi_Poo_STDP} and \cite{Froemke_STDP}, namely $\tau_{+} = 15 ms$, $A_{+} = 15 mV$, $\tau_{-} = 30 ms$ and $A_{-} = -7.5 mV$. However, we used the ``nearest neighbor" approximation for the sake of reduction of computational effort, only calculating the effect of the most recent pre-post pair of spikes for potentiation and post-pre pair for depression, yielding roughly the same value as the full summation due to the fast decay times $\tau_{+}$ and $\tau_{-}$ of the STDP-window.
+Indexes $k$ and $l$ refer to the $k$-th and $l$-th pre- and postsynaptic spike respectively. Parameters were chosen to approximate data from \cite{Bi_Poo_STDP} and \cite{Froemke_STDP}, namely $\tau_{+} = \rm 15\, ms$, $A_{+} =\rm 15\, mV$, $\tau_{-} =\rm 30\, ms$ and $A_{-} =\rm -7.5\, mV$. However, we used the ``nearest neighbor" approximation for the sake of reduction of computational effort, only calculating the effect of the most recent pre-post pair of spikes for potentiation and post-pre pair for depression, yielding roughly the same value as the full summation due to the fast decay times $\tau_{+}$ and $\tau_{-}$ of the STDP-window.
 
 \textbf{Synaptic Normalization:} We implemented synaptic normalization by calling a function once per sec., updating each $w_{ji}$ from neuron $i$ to neuron $j$ as follows:
 
 \begin{equation}
-w_{ji} \rightarrow w_{ji} \frac{w_{total}}{\sum_i w_{ji}}
+w_{ji} \rightarrow w_{ji} \frac{w_{\rm total}}{\sum_i w_{ji}}
 \label{Synnnorm}
 \end{equation}
-$w_{total}$ was set to different values for each of the four types of connections between the excitatory and inhibitory pool of neurons. Except for the dynamically populated EE-synapses these values could be directly set in accordance with the previously given parameters of desired mean individual connection strength, size of the presynaptic population and connection fraction, by calculating $w_{total} = w_{mean} \cdot N_{presyn. pop}\cdot p_{connect}$. This yielded $w_{total,EI} = 60 mV$, $w_{total,IE} = -12 mV$, $w_{total,II} = -60 mV$. $w_{total,EE}$ was set to $40mV$,  corresponding to a mean synaptic weight of $1mV$, given a targeted EE-connection fraction of $0.1$ and a population of 400 excitatory neurons.
+$w_{\rm total}$ was set to different values for each of the four types of connections between the excitatory and inhibitory pool of neurons. Except for the dynamically populated EE-synapses these values could be directly set in accordance with the previously given parameters of desired mean individual connection strength, size of the presynaptic population and connection fraction, by calculating $w_{\rm total} = w_{\rm mean} N_{\rm presyn. pop.} p_{\rm connect}$. This yielded $w_{\rm total,EI} = \rm 60\, mV$, $w_{\rm total,IE} =\rm -12\, mV$, $w_{\rm total,II} = \rm -60\, mV$. $w_{\rm total,EE}$ was set to $\rm 40\, mV$,  corresponding to a mean synaptic weight of $\rm 1\, mV$, given a targeted EE-connection fraction of $\rm 0.1$ and a population of 400 excitatory neurons.
 
-\textbf{Short Term Plasticity:} A short term plasticity (STP) mechanism acting on recurrent excitatory connections was implemented as presented in \cite{Markram_STP} as an additional stabilization of network activity. It modulates the effective synaptic weights by multiplying the value stored in the weight matrix $w_{ji}$ by two dynamic variables $x$ and $u$, $w^{effective}_{ji} = w_{ji}\cdot x \cdot u$, each synapse owning a pair $(x,u)$. The dynamics of these variables are given by:
+\textbf{Short Term Plasticity:} A short term plasticity (STP) mechanism acting on recurrent excitatory connections was implemented as presented in \cite{Markram_STP} as an additional stabilization of network activity. It modulates the effective synaptic weights by multiplying the value stored in the weight matrix $w_{ji}$ by two dynamic variables $x$ and $u$, $w^{\rm effective}_{ji} = w_{ji}\cdot x \cdot u$, each synapse owning a pair $(x,u)$. The dynamics of these variables are given by:
 
 \begin{equation}
 \dot{x} = \frac{1-x}{\tau_d},\; \dot{u} = \frac{U-u}{\tau_f}
@@ -289,16 +292,17 @@ Each presynaptic spike furthermore causes a change of $x$ and $u$ by
 x \rightarrow x - x\cdot u,\; u \rightarrow u + U(1-u)
 \label{STP_dynamics2}
 \end{equation}
-If no spikes arrive the system rests at $x\cdot u = U$. Otherwise, depending on the choice of $\tau_d$ and $\tau_f$, one can achieve a weight modulation that is dominated by potentiation ($\tau_f \gg \tau_d$) or depression ($\tau_f \ll \tau_d$). We chose $U=0.04$, $\tau_d = 0.5s$ and $\tau_f = 2s$ as a rough approximation of the values that were experimentally observed \cite{Markram_STP}, giving it a tendency towards potentiation. However, one should keep in mind that for $U\in [0,1]$, $x\cdot u \in [0,1]$ always holds, thus the factor $x\cdot u$ has a generally diminishing effect. For our choice of variables for example, a Poisson input with a constant rate achieves the best synaptic transmission at a rate of $\sim 4.5 Hz$, corresponding to $x\cdot u \approx 0.2$. \textit{Potentiation} in this context refers to the fact that stronger input strengthens synaptic transmission \emph{compared} to close to zero incoming spikes.
+If no spikes arrive the system rests at $x\cdot u = U$. Otherwise, depending on the choice of $\tau_d$ and $\tau_f$, one can achieve a weight modulation that is dominated by potentiation ($\tau_f \gg \tau_d$) or depression ($\tau_f \ll \tau_d$). We chose $U=0.04$, $\tau_d =\rm 0.5\, s$ and $\tau_f =\rm 2\, s$ as a rough approximation of the values that were experimentally observed \cite{Markram_STP}, giving it a tendency towards potentiation. However, one should keep in mind that for $U\in [0,1]$, $x\cdot u \in [0,1]$ always holds, thus the factor $x\cdot u$ has a generally diminishing effect. For our choice of variables for example, a Poisson input with a constant rate achieves the best synaptic transmission at a rate of $\sim \rm 4.5\, Hz$, corresponding to $x\cdot u \approx 0.2$. \textit{Potentiation} in this context refers to the fact that stronger input strengthens synaptic transmission \emph{compared} to close to zero incoming spikes.
 
-\subsubsection*{Neuron Model}
+\subsubsection*{Neuron model}
 We used a leaky integrate-and-fire-model for all neurons in the network, whose dynamics are described by a stochastic differential equation:
 \begin{equation}
 {\tau_m}dV = -(V-E_l)dt + \sqrt{\tau_m} \sigma dW
 \label{LIF_Dynamics}
 \end{equation}
-where $V$ is the membrane potential, $E_l$ is the equilibrium membrane potential, $\tau_m$ is the time constant of the membrane, $\sigma$ is the standard deviation of the noise term and $dW$ is the standard Wiener process. A neuron is said to spike when its membrane potential reaches the threshold voltage $V_t$. The voltage is then reset to $V_r$. A refractory period was not implemented. A presynaptic spike causes a simple (delayed, see Table \ref{syn_conn_params}) increment of the membrane potential of the postsynaptic neuron by $w^{effective}_{ji}$. Table \ref{LIF_neuron_params} summarizes the aforementioned set of parameters.
+where $V$ is the membrane potential, $E_l$ is the equilibrium membrane potential, $\tau_m$ is the time constant of the membrane, $\sigma$ is the standard deviation of the noise term and $dW$ is the standard Wiener process. A neuron is said to spike when its membrane potential reaches the threshold voltage $V_t$. The voltage is then reset to $V_r$. A refractory period was not implemented. A presynaptic spike causes a simple (delayed, see Table \ref{syn_conn_params}) increment of the membrane potential of the postsynaptic neuron by $w^{\rm effective}_{ji}$. Table \ref{LIF_neuron_params} summarizes the aforementioned set of parameters.
 \begin{table}
+\caption{Parameters of LIF neuron}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{parameter} & \textbf{exc. neur.} & \textbf{inh. neur.}\\ \hline
@@ -309,60 +313,59 @@ $\mathrm{\sigma}$ & $\mathrm{\sqrt{5}\;mV}$ & $\mathrm{\sqrt{5}\;mV}$ \\ \hline
 $\mathrm{V_t}$ & subject to IP & $\mathrm{-58\;mV}$ \\ 
 \hline
 \end{tabular}
-\caption{Parameters of LIF neuron}
 \label{LIF_neuron_params}
 \end{table}   
 
-\subsubsection*{Intrinsic Plasticity (IP)}
+\subsubsection*{Intrinsic plasticity}
 
 Apart from dynamic processes within synapses which contribute to a stabilization of the network's activity, neurons possess internal mechanisms capable of maintaining a desired regime of activity. Regular-spiking cells are known to down-(up-)regulate their firing rate upon increased (decreased) input on a timescale of tens of milliseconds \cite{Connors_Gutnick_Spike_Patterns,Benda_Herz_Spike_Frequ_Adaption}. The network itself was not expected to exhibit fast changes of synaptic input since our simulation did not incorporate any rapidly changing external drive, which allowed us to neglect this feature. On the other hand, a similar form of adaption as a reaction on deprived or enhanced input can be observed on a timescale of hours to days \cite{Desai_IP}. In the latter case, a long-term change in excitability can be attributed to an altered resistance of ionic channels. This contrasts the former short-term adaption, which can be explained by a separation of timescales among different ionic currents in the cell. A simple form of low intrinsic homeostasis was implemented in the original LIF-SORN by altering the neurons' firing threshold based on the deviation from a target firing rate. During the research reported by this paper we implemented a new model of slow intrinsic homeostasis, based on the work in \cite{Sweeney_Paper}. The following section describes both models in further detail.
-\subsubsection*{Modeling of Homeostatic Intrinsic Plasticity}
-Our original model of homeostatic control was described as an operation over discrete time steps $\Delta t = 0.1ms$, carried out for each excitatory neuron:
+\subsubsection*{Modeling of homeostatic intrinsic plasticity}
+Our original model of homeostatic control was described as an operation over discrete time steps $\Delta t = \rm 0.1\, ms$, carried out for each excitatory neuron:
 \begin{align}
-V_t &\rightarrow V_t + \eta_{IP} (N_{spikes} - h_{IP}) \label{can_hom_1}\\
-N_{spikes} &\rightarrow 0 \label{can_hom_2}
+V_t &\rightarrow V_t + \eta_{\rm IP} (N_{\rm spikes} - h_{\rm IP}) \label{can_hom_1}\\
+N_{\rm spikes} &\rightarrow 0 \label{can_hom_2}
 \end{align}
-where $V_t$ is the firing threshold, $\eta_{IP}$ an adaption rate and $h_{IP}$ the desired number of spikes per time step. $N_{spikes}$ is a variable, counting the number of spikes of the neuron within each interval. In a continuous, rate-based form, this update rule can as well be written as:
+where $V_t$ is the firing threshold, $\eta_{\rm IP}$ an adaption rate and $h_{\rm IP}$ the desired number of spikes per time step. $N_{\rm spikes}$ is a variable, counting the number of spikes of the neuron within each interval. In a continuous, rate-based form, this update rule can as well be written as:
 \begin{equation}
-\dot{V}_t = \eta_{IP}(r-r_{IP}) \label{can_hom_rate}
+\dot{V}_t = \eta_{\rm IP}(r-r_{\rm IP}) \label{can_hom_rate}
 \end{equation}
-with $r$ as the neuron's firing rate and $r_{IP}=h_{IP}/\Delta t$ the target firing rate. This feedback control indirectly drives the firing rate of each neuron towards $r_{IP}$: If $r>(<)r_{IP}$, $V_t$ increases (decreases), reducing (increasing) the probability of a spike to occur. 
+with $r$ as the neuron's firing rate and $r_{\rm IP}=h_{\rm IP}/\Delta t$ the target firing rate. This feedback control indirectly drives the firing rate of each neuron towards $r_{\rm IP}$: If $r>r_{\rm IP}$ ($r<r_{\rm IP}$), $V_t$ increases (decreases), reducing (increasing) the probability of a spike to occur. 
 
 The new diffusive homeostatic model by Sweeney et al. consists of a set of differential equations:   
 \begin{align}
-\dot{{Ca^{2+}}_i}(t) &= -\frac{{Ca^{2+}}_i}{\tau_{Ca^{2+}}} + Ca^{2+}_{spike} \sum_{j} \delta(t-t_{spike,i,j}) \label{Ca_dyn}\\
-\dot{nNOS_i}(t) &= \frac{1}{\tau_{nNOS}} \left(\frac{{{Ca^{2+}}_i}^3}{{{Ca^{2+}}_i}^3+1} - nNOS_i \right) \label{nNOS_dyn}\\
-\dot{NO}(\mathbf{r},t)&=-\lambda NO + D \nabla^2 NO + \sum_{i} \delta^2(\mathbf{r}-\mathbf{r}_{neur,i})\cdot nNOS^i \label{NO_dyn}\\
-\dot{V_{t,i}}(t) &= \frac{NO(\mathbf{r}_{neur,i},t)-NO_0}{NO_0\cdot\tau_{V_t}} \label{Theta_dyn}
+\dot{{Ca_i^{2+}}}(t) &= -\frac{{Ca_i^{2+}}}{\tau_{\rm Ca^{2+}}} + Ca^{2+}_{\rm spike} \sum_{j} \delta(t-t_{\mathrm{spike},i,j}) \label{Ca_dyn}\\
+\dot{nNOS}_i(t) &= \frac{1}{\tau_{\rm nNOS}} \left(\frac{{Ca_i^{2+}}^3}{{Ca_i^{2+}}^3+1} - nNOS_i \right) \label{nNOS_dyn}\\
+\dot{NO}(\mathbf{r},t)&=-\lambda NO + D \nabla^2 NO + \sum_{i} \delta^2(\mathbf{r}-\mathbf{r}_{\mathrm{neur.},i})\cdot nNOS^i \label{NO_dyn}\\
+\dot{V}_{t,i}(t) &= \frac{NO(\mathbf{r}_{\mathrm{neur.},i},t)-NO_0}{NO_0 \tau_{V_t}} \label{Theta_dyn}
 \end{align}
 
-A depolarization within a nerve cell upon a spike-event $t_{spike}$ causes a fixed inflow of ionic current $Ca^{2+}_{spike}$, which is modeled as an instantaneous increase of the $Ca^{2+}$ concentration. The concentration decays exponentially by a time constant $\tau_{Ca^{2+}}$. Though $Ca^{2+}$ currents can be described in a much more detailed fashion, it can be considered as a reasonable approximation \cite[p.~198-203]{Theor_Neur_Dayan}. The influence of $Ca^{2+}$ onto nNOS was modeled by Sweeney et al. through \eqref{nNOS_dyn} using the Hill equation \cite{Hill_Equ} to model a cooperative binding mechanism. The $nNOS$ production is then fed into the ``pool" of nitric oxide via point sources located at the neurons' positions. An additional decay term was added apart from the inflow and the diffusive term to provide a stable finite $NO$ concentration under constant neuronal activity.
+A depolarization within a nerve cell upon a spike-event $t_{\rm spike}$ causes a fixed inflow of ionic current $Ca^{2+}_{\rm spike}$, which is modeled as an instantaneous increase of the $\rm Ca^{2+}$ concentration. The concentration decays exponentially by a time constant $\tau_{\rm Ca^{2+}}$. Though $\rm Ca^{2+}$ currents can be described in a much more detailed fashion, it can be considered as a reasonable approximation \cite[p.~198-203]{Theor_Neur_Dayan}. The influence of $\rm Ca^{2+}$ onto nNOS was modeled by Sweeney et al. through \eqref{nNOS_dyn} using the Hill equation \cite{Hill_Equ} to model a cooperative binding mechanism. The rate of nNOS is then fed into the ``pool" of nitric oxide via point sources located at the neurons' positions. An additional decay term was added apart from the inflow and the diffusive term to provide a stable finite NO concentration under constant neuronal activity.
 
-Finally, the dynamics of firing thresholds $V_{t,i}$ were modeled such that the rate of change is proportional to the relative deviation of $NO$ concentration at the neurons' locations from a global target concentration $NO_0$. 
+Finally, the dynamics of firing thresholds $V_{t,i}$ were modeled such that the rate of change is proportional to the relative deviation of NO concentration at the neurons' locations from a global target concentration $NO_0$. 
 
 To acquire a target concentration $NO_0$ corresponding to the desired mean firing rate, we let the system run with the previous homeostatic mechanism, still solving equation \eqref{Ca_dyn}-\eqref{NO_dyn} until a steady mean over the concentrations at the neurons' positions was reached. This mean was then set to be the target concentration and we switched to diffusive homeostasis. Table \ref{Params_IP} summarizes the choice of parameters that were introduced in this section. Diffusion parameters roughly match those measured in experiments \cite{Philippides_2000}.
 \begin{table}
+\caption{Parameters of homeostatic intrinsic plasticity.}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{parameter} & \textbf{value} \\
 \hline
-$\mathrm{r_{IP}}$ & $\mathrm{3\;Hz}$ \\
+$\mathrm{r_{\rm IP}}$ & $\mathrm{3\,Hz}$ \\
 \hline
-$\mathrm{\eta_{IP}}$ & $\mathrm{0.1\;mV}$ \\
+$\mathrm{\eta_{\rm IP}}$ & $\mathrm{0.1\,mV}$ \\
 \hline
-$\mathrm{Ca^{2+}_{spike}}$ & 1 \\ \hline
-$\mathrm{\tau_{Ca^{2+}}}$ &  $\mathrm{10\;ms}$ \\
+$\mathrm{Ca^{2+}_{\rm spike}}$ & 1 \\ \hline
+$\mathrm{\tau_{\rm Ca^{2+}}}$ &  $\mathrm{10\,ms}$ \\
 \hline
-$\mathrm{\tau_{nNOS}}$ & $\mathrm{100\;ms}$ \\
+$\mathrm{\tau_{\rm nNOS}}$ & $\mathrm{100\,ms}$ \\
 \hline
-$\mathrm{D}$ & default: 10 $\mathrm{\mu m^2 ms^{-1}}$ \\
+$\mathrm{D}$ & default: 10 $\mathrm{\upmu m^2 ms^{-1}}$ \\
 \hline 
-$\mathrm{\lambda}$ & $\mathrm{0.1\;s^{-1}}$ \\
+$\mathrm{\lambda}$ & $\mathrm{0.1\,s^{-1}}$ \\
 \hline
-$\mathrm{\tau_{V_t}}$ & $\mathrm{2500\;s}$ \\
+$\mathrm{\tau_{V_t}}$ & $\mathrm{2500\,s}$ \\
 \hline
 \end{tabular}
-\caption{Parameters of homeostatic intrinsic plasticity.}
 \label{Params_IP}
 \end{table}
 
@@ -391,7 +394,7 @@ NO_{i,-1} &= NO_{i,1} \label{Neumann_Cond_3} \\
 NO_{-1,i} &= NO_{1,i} \label{Neumann_Cond_4}
 \end{align}
 
-3.) Dirichlet boundary conditions with $NO = NO_{bound}$ at the boundaries.\\
+3.) Dirichlet boundary conditions with $NO = NO_{\rm bound.}$ at the boundaries.\\
 Neumann boundary conditions were used for most of the simulations if not explicitly marked differently. This decision relates to the previously described mechanism of synaptic growth: Neurons placed close to the edge of the sheet have a lower connection probability due to the absence of neighboring neurons in the direction perpendicular to the close-by border. It therefore models the synaptic growth within a square ``cutout" of neural tissue. The Neumann boundary condition fits into this picture since it allows a zero-flux condition at the borders. This is a reasonable assumption, because NO molecules cannot diffuse out of the tissue (unless they were placed in a fluid surrounding).
 
 Equation \eqref{NO_dyn} describes the influx of NO as a sum of scaled and spatially shifted Dirac functions. Apart from the question whether this source term results in a well defined, finite solution at the neurons' positions (see Section \ref{Section_Rand_Mat_vs_Sim}), it can only be modeled to a certain degree of accuracy depending on the resolution of the numeric grid. In practice, we approximated the point sources of NO as an insertions at individual grid cells at a rate of $nNOS_i(t) / h^2$, where the normalizing divisor $h^2$ ensured the desired total influx per neuron. This numeric implementation required two additional constraints: First, all random neuron positions were confined to integer multiples of $h$ in x- and y-direction. Second, to avoid redundancy and for physiological reasons, each grid cell could only hold one neuron at maximum.
@@ -399,14 +402,14 @@ Equation \eqref{NO_dyn} describes the influx of NO as a sum of scaled and spatia
 % Results and Discussion can be combined.
 \section*{Results}
 \subsection*{Distribution of firing rates}\label{Fir_Dist_Section}
-Achieving a broad distribution of firing rates among excitatory neurons was the core motivation for the implementation of diffusive homeostasis. Figure \ref{Fir_Rate_Dist_Compare} shows a first result, comparing both homeostatic mechanisms. As expected, non-diffusive homeostasis leads to a sharp distribution of firing rates at 3 Hz. Diffusive homeostasis indeed results in a much broader distribution of mean firing rates. As mentioned in the introduction, a large number of experimental studies have found that distributions of firing rates are not only broadly distributed but well described by a log-normal distribution, which has a non-zero third moment or skewness. By definition, the logarithm of the random variable in question is thus again normally distributed. We plotted the the distribution of decadic logarithms of firing rates in Figure \ref{Fir_Rate_Dist_Compare} (B) to check for this property. In (A), we found a skewness of $\mathrm{v_{Diff} = 0.765}$, in (B) $\mathrm{v_{Diff,log} = -0.488}$. Though this told us that the distribution is more symmetric on a logarithmic scale, it should rather be seen as being neither strictly normally or log-normally distributed.  
+Achieving a broad distribution of firing rates among excitatory neurons was the core motivation for the implementation of diffusive homeostasis. Figure \ref{Fir_Rate_Dist_Compare} shows a first result, comparing both homeostatic mechanisms. As expected, non-diffusive homeostasis led to a sharp distribution of firing rates at $\rm 3\, Hz$. Diffusive homeostasis indeed resulted in a much broader distribution of mean firing rates. As mentioned in the introduction, a large number of experimental studies have found that distributions of firing rates are not only broadly distributed but well described by a log-normal distribution, which has a non-zero third moment or skewness. By definition, the logarithm of the random variable in question is thus again normally distributed. We plotted the the distribution of decadic logarithms of firing rates in Figure \ref{Fir_Rate_Dist_Compare} B to check for this property. In (A), we found a skewness of $\mathrm{v_{\rm diff.} = 0.765}$, in (B) $\mathrm{v_{\rm diff.,log.} = -0.488}$. Though this told us that the distribution is more symmetric on a logarithmic scale, it should rather be seen as being neither strictly normally or log-normally distributed.  
 \begin{figure}
 %%% plot_frequ_dist_mult_sets.py
 \begin{center}
 \includegraphics[width=0.7\textwidth]{../../plots/paper/fir_rate_dist_e_compare.png}
 \includegraphics[width=0.7\textwidth]{../../plots/paper/fir_rate_dist_i_compare.png}
 \end{center}
-\caption{Histograms of mean firing rates over the excitatory/inhibitory population in regular (A/A*) and logarithmic space (B/B*). For diffusive homeostasis ($\mathrm{D=10\, \mu m^2 ms^{-1}}$ and instant), the distribution was generated from 10 simulation runs, 1 simulation was used for non-diffusive homeostasis. Mean firing rates were calculated from spikes within $\mathrm{t=1000-1500\,s}$.}
+\caption{Histograms of mean firing rates over the excitatory/inhibitory population in regular (A/A*) and logarithmic space (B/B*). For diffusive homeostasis ($\mathrm{D=10\, \upmu m^2 ms^{-1}}$ and instant), the distribution was generated from 10 simulation runs, 1 simulation was used for non-diffusive homeostasis. Mean firing rates were calculated from spikes within $\mathrm{t=1000-1500\,s}$.}
 \label{Fir_Rate_Dist_Compare}
 \end{figure}
 
@@ -427,10 +430,10 @@ Sweeney et al. found that diffusive homeostasis maintains broadness of firing ra
 \end{figure}
 We also investigated the influence of the diffusion constant onto the distribution's skewness, shown in Figure \ref{Fir_Rate_Dist_Width_Skewness_vs_D} (B), to further quantify this dependence. Compared to the standard deviation, we saw a similar but not as clear trend with a drop for very small diffusion constants, even occasionally resulting in a left-skewed distribution (negative D-values).
 
-A naturally emerging question when altering the diffusion constant is how the firing rate behaves in the absolute limit of infinitely fast diffusion. In fact, this case is quite easy to implement simulation-wise: One simply has to feed all NO-sources into a single scalar variable of NO concentration. This will provide the same NO readout for all excitatory neurons, which means that all excitatory thresholds change at the same rate all the time, only shifting their initial random distribution. Figure \ref{Fir_Rate_Dist_Compare} also shows the distribution for this special limiting case. The standard deviation for the excitatory population was $\mathrm{\sigma_{inst} = 1.79\, Hz}$ and the skewness $\mathrm{v_{inst} = 1.51}$ ($\mathrm{v_{inst,log} = -0.52}$), which makes the asymmetry slightly more pronounced.  
+A naturally emerging question when altering the diffusion constant is how the firing rate behaves in the absolute limit of infinitely fast diffusion. In fact, this case is quite easy to implement simulation-wise: One simply has to feed all NO sources into a single scalar variable of NO concentration. This will provide the same NO readout for all excitatory neurons, which means that all excitatory thresholds change at the same rate all the time, only shifting their initial random distribution. Figure \ref{Fir_Rate_Dist_Compare} also shows the distribution for this special limiting case. The standard deviation for the excitatory population was $\mathrm{\sigma_{\rm inst.} = 1.79\, Hz}$ and the skewness $\mathrm{v_{\rm inst.} = 1.51}$ ($\mathrm{v_{\rm inst.,log.} = -0.52}$), which makes the asymmetry slightly more pronounced.  
 
 \subsection*{Previously reported features of network topology and dynamics are preserved}\label{Section_Topol_Preservation}
-While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. Figure \ref{Syn_Topology_Features} summarizes features that we found to be preserved for diffusive homeostasis. Diffusive homeostasis leads to the same stable level of recurrent excitatory connection fraction, as well as the observation that a non-uniform connection profile is required to allow for an over-representation of bidirectional connections, as reported previously \cite{SORN_Paper}. A more general discussion on this issue was given by Hoffmann and Triesch \cite{Hoffmann_2017}. Figure \ref{Syn_Topology_Features},C shows that a log-normal like distribution of excitatory weights is preserved under diffusive homeostasis, though a broader shape could be observed. Figure \ref{Syn_Topology_Features},D illustrates the preservation of a distribution of recurrent excitatory synaptic lifetimes during the steady phase of connectivity, resembling a power-law. Given the assertion that the slope of this distribution is linked to the overall balance of synaptic potentiation and depression \cite{SORN_Paper}, we can assume that both types of homeostasis result in a similar net difference between potentiation and depression.
+While we explicitly intended altering the statistics of excitatory firing rates by implementing diffusive homeostasis, we hoped to preserve what has previously been reported by Miner and Triesch regarding the evolution and structure of recurrent excitatory weights \cite{SORN_Paper}. Figure \ref{Syn_Topology_Features} summarizes features that we found to be preserved for diffusive homeostasis. Diffusive homeostasis leads to the same stable level of recurrent excitatory connection fraction, as well as the observation that a non-uniform connection profile is required to allow for an over-representation of bidirectional connections, as reported previously \cite{SORN_Paper}. A more general discussion on this issue was given by Hoffmann and Triesch \cite{Hoffmann_2017}. Figure \ref{Syn_Topology_Features},C shows that a log-normal like distribution of excitatory weights is preserved under diffusive homeostasis. Figure \ref{Syn_Topology_Features} D illustrates the preservation of a power-law distribution of recurrent excitatory synaptic lifetimes during the steady phase of connectivity. Given the assertion that the slope of this distribution is linked to the overall balance of synaptic potentiation and depression \cite{SORN_Paper}, we can assume that both types of homeostasis result in a similar net difference between potentiation and depression. Fitting of the power-law exponent was done with 
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{../../plots/paper/syn_topology_comp.png}
@@ -439,7 +442,7 @@ While we explicitly intended altering the statistics of excitatory firing rates 
 \label{Syn_Topology_Features}
 \end{figure}
 \subsection*{Heterogeneity of firing rate leads to the emergence of strongly influential excitatory neurons}\label{Section_Mean_outgoing_Weights}
-Having reproduced these results of the previous model, we further sought for possible differences within our network topology as a result of diffusive homeostasis. Since we only implemented synaptic normalization for the sum of ingoing weights, the total or average strength of \emph{outgoing} connections may vary from cell to cell. In a sense, the strength of outgoing connections per neuron can be regarded as a measure of how influential a neuron's activity is with respect to other neurons in the network. Effenberger et al. have shown in computational studies that these ``driver neurons" form highly active and interconnected subnetworks \cite{Effenberger_2015}, an observation that is backed up by experimental studies \cite{Yassin_Subnetworks_2010,Eckmann_Leader_Neurons_2008}. Figure \ref{Out_Weight_Mean_Quantile} shows that diffusive homeostasis allows for the emergence of a small group of highly influential neurons, which resembles the findings in \cite{Effenberger_2015}. A comparison of statistics generated with shuffled versions of the weight matrices illustrates that above-chance exceptionally strong mean outgoing weights were indeed present.
+Having reproduced these results of the previous model, we further sought for possible differences within our network topology as a result of diffusive homeostasis. Since we only implemented synaptic normalization for the sum of ingoing weights, the total or average strength of \emph{outgoing} connections may vary from cell to cell. In a sense, the strength of outgoing connections per neuron can be regarded as a measure of how influential a neuron's activity is with respect to other neurons in the network. Effenberger et al. have shown in computational studies that these ``driver neurons" form highly active and interconnected subnetworks \cite{Effenberger_2015}, an observation that is backed up by experimental studies \cite{Yassin_Subnetworks_2010,Eckmann_Leader_Neurons_2008}. Figure \ref{Out_Weight_Mean_Quantile} shows that diffusive homeostasis allows for the emergence of a small group of highly influential neurons, which resembles the findings in \cite{Effenberger_2015}. A comparison of statistics generated with shuffled versions of the weight matrices illustrates that above-chance exceptionally strong mean outgoing weights were indeed present. Statistical significance of the differences depicted in Figure \ref{Out_Weight_Mean_Quantile} was additionally tested by means of a two-sample Kolmogorov-Smirnov test, yielding p-values below a 1\% significance level for all non-identical weight distributions.
 \begin{figure}
 %%% plot_sum_outgoing_weights_dist.py
 \begin{center}
@@ -458,35 +461,35 @@ Synapses between highly active presynaptic cells and postsynaptic neurons with l
 \caption{Mean of outgoing excitatory weights at $\mathrm{t=1500\,s}$ plotted against mean presynaptic firing rate (averaged over $\mathrm{t=700-1000\,s}$) in regular (A) and logarithmic space (B). Each plot corresponds to a presynaptic excitatory cell. Two simulation runs were used for diffusive homeostasis, all other are single-trial data.}
 \label{Out_Weight_vs_F}
 \end{figure}
+Experimental studies have not only considered the presence of neurons with strong influence onto other neurons \cite{Eckmann_Leader_Neurons_2008}, but also found evidence that highly active neurons form subnetworks with an increased connectivity, in the sense that these cells were more likely than average to connect to each other, see \cite{Yassin_Subnetworks_2010}. We tested this in our network by evaluating the connection fraction $\rm CF_{diff.,leader}$ among the top 10\% of excitatory neurons with respect to their average firing rate within $\rm 1000\,s < t < 1500\,s$ and comparing it to the rest of the excitatory population and the same calculation for the non-diffusive case. This returned $\rm CF_{diff.,leader} = 0.1371 \pm 0.0061$, $\rm CF_{diff.,non-leader} = 0.0982 \pm 0.0013$, $\rm CF_{non-diff.,leader} = 0.0954 \pm 0.0044$ and $\rm CF_{non-diff.,non-leader} = 0.0992 \pm 0.0002$. Standard errors were calculated from 5 simulation runs for each homeostatic mechanism, and connectivity matrices were taken from $\rm t = 1500\,s$. This showed that connectivity is indeed increased among the fastest-firing 10\% of the neurons in the case of diffusive homeostasis. Effenberger et al. reported a similar effect, in fact with even more pronounced differences of connectivity \cite{Effenberger_2015}.
 
-
-\subsection*{Spatial configuration of seurons allows for the precise prediction of firing Rates}\label{Section_Rand_Mat_vs_Sim}
+\subsection*{Spatial configuration of neurons allows for the precise prediction of firing rates}\label{Section_Rand_Mat_vs_Sim}
 After having analyzed the distribution of firing rates resulting from the implementation of diffusive homeostasis, we were interested in how strongly the actual positioning of excitatory neurons influences the resulting statistics of firing activity. To do so, we assumed that the spontaneous firing measured during the stable phase of the network, characterized by a constant excitatory connectivity, can be regarded as a homeostatic steady state. Given no sudden strong changes of neural input, the homeostatic feedback levels out the error to approximately zero, since Equation \ref{Theta_dyn} is a realization of an integral control. Our search for the steady-state configuration of firing rates thus reduced to finding a set of firing rates that led to a concentration level of $NO_0$ at every excitatory neuron's position:
 \begin{equation}
-NO(\mathbf{x}_{neur,i}) = NO_0 \:, \: \forall i \; .
+NO(\mathbf{x}_{\mathrm{neur.},i}) = NO_0 \:, \: \forall i \; .
 \label{NO_equil_cond}
 \end{equation}
-Furthermore, we found that the nonlinearity between spiking activity and NO synthesis could be well approximated by a linear relation between average firing rate $r_i$ and rate of NO-synthesis $nNOS_i$ by
+Furthermore, we found that the nonlinearity between spiking activity and NO synthesis could be well approximated by a linear relation between average firing rate $r_i$ and rate of NO synthesis $nNOS_i$ by
 \begin{equation}
-nNOS_i = \frac{{Ca^{2+}_{spike}}^3 \tau_{Ca^{2+}}ln(2)}{3} \cdot r_i \equiv \gamma r_i \; .
+nNOS_i = \frac{{Ca^{2+}}^3_{\rm spike} \tau_{\rm Ca^{2+}}\ln(2)}{3} \cdot r_i \equiv \gamma r_i \; .
 \label{simpl_nNOS}
 \end{equation}
 See Appendix \ref{S1_Appendix} for a derivation of the proportionality factor. Given this simplification, the steady state of NO concentration is thus defined by the solution of
 \begin{align}
-0 &=-\lambda NO + D \nabla^2 NO + \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{neur,i})\cdot \gamma \cdot r_i \label{simple_NO_dyn_with_diff} \\
-\left(\nabla^2 + \left( i\sqrt{\frac{\lambda}{D}}\right)^2\right) NO &= \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{neur,i})\cdot \frac{- \gamma \cdot r_i}{D}
+0 &=-\lambda NO + D \nabla^2 NO + \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{\mathrm{neur.},i})\cdot \gamma \cdot r_i \label{simple_NO_dyn_with_diff} \\
+\left(\nabla^2 + \left( i\sqrt{\frac{\lambda}{D}}\right)^2\right) NO &= \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{\mathrm{neur.},i})\cdot \frac{- \gamma \cdot r_i}{D}
 \label{simple_NO_dyn_with_diff_equil_helmholtz}
 \end{align}
 which is a two-dimensional Helmholtz equation. Its Green's function is
 \begin{equation}
-NO(\mathbf{x}) = \frac{r_i \gamma}{2 \pi D} K_0 \left(|\mathbf{x}|\sqrt{\frac{\lambda}{D}} \right) \equiv r_i \cdot \psi_{point}(|\mathbf{x}|)
+NO(\mathbf{x}) = \frac{r_i \gamma}{2 \pi D} K_0 \left(|\mathbf{x}|\sqrt{\frac{\lambda}{D}} \right) \equiv r_i \cdot \psi_{\rm point}(|\mathbf{x}|)
 \label{solution_diff_equil_bessel}
 \end{equation}
-where $\mathrm{K_0}$ is the zeroth modified Bessel function of the second kind \cite{Helmholtz_Solution_2d}.  This solution reveals a fundamental problem of modeling the sources of NO-production as point sources: the fact that $\mathrm{K_0(x)}$ diverges to infinity for $\mathrm{x\rightarrow 0}$. It is merely due to the finite density of the numeric grid used for the simulation of diffusion that allows for a finite target value of concentration.
+where $\mathrm{K_0}$ is the zeroth modified Bessel function of the second kind \cite{Helmholtz_Solution_2d}.  This solution reveals a fundamental problem of modeling the sources of NO production as point sources: the fact that $\mathrm{K_0(x)}$ diverges to infinity for $\mathrm{x\rightarrow 0}$. It is merely due to the finite density of the numeric grid used for the simulation of diffusion that allows for a finite target value of concentration.
 
 Generally speaking, no matter how the actual shape of the numeric solution in the equilibrium at a constant production rate looks like, it must be of the form
 \begin{equation}
-NO_i(\mathbf{x}) = r_i \cdot \psi (|\mathbf{x}_{neur,i}-\mathbf{x}|) \;  . \label{general_diff_interaction}
+NO_i(\mathbf{x}) = r_i \cdot \psi (|\mathbf{x}_{\mathrm{neur.},i}-\mathbf{x}|) \;  . \label{general_diff_interaction}
 \end{equation}
 The full solution is then
 \begin{equation}
@@ -495,7 +498,7 @@ NO(\mathbf{x}) = \sum_i NO_i(\mathbf{x})\;.
 \end{equation}
 By defining
 \begin{equation}
-\psi_{ij} \equiv \psi_{ij} \equiv \psi (|\mathbf{x}_{neur,i}-\mathbf{x}_{neur,j}|)
+\psi_{ij} \equiv \psi_{ij} \equiv \psi (|\mathbf{x}_{\mathrm{neur.},i}-\mathbf{x}_{\mathrm{neur.},j}|)
 \label{interact_matrix_elements}
 \end{equation}
 we could express condition \eqref{NO_equil_cond} as
@@ -514,9 +517,9 @@ The problem of finding the steady-state solution of the homeostatic constraint t
 \label{NO_euqil_cond_interact_matrix_operator_solve}
 \end{equation}
 
-Still, we had to find a modified, non-diverging version of $\mathrm{\psi (d(\mathbf{x}_{neur,i},\mathbf{x}))}$ to acquire any prediction from this model. It had to retain the shape given by \eqref{solution_diff_equil_bessel} for larger distances but approach the correct numeric error value at the origin, determined by the spacing of the numeric grid. We solved this problem by the following expression:
+Still, we had to find a modified, non-diverging version of $\mathrm{\psi (d(\mathbf{x}_{\mathrm{neur.},i},\mathbf{x}))}$ to acquire any prediction from this model. It had to retain the shape given by \eqref{solution_diff_equil_bessel} for larger distances but approach the correct numeric error value at the origin, determined by the spacing of the numeric grid. We solved this problem by the following expression:
 \begin{equation}
-\psi_{approx.} \equiv \frac{1}{\left(\frac{1}{\psi_0^\varepsilon} + \frac{1}{\psi_{point}^\varepsilon}\right)^{\frac{1}{\varepsilon}}}
+\psi_{\rm approx.} \equiv \frac{1}{\left(\frac{1}{\psi_0^\varepsilon} + \frac{1}{\psi_{\rm point}^\varepsilon}\right)^{\frac{1}{\varepsilon}}}
 \label{Numeric_Solution_Expression_Trick}
 \end{equation}
 where $\mathrm{\varepsilon}$ determines the ``smoothness" of transition between $\mathrm{\psi}$ and the cutoff value $\mathrm{\psi_0}$. We chose $\mathrm{\varepsilon=10}$ for all further calculations. We took the simple approach of interpreting this value as a mean of the analytic solution across the area covered by the corresponding grid cell to find an expression for $\mathrm{\psi_0}$. As an additional simplification, we substituted the necessary integration over the square grid cell by a circular area of equal size around the source. This calculation yielded
@@ -528,13 +531,13 @@ where $\mathrm{h}$ is the spatial resolution of the grid cells.
 
 By simply calculating all matrix elements of $\mathrm{\hat{\psi}}$ by means of Equation \eqref{interact_matrix_elements}, one would neglect the finite boundaries of the system, which would cause neurons close to the edge to ``bleed" into empty space. We accommodated for zero-flux Neumann boundary conditions by adding appropriately mirrored copies of the neurons' positions, canceling the orthogonal component of the gradient at the boundaries. 
 
-After having worked out the analytical basis, we compared the prediction obtained from numerically solving \eqref{NO_equil_cond_interact_matrix_operator} for certain spatial configurations of neurons to the steady-state firing rates of the full spiking network with the same spatial structure. We were particularly interested in the quality of the predictions with respect to the choice of diffusion constant. Figure \ref{Rand_Matrix_Sol_vs_Sim} shows three examples: For $\mathrm{D=10\, \mu m^2 ms^{-1}}$, the correlation between measured and predicted firing rates is very good. In contrast, we included the - obviously unsuccessful - attempt to predict firing rates for a simulation with instant diffusion based on the spatial structure by setting D to a relatively high value of $\mathrm{D=100\, \mu m^2 ms^{-1}}$. This represented a limiting case where our analytic model could not make any meaningful predictions, since instant diffusion overrides any spatial inhomogeneities. The outcome of the third case shown in the plot, $\mathrm{D=0}$, is correctly predicted by the analytic model. In general, instant diffusion as well as $\mathrm{D=0}$ overrode the effects of spatial heterogeneity onto firing rates. 
+After having worked out the analytical basis, we compared the prediction obtained from numerically solving \eqref{NO_equil_cond_interact_matrix_operator} for certain spatial configurations of neurons to the steady-state firing rates of the full spiking network with the same spatial structure. We were particularly interested in the quality of the predictions with respect to the choice of diffusion constant. Figure \ref{Rand_Matrix_Sol_vs_Sim} shows three examples: For $\mathrm{D=10\, \upmu m^2 ms^{-1}}$, the correlation between measured and predicted firing rates is very good. In contrast, we included the - obviously unsuccessful - attempt to predict firing rates for a simulation with instant diffusion based on the spatial structure by setting D to a relatively high value of $\mathrm{D=100\, \upmu m^2 ms^{-1}}$. This represented a limiting case where our analytic model could not make any meaningful predictions, since instant diffusion overrides any spatial inhomogeneities. The outcome of the third case shown in the plot, $\mathrm{D=0}$, is correctly predicted by the analytic model. In general, instant diffusion as well as $\mathrm{D=0}$ overrode the effects of spatial heterogeneity onto firing rates. 
 \begin{figure}
 %% plot_rand_matrix_sol_vs_sim.py
 \begin{center}
 \includegraphics[width=0.7\textwidth]{../../plots/rates_matrix_prediction_vs_sim.png}
 \end{center}
-\caption{Measured firing rates (t=1200-1500 s) versus predicted firing rates based on the solution of Equation \eqref{NO_equil_cond_interact_matrix_operator}. For $\mathrm{D=\infty}$ (instant diffusion in the full simulation), the analytic prediction was calculated with a comparably large diffusion constant of $\mathrm{D=100\, \mu m^2 ms^{-1}}$. Plot shows representative single-trial data.}
+\caption{Measured firing rates (t=1200-1500 s) versus predicted firing rates based on the solution of Equation \eqref{NO_equil_cond_interact_matrix_operator}. For $\mathrm{D=\infty}$ (instant diffusion in the full simulation), the analytic prediction was calculated with a comparably large diffusion constant of $\mathrm{D=100\, \upmu m^2 ms^{-1}}$. Plot shows representative single-trial data.}
 \label{Rand_Matrix_Sol_vs_Sim}
 \end{figure}
 As Figure \ref{Fir_Rate_Dist_Sim_vs_Mat} shows, the actual shape of the distribution was also well predicted by the solution of the linear system.
@@ -543,11 +546,11 @@ As Figure \ref{Fir_Rate_Dist_Sim_vs_Mat} shows, the actual shape of the distribu
 %% fir_dist_shape_sim_matrix_compare.py
 \includegraphics[width=0.7\textwidth]{../../plots/firing_rate_dists/fir_rate_dist_sim_vs_mat.png}
 \end{center}
-\caption{Distribution of firing rates for $\mathrm{D=10\, \mu m^2 ms^{-1}}$, full simulation and analytic prediction. Data was taken from 10 simulation runs.}
+\caption{Distribution of firing rates for $\mathrm{D=10\, \upmu m^2 ms^{-1}}$, full simulation and analytic prediction. Data was taken from 10 simulation runs.}
 \label{Fir_Rate_Dist_Sim_vs_Mat}
 \end{figure}
 
-These observations naturally led us to the question of how the correlation between predicted measured firing rates behaves in between the aforementioned limits. Especially, we were interested in the range of the diffusion constant for which our model provides a good description of the full spiking network's activity. Figure \ref{Corr_Coeff_vs_D} depicts the Pearson correlation coefficient of $\mathrm{f_{matrix, predict}}$ and $\mathrm{f_{sim}}$ against the diffusion constant used in the simulation. A relatively high correlation was obtained for a wide range of diffusion constants. However, we could see a general decline of correlation for larger diffusion constants. This trend was in line with the aforementioned limit of instant diffusion, namely a complete decorrelation between prediction and measurement, as well as the good agreement for $\mathrm{D= 10\, \mu m^2 ms^{-1}}$ shown in Figure \ref{Fir_Rate_Dist_Sim_vs_Mat}.
+These observations naturally led us to the question of how the correlation between predicted measured firing rates behaves in between the aforementioned limits. Especially, we were interested in the range of the diffusion constant for which our model provides a good description of the full spiking network's activity. Figure \ref{Corr_Coeff_vs_D} depicts the Pearson correlation coefficient of $\mathrm{f_{\rm matrix, predict.}}$ and $\mathrm{f_{\rm sim.}}$ against the diffusion constant used in the simulation. A relatively high correlation was obtained for a wide range of diffusion constants. However, we could see a general decline of correlation for larger diffusion constants. This trend was in line with the aforementioned limit of instant diffusion, namely a complete decorrelation between prediction and measurement, as well as the good agreement for $\mathrm{D= 10\, \upmu m^2 ms^{-1}}$ shown in Figure \ref{Fir_Rate_Dist_Sim_vs_Mat}.
 \begin{figure}
 %% sim_vs_matrix_solve_corr_vs_D.py
 \begin{center}
@@ -558,22 +561,22 @@ These observations naturally led us to the question of how the correlation betwe
 \end{figure}
 
 \subsection*{Low-density neighborhoods correlate with strong outgoing connections}
-In Section \ref{Section_Mean_outgoing_Weights} we stated that diffusive homeostasis allowed the network do develop few neurons with exceptionally strong outgoing weights. We found this effect to be present in neurons with an highly above-average firing rate. Moreover, the outcomes presented in Section \ref{Section_Rand_Mat_vs_Sim} suggest that the steady state of firing rates is strongly influenced by the spatial structure of excitatory neurons. Combining these two qualities led us the conclusion that one should be able to observe some relation between spatial structure and the emergence of ``driver neurons". More specific, regions of neurons with above average firing rates should develop stronger outgoing connections. We approximated the local neuron density by means of a a Gaussian kernel with $\mathrm{\sigma = 50\, \mu m}$ to test this hypothesis. Figure \ref{Inverse_Dens_vs_Sum_Out_Weights} shows the results. Despite a certain amount of randomness, our prediction was indeed verified. 
+In Section \ref{Section_Mean_outgoing_Weights} we stated that diffusive homeostasis allowed the network do develop few neurons with exceptionally strong outgoing weights. We found this effect to be present in neurons with an highly above-average firing rate. Moreover, the outcomes presented in Section \ref{Section_Rand_Mat_vs_Sim} suggest that the steady state of firing rates is strongly influenced by the spatial structure of excitatory neurons. Combining these two qualities led us the conclusion that one should be able to observe some relation between spatial structure and the emergence of ``driver neurons". More specific, regions of neurons with above average firing rates should develop stronger outgoing connections. We approximated the local neuron density by means of a a Gaussian kernel with $\mathrm{\sigma = 50\, \upmu m}$ to test this hypothesis. Figure \ref{Inverse_Dens_vs_Sum_Out_Weights} shows the results. Despite a certain amount of randomness, our prediction was indeed verified. 
 \begin{figure}
 %% density_vs_sum_out_weights.py
 \begin{center}
-\includegraphics[width=0.5\textwidth]{../../plots/scatter_density_out_weights.png}
+\includegraphics[width=0.5\textwidth]{../../plots/scatter_density_out_weights_new.png}
 %% density_vs_sum_out_weights_points.py
-\includegraphics[width=0.5\textwidth]{../../plots/scatter_density_out_weights_points.png}
+\includegraphics[width=0.5\textwidth]{../../plots/scatter_density_out_weights_points_new.png}
 \end{center}
-\caption{(A) and (B): Scatter-plot of inverse of local neuron density (calculated by convolution with a gaussian kernel with $\mathrm{\sigma = 50\, \mu m}$) and decadic logarithm of outgoing excitatory weights. Note the spatial correlation in high/low-density regions. (C) and (D): The decadic logarithm of outgoing weights correlates with inverse neuron density (corr. coeff. of 0.513). All plots show representative single-trial data.}
+\caption{A and B: Scatter-plot of inverse of local neuron density (calculated by convolution with a gaussian kernel with $\mathrm{\sigma = 50\, \upmu m}$) and decadic logarithm of outgoing excitatory weights. Note the spatial correlation in high/low-density regions. C and D: The decadic logarithm of outgoing weights correlates with inverse neuron density (corr. coeff. of 0.513). All plots show representative single-trial data.}
 \label{Inverse_Dens_vs_Sum_Out_Weights}
 \end{figure}
 
 \section*{Discussion}
 By implementing diffusive homeostasis into the LIF-SORN model we managed to achieve a broader, skewed firing rate distribution of excitatory cells. In order to acquire a deeper understanding of the mechanisms that determine these statistics we developed an analytical expression that allowed us to reliably predict the steady-state of firing rates based on the spatial structure of excitatory neurons. We would like to emphasize that this explanation differs from common approaches of understanding the emergence of heavy-tailed statistics of firing rates in recurrent networks. Theoretical studies on the behavior of recurrent networks are largely based on the assumption that the excitability of neurons is not individually fine-tuned but rather randomly distributed and adjusted globally to achieve a desired mean firing rate. Predictions about the resulting activity are then made based on (potentially simplified) statistical features of recurrent connectivity and/or the specific form of the neuronal transfer function used in the model, see e.g. \cite{Roxin_Firing_Rate_Distribution,Vreeswijk1998,Koulakov_2009}. Our interpretation of our results leads to the conclusion that this approach matches the limiting case of instant diffusion: While Figure \ref{Fir_Rate_Dist_Compare} did not reveal many differences between finite-velocity and instant diffusion in terms of overall statistics, the decorrelation discussed in Section \ref{Section_Rand_Mat_vs_Sim} and plotted in Figure \ref{Corr_Coeff_vs_D} suggests that increasing the diffusion constant goes along with a transition between a spatially determined configuration of excitatory firing rates and a network topology-determined behavior.
 
-By analyzing network activity based on our analytic model we found that indeed only a single homeostatic fixed point exists for finite diffusion constants. On a practical level though, the gradual decorrelation with this theoretical state of activity upon larger values of $\mathrm{D}$ was presumably caused by synaptic turnovers which change the synaptic input, which means that fluctuations in activity were more slowly and less accurately compensated in the case of larger diffusion constants. However, for the standard choice of parameters (being roughly based on experimental data) the resulting activity was indeed strongly bound to the spatial structure of excitatory cells. Naturally, this raises the question of biological plausibility. To our knowledge, no experimental study exists that relates measurements of spontaneous activity to local fluctuations of neuronal densities. Interestingly, measurements in the barrel cortex and hippocampus have found that firing rates during exploration or task performance are significantly correlated with those found for spontaneous, baseline activity \cite{OConnor_2010,Mizuseki_2013}. This suggests that the same set of neurons tend to be relatively active or inactive under different stimuli and changing environments. In the light of these observations, one might speculate whether random spatial positioning might at least partially act as a determinant of these individual homeostatic working points of firing activity. A possible reason for the strong influence of spatial structure in the implemented model could be the fact that cells were modeled as approximate point sources. This allowed for a clear distinction between individual cells, even in close vicinity. While Sweeney et al. argued that the size of the studied tissue is large compared to the size of individual somata (which, apparently, they claim to be the main source of nitric oxide) Philippides et al. reported that NO is often synthesized in a more delocalized way by means of fine fibers exceeding the soma \cite{Philippides_2005}. The diameter of these production areas is on the order of $\mathrm{10-100 \mu m}$. This might explain why in reality diffusive homeostasis may not act as much as a precise tuner of single neuron activities as found in the computational model.
+By analyzing network activity based on our analytic model, we found that indeed only a single homeostatic fixed point exists for finite diffusion constants. On a practical level though, the gradual decorrelation with this theoretical state of activity upon larger values of $\mathrm{D}$ was presumably caused by synaptic turnovers which change the synaptic input, which means that fluctuations in activity were more slowly and less accurately compensated in the case of larger diffusion constants. However, for the standard choice of parameters (being roughly based on experimental data) the resulting activity was indeed strongly bound to the spatial structure of excitatory cells. Naturally, this raises the question of biological plausibility. To our knowledge, no experimental study exists that relates measurements of spontaneous activity to local fluctuations of neuronal densities. Interestingly, measurements in the barrel cortex and hippocampus have found that firing rates during exploration or task performance are significantly correlated with those found for spontaneous, baseline activity \cite{OConnor_2010,Mizuseki_2013}. This suggests that the same set of neurons tend to be relatively active or inactive under different stimuli and changing environments. In the light of these observations, one might speculate whether random spatial positioning might at least partially act as a determinant of these individual homeostatic working points of firing activity. A possible reason for the strong influence of spatial structure in the implemented model could be the fact that cells were modeled as approximate point sources. This allowed for a clear distinction between individual cells, even in close vicinity. While Sweeney et al. argued that the size of the studied tissue is large compared to the size of individual somata (which, apparently, they claim to be the main source of nitric oxide) Philippides et al. reported that NO is often synthesized in a more delocalized way by means of fine fibers exceeding the soma \cite{Philippides_2005}. The diameter of these production areas is on the order of $\mathrm{10-100 \upmu m}$. This might explain why in reality diffusive homeostasis may not act as much as a precise tuner of single neuron activities as found in the computational model.
 
 Savin et al. showed that local lesions in a network subject to diffusive synaptic homeostasis can lead to significantly different, bursting network behavior \cite{Savin_2008}. This complements our results in the sense that it supports the general idea of diffusive processes affecting activity based on spatial inhomogeneities.
 
@@ -594,22 +597,22 @@ As mentioned previously, the SORN has also proven its capabilities in associativ
 
 \paragraph*{S1 Appendix.}
 \label{S1_Appendix}
-We would like to derive a linear relation between mean firing rate  and the mean rate of NO synthesis. One could naively replace the sum of Dirac functions in \eqref{Ca_dyn} by a continuous inflow $Ca^{2+}_{spike} r(t)$. This approximation would indeed allow for the correct calculation of a linear relation between mean firing rate and NO production if \eqref{nNOS_dyn} was a linear homogeneous differential equation. The cubic dependence on $Ca^{2+}$ breaks this simplicity. We note the following in order to derive an approximate description: The target firing rate of 3 Hz and the corresponding mean interspike interval of 0.33...s is large compared to the decay constant of calcium, $\tau_{Ca^{2+}} = \mathrm{0.01\,s}$. Consequently, it is very unlikely that one spike event will fall into a region where the calcium concentration, decaying from the instant jump of the previous spike event, is still significantly larger than zero. As such, one can justify
+We would like to derive a linear relation between mean firing rate  and the mean rate of NO synthesis. One could naively replace the sum of Dirac functions in \eqref{Ca_dyn} by a continuous inflow $Ca^{2+}_{\rm spike} r(t)$. This approximation would indeed allow for the correct calculation of a linear relation between mean firing rate and NO production if \eqref{nNOS_dyn} was a linear homogeneous differential equation. The cubic dependence on $Ca^{2+}$ breaks this simplicity. We note the following in order to derive an approximate description: The target firing rate of 3 Hz and the corresponding mean interspike interval of 0.33...s is large compared to the decay constant of calcium, $\tau_{\rm Ca^{2+}} = \mathrm{0.01\,s}$. Consequently, it is very unlikely that one spike event will fall into a region where the calcium concentration, decaying from the instant jump of the previous spike event, is still significantly larger than zero. As such, one can justify
 \begin{equation}
 \begin{split}
-{Ca^{2+}}^3(t) &= \left[ Ca^{2+}_{\rm spike} \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \mathrm{exp} \left( - \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) \right]^3 \\
-&\approx {Ca_{\rm spike}^{2+}}^3 \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \mathrm{exp} \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) 
+{Ca^{2+}}^3(t) &= \left[ Ca^{2+}_{\rm spike} \sum_{i} \mathrm{\uptheta} \left( t-t^i_{\rm spike} \right) \exp \left( - \left( t-t^i_{\rm spike} \right) /\tau_{\rm Ca^{2+}} \right) \right]^3 \\
+&\approx {Ca_{\rm spike}^{2+}}^3 \sum_{i} \uptheta \left( t-t^i_{\rm spike} \right) \exp \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{\rm Ca^{2+}} \right) 
 \end{split} \label{cubic_approx_1}			
 \end{equation}
-with $\theta(x)$ being the Heaviside step function. By the same argument
+with $\uptheta(x)$ being the Heaviside step function. By the same argument
 \begin{equation}
-\frac{{Ca^{2+}}^3(t)}{{Ca^{2+}}^3(t)+1} \approx \sum_{i} \mathrm{\theta} \left( t-t^i_{\rm spike} \right) \frac{ \mathrm{exp} \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{Ca^{2+}} \right) }{\mathrm{exp} \left( -3 \left( t-t^i_{spike} \right) /\tau_{Ca^{2+}} \right) + \frac{1}{{Ca_{\rm spike}^{2+}}^3}} \; .
+\frac{{Ca^{2+}}^3(t)}{{Ca^{2+}}^3(t)+1} \approx \sum_{i} \uptheta \left( t-t^i_{\rm spike} \right) \frac{ \exp \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{\rm Ca^{2+}} \right) }{\exp \left( -3 \left( t-t^i_{\rm spike} \right) /\tau_{\rm Ca^{2+}} \right) + \frac{1}{{Ca_{\rm spike}^{2+}}^3}} \; .
 \end{equation}
-Therefore, the resulting rate of NO synthesis can be decomposed into a sum of time shifted responses onto a single kernel of calcium concentration as a result of a spike. For a spike at $t_{spike}=0$, the solution of \eqref{nNOS_dyn} can be calculated by
+Therefore, the resulting rate of NO synthesis can be decomposed into a sum of time shifted responses onto a single kernel of calcium concentration as a result of a spike. For a spike at $t_{\rm spike}=0$, the solution of \eqref{nNOS_dyn} can be calculated by
 \begin{equation}
 \begin{split}
-nNOS(t) &= \frac{1}{\tau_{nNOS}}\int_{-\infty}^t dt' exp(-(t-t')/\tau_{nNOS})\cdot \theta(t') \frac{exp(-3t'/\tau_{Ca^{2+}})}{exp(-3t'/\tau_{Ca^{2+}}) + \frac{1}{{Ca^{2+}_{spike}}^3}} \\
-&= \frac{1}{\tau_{nNOS}}\int_{0}^t dt' exp(-(t-t')/\tau_{nNOS})\cdot \frac{exp(-3t'/\tau_{Ca^{2+}})}{exp(-3t'/\tau_{Ca^{2+}}) + \frac{1}{{Ca^{2+}_{spike}}^3}}\;.
+nNOS(t) &= \frac{1}{\tau_{\rm nNOS}}\int_{-\infty}^t dt' \exp(-(t-t')/\tau_{\rm nNOS}) \uptheta(t') \frac{\exp(-3t'/\tau_{\rm Ca^{2+}})}{\exp(-3t'/\tau_{\rm Ca^{2+}}) + \frac{1}{{Ca^{2+}_{\rm spike}}^3}} \\
+&= \frac{1}{\tau_{\rm nNOS}}\int_{0}^t dt' \exp(-(t-t')/\tau_{\rm nNOS})\cdot \frac{\exp(-3t'/\tau_{\rm Ca^{2+}})}{\exp(-3t'/\tau_{\rm Ca^{2+}}) + \frac{1}{{Ca^{2+}_{\rm spike}}^3}}\;.
 \end{split}\label{nNOS_single_sol}
 \end{equation}
 
@@ -621,21 +624,21 @@ nNOS(t) &= \frac{1}{\tau_{nNOS}}\int_{-\infty}^t dt' exp(-(t-t')/\tau_{nNOS})\cd
 \caption{Time course of nNOS(t) with Poisson spiking at 3 Hz. The full simulation (blue, see equations \eqref{Ca_dyn},\eqref{nNOS_dyn}) is well fitted by the simplified model (red, see equation \eqref{nNOS_single_sol_approx2}). Top axis is a closeup of the first spike event.}
 \end{figure}
 
-The exact solution of this integral can be expressed in terms of the hyper-geometric function, making it rather impractical for any further analysis. Looking for further simplifications, we noted that $\tau_{nNOS}$ is ten-fold larger than $\tau_{Ca^{2+}}$. This discrepancy in decay times allows for the assumption that the impact of the calcium kernel onto $nNOS$ is practically instantaneous. Consequently, $nNOS(t)$ becomes
+The exact solution of this integral can be expressed in terms of the hyper-geometric function, making it rather impractical for any further analysis. Looking for further simplifications, we noted that $\tau_{\rm nNOS}$ is ten-fold larger than $\tau_{\rm Ca^{2+}}$. This discrepancy in decay times allows for the assumption that the impact of the calcium kernel onto $nNOS$ is practically instantaneous. Consequently, $nNOS(t)$ becomes
 \begin{equation}
-nNOS(t) = \frac{1}{\tau_{nNOS}} \theta(t) exp(-t/\tau_{nNOS}) \int_{0}^\infty dt' \frac{exp(-3t'/\tau_{Ca^{2+}})}{exp(-3t'/\tau_{Ca^{2+}}) + \frac{1}{{Ca^{2+}_{spike}}^3}}\;.
+nNOS(t) = \frac{1}{\tau_{\rm nNOS}} \uptheta(t) \exp(-t/\tau_{\rm nNOS}) \int_{0}^\infty dt' \frac{\exp(-3t'/\tau_{\rm Ca^{2+}})}{\exp(-3t'/\tau_{\rm Ca^{2+}}) + \frac{1}{{Ca^{2+}_{\rm spike}}^3}}\;.
 \label{nNOS_single_sol_approx1}
 \end{equation}
 In this form, the integral has an easy-to-handle solution, which - with all spike events now included - results in
 \begin{equation}
-nNOS(t) = \frac{{Ca^{2+}_{spike}}^3 \tau_{Ca^{2+}}ln(2)}{3\tau_{nNOS}} \sum_i \theta(t-t^i_{spike}) \exp(-(t-t^i_{spike})/\tau_{nNOS})\;.
+nNOS(t) = \frac{{Ca^{2+}_{\rm spike}}^3 \tau_{\rm Ca^{2+}}\ln(2)}{3\tau_{\rm nNOS}} \sum_i \uptheta(t-t^i_{\rm spike}) \exp(-(t-t^i_{\rm spike})/\tau_{\rm nNOS})\;.
 \label{nNOS_single_sol_approx2}
 \end{equation}
 Figure \ref{nNOS_approx_plot} compares the approximation given by \eqref{nNOS_single_sol_approx2} to the full NO production model (equations \eqref{Ca_dyn} and \eqref{nNOS_dyn}). Spikes were drawn from a Poisson process at a rate of 3 Hz. The simplified model fits very well for sufficiently isolated spike events, as predicted. One can observe a slightly smaller but acceptable agreement for the rare event of two subsequent spikes appearing very close to each other, as seen in Figure \ref{nNOS_approx_plot} at approximately 4 seconds.
 
 Thus, on average, the sum in Equation \ref{nNOS_single_sol_approx2} simply reduces to the mean rate $\langle r \rangle$:
 \begin{equation}
-\langle nNOS \rangle = \frac{{Ca^{2+}_{spike}}^3 \tau_{Ca^{2+}}ln(2)}{3\tau_{nNOS}} \langle r \rangle
+\langle nNOS \rangle = \frac{{Ca^{2+}_{\rm spike}}^3 \tau_{\rm Ca^{2+}}\ln(2)}{3\tau_{\rm nNOS}} \langle r \rangle
 \label{nNOS_single_sol_approx3}
 \end{equation}
 \label{nNOS_approx_plot}
