@@ -1,43 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Buzsaki_Fir_Rates_2014}
-Buzsáki G, Mizuseki K.
-\newblock {The log-dynamic brain: how skewed distributions affect network
-  operations}.
-\newblock Nature Reviews Neuroscience. 2014;.
-
-\bibitem{Wohrer_Fir_Rates_2012}
-Wohrer A, Humphries MD, Machens C.
-\newblock {Population-wide distributions of neural activity during perceptual
-  decision-making}.
-\newblock Progress in Neurobiology. 2012;.
-
-\bibitem{Marsat_2010}
-Marsat G, Maler L.
-\newblock {Neural Heterogeneity and Efficient Population Codes for
-  Communication Signals}.
-\newblock Journal of Neurophysiology. 2010;104(5):2543--2555.
-\newblock doi:{10.1152/jn.00256.2010}.
-
-\bibitem{Dragoi_2003}
-Dragoi G, Harris KD, Buzsáki G.
-\newblock {Place Representation within Hippocampal Networks Is Modified by
-  Long-Term Potentiation}.
-\newblock Neuron. 2003;39(5):843 -- 853.
-\newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
-
-\bibitem{Buzsaki_2004}
-Buzsáki G, Geisler C, Henze DA, Wang XJ.
-\newblock {Interneuron Diversity series: Circuit complexity and axon wiring
-  economy of cortical interneurons}.
-\newblock Trends in Neurosciences. 2004;27.
-
-\bibitem{Sweeney_Paper}
-Sweeney Y, Kotaleski JH, Hennig MH.
-\newblock {A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and
-  Responsiveness in Cortical Networks}.
-\newblock PLoS Computational Biology. 2015;.
-
 \bibitem{Lazar_2009}
 Lazar A, Pipa G, Triesch J.
 \newblock {SORN: a self-organizing recurrent neural network}.
@@ -71,13 +33,6 @@ Zhang LI, Tao HW, Holt CE, Harris WA, Poo M.
 Turrigiano GG.
 \newblock {The Self-Tuning Neuron: Synaptic Scaling of Excitatory Synapses}.
 \newblock Cell. 2008;135.
-
-\bibitem{Haider_2006}
-Haider B, Duque A, Hasenstaub AR, McCormick DA.
-\newblock {Neocortical Network Activity In Vivo Is Generated through a Dynamic
-  Balance of Excitation and Inhibition}.
-\newblock Journal of Neuroscience. 2006;26(17):4535--4545.
-\newblock doi:{10.1523/JNEUROSCI.5297-05.2006}.
 
 \bibitem{Vogels_2011}
 Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.
@@ -129,12 +84,43 @@ Hartmann C, Lazar A, Nessler B, Triesch J.
 \newblock PLOS Computational Biology. 2016;11(12):1--35.
 \newblock doi:{10.1371/journal.pcbi.1004640}.
 
+\bibitem{Buzsaki_Fir_Rates_2014}
+Buzsáki G, Mizuseki K.
+\newblock {The log-dynamic brain: how skewed distributions affect network
+  operations}.
+\newblock Nature Reviews Neuroscience. 2014;.
+
+\bibitem{Wohrer_Fir_Rates_2012}
+Wohrer A, Humphries MD, Machens C.
+\newblock {Population-wide distributions of neural activity during perceptual
+  decision-making}.
+\newblock Progress in Neurobiology. 2012;.
+
+\bibitem{Buzsaki_2004}
+Buzsáki G, Geisler C, Henze DA, Wang XJ.
+\newblock {Interneuron Diversity series: Circuit complexity and axon wiring
+  economy of cortical interneurons}.
+\newblock Trends in Neurosciences. 2004;27.
+
+\bibitem{Marsat_2010}
+Marsat G, Maler L.
+\newblock {Neural Heterogeneity and Efficient Population Codes for
+  Communication Signals}.
+\newblock Journal of Neurophysiology. 2010;104(5):2543--2555.
+\newblock doi:{10.1152/jn.00256.2010}.
+
 \bibitem{Tripathy_2013}
 Tripathy SJ, Padmanabhan K, Gerkin RC, Urban NN.
 \newblock {Intermediate intrinsic diversity enhances neural population coding}.
 \newblock Proceedings of the National Academy of Sciences.
   2013;110(20):8248--8253.
 \newblock doi:{10.1073/pnas.1221214110}.
+
+\bibitem{Sweeney_Paper}
+Sweeney Y, Kotaleski JH, Hennig MH.
+\newblock {A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and
+  Responsiveness in Cortical Networks}.
+\newblock PLoS Computational Biology. 2015;.
 
 \bibitem{Briansim}
 Brette R, Goodman D, Stirnberg M. {The Brian spiking neural network simulator
@@ -284,6 +270,13 @@ Gilson M, Fukai T.
   Distributions Solve the Dilemma}.
 \newblock PLOS ONE. 2011;6(10):1--18.
 \newblock doi:{10.1371/journal.pone.0025339}.
+
+\bibitem{Dragoi_2003}
+Dragoi G, Harris KD, Buzsáki G.
+\newblock {Place Representation within Hippocampal Networks Is Modified by
+  Long-Term Potentiation}.
+\newblock Neuron. 2003;39(5):843 -- 853.
+\newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
 
 \bibitem{Luz_2012}
 Luz Y, Shamir M.
