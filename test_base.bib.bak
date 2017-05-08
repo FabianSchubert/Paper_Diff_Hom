@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.10b2.
+% This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
 
@@ -22,6 +22,24 @@
   Owner                    = {fschubert},
   Timestamp                = {2016.10.06},
   Url                      = {http://www.briansimulator.org/}
+}
+
+@Article{Battaglia_2005,
+  Title                    = {{Firing rate modulation: A simple statistical view of memory trace reactivation}},
+  Author                   = {Battaglia, F. P. and Sutherland, G. R. and Cowen, S. L. and Mc Naughton, B. L.  and Harris, K. D.},
+  Journal                  = {Neural Networks },
+  Year                     = {2005},
+  Note                     = {Computational Theories of the Functions of the Hippocampus },
+  Number                   = {9},
+  Pages                    = {1280 - 1291},
+  Volume                   = {18},
+
+  Doi                      = {https://doi.org/10.1016/j.neunet.2005.08.011},
+  ISSN                     = {0893-6080},
+  Keywords                 = {Memory consolidation},
+  Owner                    = {fabian},
+  Timestamp                = {2017.05.09},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0893608005001954}
 }
 
 @Book{Bear_Exploring_the_Brain,
@@ -379,6 +397,21 @@
   Url                      = {http://www.jneurosci.org/content/26/17/4535}
 }
 
+@Article{Hall_2009,
+  Title                    = {{What is the real physiological \{NO\} concentration in vivo?}},
+  Author                   = {Hall, C. N. and Garthwaite, J.},
+  Journal                  = {Nitric Oxide},
+  Year                     = {2009},
+  Number                   = {2},
+  Pages                    = {92 - 103},
+  Volume                   = {21},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.niox.2009.07.002},
+  ISSN                     = {1089-8603},
+  Keywords                 = {Nitric oxide},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S1089860309000962}
+}
+
 @Article{Stability_Homeostasis_Harnack_2015,
   Title                    = {{Stability of Neuronal Networks with Homeostatic Regulation}},
   Author                   = {Harnack, D. and Pelko, M. and Chaillet, A. and Chitour, Y. and van Rossum, M. C. W.},
@@ -542,6 +575,25 @@
 
   Owner                    = {fschubert},
   Timestamp                = {2017.02.16}
+}
+
+@Article{Lefort_2009,
+  Title                    = {{The Excitatory Neuronal Network of the C2 Barrel Column in Mouse Primary Somatosensory Cortex}},
+  Author                   = {Lefort, S. and Tomm, C. and Floyd Sarria, J.-C. and Petersen, Carl C.H.},
+  Journal                  = {Neuron},
+  Year                     = {2009},
+  Number                   = {2},
+  Pages                    = {301--316},
+  Volume                   = {61},
+
+  Booktitle                = {Neuron},
+  Comment                  = {doi: 10.1016/j.neuron.2008.12.020},
+  Doi                      = {10.1016/j.neuron.2008.12.020},
+  ISSN                     = {0896-6273},
+  Owner                    = {fabian},
+  Publisher                = {Elsevier},
+  Timestamp                = {2017.05.09},
+  Url                      = {http://dx.doi.org/10.1016/j.neuron.2008.12.020}
 }
 
 @Article{LeMasson_1993,
