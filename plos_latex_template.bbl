@@ -122,12 +122,6 @@ Sweeney Y, Kotaleski JH, Hennig MH.
   Responsiveness in Cortical Networks}.
 \newblock PLoS Computational Biology. 2015;.
 
-\bibitem{Briansim}
-Brette R, Goodman D, Stirnberg M. {The Brian spiking neural network simulator
-  (Version 1.0) [Computer Software]}; 2016.
-\newblock \url{http://www.briansimulator.org/}.
-\newblock Available from: \url{http://www.briansimulator.org/}.
-
 \bibitem{Bi_Poo_STDP}
 Bi G, Poo M.
 \newblock {Synaptic Modifications in Cultured Hippocampal Neurons: Dependence
@@ -181,6 +175,17 @@ Philippides A, Husbands P, O{\textquoteright}Shea M.
 \newblock {Four-Dimensional Neuronal Signaling by Nitric Oxide: A Computational
   Analysis}.
 \newblock Journal of Neuroscience. 2000;20(3):1199--1207.
+
+\bibitem{Briansim}
+Brette R, Goodman D, Stirnberg M. {The Brian spiking neural network simulator
+  (Version 1.0) [Computer Software]}; 2016.
+\newblock \url{http://www.briansimulator.org/}.
+\newblock Available from: \url{http://www.briansimulator.org/}.
+
+\bibitem{Matplotlib}
+Team MD. {Matplotlib (Version 1.5.3) [Computer Software]}; 2016.
+\newblock \url{https://matplotlib.org/1.5.3/index.html}.
+\newblock Available from: \url{http://www.briansimulator.org/}.
 
 \bibitem{Hoffmann_2017}
 Hoffmann FZ, Triesch J.
