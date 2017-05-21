@@ -187,6 +187,32 @@ Team MD. {Matplotlib (Version 1.5.3) [Computer Software]}; 2016.
 \newblock \url{https://matplotlib.org/1.5.3/index.html}.
 \newblock Available from: \url{http://www.briansimulator.org/}.
 
+\bibitem{Loewenstein_2015}
+Loewenstein Y, Yanover U, Rumpel S.
+\newblock Predicting the Dynamics of Network Connectivity in the Neocortex.
+\newblock Journal of Neuroscience. 2015;35(36):12535--12544.
+\newblock doi:{10.1523/JNEUROSCI.2917-14.2015}.
+
+\bibitem{Yasumatsu_Synapses_2008}
+Yasumatsu N, Matsuzaki M, Miyazaki T, Noguchi J, Kasai H.
+\newblock {Principles of Long-Term Dynamics of Dendritic Spines}.
+\newblock Journal of Neuroscience. 2008;28(50):13592--13608.
+\newblock doi:{10.1523/JNEUROSCI.0603-08.2008}.
+
+\bibitem{Lefort_2009}
+Lefort S, Tomm C, Floyd~Sarria JC, Petersen CCH.
+\newblock {The Excitatory Neuronal Network of the C2 Barrel Column in Mouse
+  Primary Somatosensory Cortex}.
+\newblock Neuron. 2009;61(2):301--316.
+\newblock doi:{10.1016/j.neuron.2008.12.020}.
+
+\bibitem{Loewenstein_Spine_Sizes}
+Loewenstein Y, Kuras A, Rumpel S.
+\newblock {Multiplicative Dynamics Underlie the Emergence of the Log-Normal
+  Distribution of Spine Sizes in the Neocortex In Vivo}.
+\newblock Journal of Neuroscience. 2011;31(26):9481--9488.
+\newblock doi:{10.1523/JNEUROSCI.6130-10.2011}.
+
 \bibitem{Hoffmann_2017}
 Hoffmann FZ, Triesch J.
 \newblock {Non-random network connectivity comes in pairs}.

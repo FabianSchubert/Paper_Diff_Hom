@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: plos_latex_template.aux
 The style file: plos2015.bst
@@ -7,44 +7,44 @@ Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 50 entries,
+You've used 54 entries,
             3058 wiz_defined-function locations,
-            991 strings with 15376 characters,
-and the built_in function-call counts, 69738 in all, are:
-= -- 9131
-> -- 564
+            1028 strings with 16606 characters,
+and the built_in function-call counts, 76830 in all, are:
+= -- 10055
+> -- 624
 < -- 0
-+ -- 466
-- -- 141
-* -- 5541
-:= -- 7666
-add.period$ -- 214
-call.type$ -- 50
++ -- 513
+- -- 156
+* -- 6130
+:= -- 8437
+add.period$ -- 234
+call.type$ -- 54
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 50
-duplicate$ -- 6692
-empty$ -- 6450
-format.name$ -- 184
-if$ -- 16346
+cite$ -- 54
+duplicate$ -- 7322
+empty$ -- 7107
+format.name$ -- 203
+if$ -- 17999
 int.to.chr$ -- 0
-int.to.str$ -- 50
-missing$ -- 395
-newline$ -- 271
-num.names$ -- 50
-pop$ -- 707
+int.to.str$ -- 54
+missing$ -- 434
+newline$ -- 295
+num.names$ -- 54
+pop$ -- 765
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 670
+skip$ -- 729
 stack$ -- 0
-substring$ -- 12135
-swap$ -- 925
+substring$ -- 13445
+swap$ -- 1027
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 415
-width$ -- 52
-write$ -- 572
+while$ -- 458
+width$ -- 56
+write$ -- 624
