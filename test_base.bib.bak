@@ -440,8 +440,8 @@
 }
 
 @Article{Hengen_2016,
-  Title                    = {Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted by Wake},
-  Author                   = {Hengen, K. B. and Torrado Pacheco, A. and McGregor, J. N. and Van Hooser, S. D. and Turrigiano, G. G.},
+  Title                    = {{Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted by Wake}},
+  Author                   = {Hengen, K. B. and Torrado Pacheco, A. and McGregor, J. N. and Van Hooser, S. D. and Turrigiano, G. G.},
   Journal                  = {Cell},
   Number                   = {1},
   Pages                    = {180--191},
@@ -567,6 +567,18 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
   Timestamp                = {2017.02.22}
 }
 
+@Article{Luetcke_2011,
+  Title                    = {{Two-photon imaging and analysis of neural network dynamics}},
+  Author                   = {L\"utcke, H. and Helmchen, F.},
+  Journal                  = {Reports on Progress in Physics},
+  Year                     = {2011},
+  Number                   = {8},
+  Pages                    = {086602},
+  Volume                   = {74},
+
+  Url                      = {http://stacks.iop.org/0034-4885/74/i=8/a=086602}
+}
+
 @Article{Lancaster_1994,
   Title                    = {{Simulation of the diffusion and reaction of endogenously produced nitric oxide}},
   Author                   = {Lancaster, J. R.},
@@ -608,6 +620,7 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
   Comment                  = {doi: 10.1016/j.neuron.2008.12.020},
   Doi                      = {10.1016/j.neuron.2008.12.020},
   ISSN                     = {0896-6273},
+  Keywords                 = {log-normal},
   Owner                    = {fabian},
   Publisher                = {Elsevier},
   Timestamp                = {2017.05.09},
@@ -673,7 +686,7 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
 }
 
 @Article{Loewenstein_2015,
-  Title                    = {Predicting the Dynamics of Network Connectivity in the Neocortex},
+  Title                    = {{Predicting the Dynamics of Network Connectivity in the Neocortex}},
   Author                   = {Loewenstein, Y. and Yanover, U. and Rumpel, S.},
   Journal                  = {Journal of Neuroscience},
   Year                     = {2015},
@@ -689,18 +702,6 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
   Publisher                = {Society for Neuroscience},
   Timestamp                = {2017.05.21},
   Url                      = {http://www.jneurosci.org/content/35/36/12535}
-}
-
-@Article{Luetcke_2011,
-  Title                    = {{Two-photon imaging and analysis of neural network dynamics}},
-  Author                   = {Lütcke, H. and Helmchen, F.},
-  Journal                  = {Reports on Progress in Physics},
-  Year                     = {2011},
-  Number                   = {8},
-  Pages                    = {086602},
-  Volume                   = {74},
-
-  Url                      = {http://stacks.iop.org/0034-4885/74/i=8/a=086602}
 }
 
 @Article{Luz_2012,
@@ -1000,6 +1001,7 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
 
   Abstract                 = {A dataset of hundreds of recordings in which four neurons were simultaneously monitored reveals clustered connectivity patterns among cortical neurons.},
   Doi                      = {10.1371/journal.pbio.0030068},
+  Keywords                 = {log-normal},
   Publisher                = {Public Library of Science},
   Url                      = {http://dx.doi.org/10.1371%2Fjournal.pbio.0030068}
 }
@@ -1213,6 +1215,7 @@ Homeostatic mechanisms stabilize neural circuit function by keeping firing rates
   Doi                      = {10.1523/JNEUROSCI.0603-08.2008},
   Eprint                   = {http://www.jneurosci.org/content/28/50/13592.full.pdf},
   ISSN                     = {0270-6474},
+  Keywords                 = {log-normal},
   Publisher                = {Society for Neuroscience},
   Url                      = {http://www.jneurosci.org/content/28/50/13592}
 }

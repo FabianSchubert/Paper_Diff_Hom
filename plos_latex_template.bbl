@@ -1,74 +1,17 @@
 \begin{thebibliography}{10}
 
-\bibitem{Lazar_2009}
-Lazar A, Pipa G, Triesch J.
-\newblock {SORN: a self-organizing recurrent neural network}.
-\newblock Frontiers in Computational Neuroscience. 2009;3.
+\bibitem{Battaglia_2005}
+Battaglia FP, Sutherland GR, Cowen SL, Mc~Naughton BL, Harris KD.
+\newblock {Firing rate modulation: A simple statistical view of memory trace
+  reactivation}.
+\newblock Neural Networks. 2005;18(9):1280 -- 1291.
+\newblock doi:{https://doi.org/10.1016/j.neunet.2005.08.011}.
 
-\bibitem{Savin_2010}
-Savin C, Joshi P, Triesch J.
-\newblock {Independent Component Analysis in Spiking Neurons}.
-\newblock PLOS Computational Biology. 2010;6(4):1--10.
-\newblock doi:{10.1371/journal.pcbi.1000757}.
-
-\bibitem{Tetzlaff_2012}
-Tetzlaff C, Kolodziejski C, Timme M, W\"org\"otter F.
-\newblock {Analysis of Synaptic Scaling in Combination with Hebbian Plasticity
-  in Several Simple Networks}.
-\newblock Frontiers in Computational Neuroscience. 2012;.
-
-\bibitem{Effenberger_2015}
-Effenberger F, Jost J.
-\newblock {Self-Organization in Balanced State Networks by STDP and Homeostatic
-  Plasticity}.
-\newblock PLOS Computational Biology. 2015;.
-
-\bibitem{Zhang_STDP}
-Zhang LI, Tao HW, Holt CE, Harris WA, Poo M.
-\newblock {A critical window for cooperation and competition among developing
-  retinotectal synapses}.
-\newblock Nature. 1998;395:37--44.
-
-\bibitem{Turrigiano_2008}
-Turrigiano GG.
-\newblock {The Self-Tuning Neuron: Synaptic Scaling of Excitatory Synapses}.
-\newblock Cell. 2008;135.
-
-\bibitem{Vogels_2011}
-Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.
-\newblock {Inhibitory Plasticity Balances Excitation and Inhibition in Sensory
-  Pathways and Memory Networks}.
-\newblock Science. 2011;334(6062):1569--1573.
-\newblock doi:{10.1126/science.1211095}.
-
-\bibitem{Syn_Plast_Abbott}
-Abbott L, Nelson SB.
-\newblock {Synaptic Plasticity: taming the beast}.
-\newblock Nature Neuroscience. 2000;.
-
-\bibitem{LeMasson_1993}
-LeMasson G, Marder E, Abbott LF.
-\newblock {Activity-dependent regulation of conductances in model neurons}.
-\newblock Science. 1993;259(5103):1915--1917.
-\newblock doi:{10.1126/science.8456317}.
-
-\bibitem{SORN_Paper}
-Miner D, Triesch J.
-\newblock {Plasticity-Driven Self-Organization under Topological Constraints
-  Accounts for Non-Random Features of Cortical Synaptic Wiring}.
-\newblock PLoS Computational Biology. 2016;.
-
-\bibitem{Pengsheng_2013}
-Zheng P, Dimitrakakis C, Triesch J.
-\newblock {Network Self-Organization Explains the Statistics and Dynamics of
-  Synaptic Connection Strength in Cortex}.
-\newblock PLOS Computational Biology. 2013;.
-
-\bibitem{Markram_Connections_1997}
-Markram H.
-\newblock {A network of tufted layer 5 pyramidal neurons.}
-\newblock Cerebral Cortex. 1997;7(6):523--533.
-\newblock doi:{10.1093/cercor/7.6.523}.
+\bibitem{Mizuseki_2013}
+Mizuseki K, Buzsáki G.
+\newblock {Preconfigured, skewed distribution of firing rates in the
+  hippocampus and entorhinal cortex}.
+\newblock Cell Reports. 2013;4.
 
 \bibitem{Song_Connectivity_2005}
 Song S, Sj\"ostr\"om PJ, Reigl M, Nelson S, Chklovskii DB.
@@ -77,30 +20,24 @@ Song S, Sj\"ostr\"om PJ, Reigl M, Nelson S, Chklovskii DB.
 \newblock PLOS Biology. 2005;3(3).
 \newblock doi:{10.1371/journal.pbio.0030068}.
 
-\bibitem{Hartmann_2016}
-Hartmann C, Lazar A, Nessler B, Triesch J.
-\newblock {Where’s the Noise? Key Features of Spontaneous Activity and Neural
-  Variability Arise through Learning in a Deterministic Network}.
-\newblock PLOS Computational Biology. 2016;11(12):1--35.
-\newblock doi:{10.1371/journal.pcbi.1004640}.
-
-\bibitem{Buzsaki_Fir_Rates_2014}
-Buzsáki G, Mizuseki K.
-\newblock {The log-dynamic brain: how skewed distributions affect network
-  operations}.
-\newblock Nature Reviews Neuroscience. 2014;.
-
-\bibitem{Wohrer_Fir_Rates_2012}
-Wohrer A, Humphries MD, Machens C.
-\newblock {Population-wide distributions of neural activity during perceptual
-  decision-making}.
-\newblock Progress in Neurobiology. 2012;.
+\bibitem{Lefort_2009}
+Lefort S, Tomm C, Floyd~Sarria JC, Petersen CCH.
+\newblock {The Excitatory Neuronal Network of the C2 Barrel Column in Mouse
+  Primary Somatosensory Cortex}.
+\newblock Neuron. 2009;61(2):301--316.
+\newblock doi:{10.1016/j.neuron.2008.12.020}.
 
 \bibitem{Buzsaki_2004}
 Buzsáki G, Geisler C, Henze DA, Wang XJ.
 \newblock {Interneuron Diversity series: Circuit complexity and axon wiring
   economy of cortical interneurons}.
 \newblock Trends in Neurosciences. 2004;27.
+
+\bibitem{Buzsaki_Fir_Rates_2014}
+Buzsáki G, Mizuseki K.
+\newblock {The log-dynamic brain: how skewed distributions affect network
+  operations}.
+\newblock Nature Reviews Neuroscience. 2014;.
 
 \bibitem{Marsat_2010}
 Marsat G, Maler L.
@@ -109,18 +46,50 @@ Marsat G, Maler L.
 \newblock Journal of Neurophysiology. 2010;104(5):2543--2555.
 \newblock doi:{10.1152/jn.00256.2010}.
 
-\bibitem{Tripathy_2013}
-Tripathy SJ, Padmanabhan K, Gerkin RC, Urban NN.
-\newblock {Intermediate intrinsic diversity enhances neural population coding}.
-\newblock Proceedings of the National Academy of Sciences.
-  2013;110(20):8248--8253.
-\newblock doi:{10.1073/pnas.1221214110}.
+\bibitem{Statman_Synapses_2014}
+Statman A, Kaufman M, Minerbi A, Ziv NE, Brenner N.
+\newblock {Synaptic Size Dynamics as an Effectively Stochastic Process}.
+\newblock PLOS Computational Biology. 2014;10(10):1--17.
+\newblock doi:{10.1371/journal.pcbi.1003846}.
+
+\bibitem{Gilson_2011}
+Gilson M, Fukai T.
+\newblock {Stability versus Neuronal Specialization for STDP: Long-Tail Weight
+  Distributions Solve the Dilemma}.
+\newblock PLOS ONE. 2011;6(10):1--18.
+\newblock doi:{10.1371/journal.pone.0025339}.
+
+\bibitem{Koulakov_2009}
+Koulakov AA, Hrom\'{a}dka T, Zador AM.
+\newblock {Correlated Connectivity and the Distribution of Firing Rates in the
+  Neocortex}.
+\newblock The Journal of Neuroscience. 2009;.
+
+\bibitem{Roxin_Firing_Rate_Distribution}
+Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
+\newblock {On the Distribution of Firing Rates in Networks of Cortical
+  Neurons}.
+\newblock Journal of Neuroscience. 2011;31(45):16217--16226.
+\newblock doi:{10.1523/JNEUROSCI.1677-11.2011}.
+
+\bibitem{Hengen_2016}
+Hengen KB, Torrado~Pacheco A, McGregor JN, Van~Hooser SD, Turrigiano GG.
+\newblock {Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted
+  by Wake}.
+\newblock Cell. 2016;165(1):180--191.
+\newblock doi:{10.1016/j.cell.2016.01.046}.
 
 \bibitem{Sweeney_Paper}
 Sweeney Y, Kotaleski JH, Hennig MH.
 \newblock {A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and
   Responsiveness in Cortical Networks}.
 \newblock PLoS Computational Biology. 2015;.
+
+\bibitem{Zhang_STDP}
+Zhang LI, Tao HW, Holt CE, Harris WA, Poo M.
+\newblock {A critical window for cooperation and competition among developing
+  retinotectal synapses}.
+\newblock Nature. 1998;395:37--44.
 
 \bibitem{Bi_Poo_STDP}
 Bi G, Poo M.
@@ -187,9 +156,21 @@ Team MD. {Matplotlib (Version 1.5.3) [Computer Software]}; 2016.
 \newblock \url{https://matplotlib.org/1.5.3/index.html}.
 \newblock Available from: \url{http://www.briansimulator.org/}.
 
+\bibitem{Powerlaw_Package}
+Alstott J. {powerlaw: A Python Package for Analysis of Heavy-Tailed
+  Distributions (Version 1.4.1) [Computer Software]}; 2017.
+\newblock \url{https://pypi.python.org/pypi/powerlaw}.
+\newblock Available from: \url{http://www.briansimulator.org/}.
+
+\bibitem{SORN_Paper}
+Miner D, Triesch J.
+\newblock {Plasticity-Driven Self-Organization under Topological Constraints
+  Accounts for Non-Random Features of Cortical Synaptic Wiring}.
+\newblock PLoS Computational Biology. 2016;.
+
 \bibitem{Loewenstein_2015}
 Loewenstein Y, Yanover U, Rumpel S.
-\newblock Predicting the Dynamics of Network Connectivity in the Neocortex.
+\newblock {Predicting the Dynamics of Network Connectivity in the Neocortex}.
 \newblock Journal of Neuroscience. 2015;35(36):12535--12544.
 \newblock doi:{10.1523/JNEUROSCI.2917-14.2015}.
 
@@ -199,13 +180,6 @@ Yasumatsu N, Matsuzaki M, Miyazaki T, Noguchi J, Kasai H.
 \newblock Journal of Neuroscience. 2008;28(50):13592--13608.
 \newblock doi:{10.1523/JNEUROSCI.0603-08.2008}.
 
-\bibitem{Lefort_2009}
-Lefort S, Tomm C, Floyd~Sarria JC, Petersen CCH.
-\newblock {The Excitatory Neuronal Network of the C2 Barrel Column in Mouse
-  Primary Somatosensory Cortex}.
-\newblock Neuron. 2009;61(2):301--316.
-\newblock doi:{10.1016/j.neuron.2008.12.020}.
-
 \bibitem{Loewenstein_Spine_Sizes}
 Loewenstein Y, Kuras A, Rumpel S.
 \newblock {Multiplicative Dynamics Underlie the Emergence of the Log-Normal
@@ -213,16 +187,11 @@ Loewenstein Y, Kuras A, Rumpel S.
 \newblock Journal of Neuroscience. 2011;31(26):9481--9488.
 \newblock doi:{10.1523/JNEUROSCI.6130-10.2011}.
 
-\bibitem{Hoffmann_2017}
-Hoffmann FZ, Triesch J.
-\newblock {Non-random network connectivity comes in pairs}.
-\newblock Network Neuroscience. 2017;.
-
-\bibitem{Powerlaw_Package}
-Alstott J. {powerlaw: A Python Package for Analysis of Heavy-Tailed
-  Distributions (Version 1.4.1) [Computer Software]}; 2017.
-\newblock \url{https://pypi.python.org/pypi/powerlaw}.
-\newblock Available from: \url{http://www.briansimulator.org/}.
+\bibitem{Effenberger_2015}
+Effenberger F, Jost J.
+\newblock {Self-Organization in Balanced State Networks by STDP and Homeostatic
+  Plasticity}.
+\newblock PLOS Computational Biology. 2015;.
 
 \bibitem{Yassin_Subnetworks_2010}
 Yassin L, Benedetti BL, Jouhanneau JS, Wen JA, Poulet JF, Barth AL.
@@ -266,35 +235,16 @@ Sch\"uz A, Palm G.
 \newblock The Journal of Comparative Neurology. 1989;286(4):442--455.
 \newblock doi:{10.1002/cne.902860404}.
 
-\bibitem{Roxin_Firing_Rate_Distribution}
-Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
-\newblock {On the Distribution of Firing Rates in Networks of Cortical
-  Neurons}.
-\newblock Journal of Neuroscience. 2011;31(45):16217--16226.
-\newblock doi:{10.1523/JNEUROSCI.1677-11.2011}.
-
 \bibitem{Vreeswijk1998}
 van Vreeswijk C, Sompolinsky H.
 \newblock {Chaotic Balanced State in a Model of Cortical Circuits}.
 \newblock Neural Computation. 1998;.
-
-\bibitem{Koulakov_2009}
-Koulakov AA, Hrom\'{a}dka T, Zador AM.
-\newblock {Correlated Connectivity and the Distribution of Firing Rates in the
-  Neocortex}.
-\newblock The Journal of Neuroscience. 2009;.
 
 \bibitem{OConnor_2010}
 O'Connor DH, Peron SP, Huber D, Svoboda K.
 \newblock {Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object
   Localization in Mice}.
 \newblock Neuron. 2010;67.
-
-\bibitem{Mizuseki_2013}
-Mizuseki K, Buzsáki G.
-\newblock {Preconfigured, skewed distribution of firing rates in the
-  hippocampus and entorhinal cortex}.
-\newblock Cell Reports. 2013;4.
 
 \bibitem{Philippides_2005}
 Philippides A, Ott SR, Husbands P, Lovick TA, O{\textquoteright}Shea M.
@@ -308,19 +258,26 @@ Savin C, Triesch J, Meyer-Hermann M.
 \newblock {Epileptogenesis due to glia-mediated synaptic scaling}.
 \newblock Journal of the Royal Society Interface. 2008;.
 
-\bibitem{Gilson_2011}
-Gilson M, Fukai T.
-\newblock {Stability versus Neuronal Specialization for STDP: Long-Tail Weight
-  Distributions Solve the Dilemma}.
-\newblock PLOS ONE. 2011;6(10):1--18.
-\newblock doi:{10.1371/journal.pone.0025339}.
-
 \bibitem{Dragoi_2003}
 Dragoi G, Harris KD, Buzsáki G.
 \newblock {Place Representation within Hippocampal Networks Is Modified by
   Long-Term Potentiation}.
 \newblock Neuron. 2003;39(5):843 -- 853.
 \newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
+
+\bibitem{Hartmann_2016}
+Hartmann C, Lazar A, Nessler B, Triesch J.
+\newblock {Where’s the Noise? Key Features of Spontaneous Activity and Neural
+  Variability Arise through Learning in a Deterministic Network}.
+\newblock PLOS Computational Biology. 2016;11(12):1--35.
+\newblock doi:{10.1371/journal.pcbi.1004640}.
+
+\bibitem{Vogels_2011}
+Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.
+\newblock {Inhibitory Plasticity Balances Excitation and Inhibition in Sensory
+  Pathways and Memory Networks}.
+\newblock Science. 2011;334(6062):1569--1573.
+\newblock doi:{10.1126/science.1211095}.
 
 \bibitem{Luz_2012}
 Luz Y, Shamir M.
