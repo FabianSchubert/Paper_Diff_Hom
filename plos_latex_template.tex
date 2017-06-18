@@ -192,7 +192,7 @@
 \begin{flushleft}
 {\Large
 \textbf\newline{
-Diffusive homeostasis in a self-organizing recurrent neural network: Spatially dependent interaction as a determinant of neural activity and plasticity
+Diffusive homeostasis in a self-organizing recurrent neural network: local neuron density predicts firing rates
 } % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 }
 \newline
@@ -231,12 +231,17 @@ Jochen Triesch\textsuperscript{1\dag},
 
 %Building upon on a self-organizing spiking neural network (LIF-SORN), we replaced an intrinsic homeostatic control system used in earlier versions by a mechanism based on the diffusion of a neurotransmitter across the nervous tissue. The model of diffusive homeostasis was adopted from a previously published theoretical study. The main goal of this modification was to allow for the aforementioned broad and heavy tailed distribution of firing rates among the excitatory neural population, which could not be achieved by the formerly used single-cell homeostatic mechanism, binding firing rates of all neurons to a fixed target value. The resulting statistical features of spiking activity were positive regarding the desired firing rate statistics. Furthermore, we compared both homeostatic mechanisms with respect to features of synaptic network structures emerging throughout the simulation. Apart from the preservation of earlier reported non-random topological features, we found that diffusive homeostasis allowed for the emergence of neurons with strong outgoing synaptic efficacies. We could relate this feature of synaptic topology to the imposed spatial structure of the neural population by means of an analytic approach to the diffusive homeostatic steady state.
 %% NEW VERSION
-The topology of cortical networks is subject to to constant change and the mechanisms involved in these dynamics are driven by the timing of neuronal spiking. Consequently, the success of a computational model of the self-organization of synaptic connectivity not only depends on the physiological accuracy of the plasticity mechanisms itself, but also on a realistic modeling of neuronal activity, e.g. since exact spike timing contains information on causal relations between pre- and postsynaptic activity. Experiments have found evidence for a strong heterogeneity among the average firing rates of cortical neurons, approximately following a log-normal distribution. In the context of synaptic plasticity it has been suggested that this property of neuronal firing has functional role in the formation of stable subnetworks. Furthermore, log-normal distributions are also known to well describe the statistics of synaptic efficacies in cortical networks. 
+%The topology of cortical networks is subject to to constant change and the mechanisms involved in these dynamics are driven by the timing of neuronal spiking. Consequently, the success of a computational model of the self-organization of synaptic connectivity not only depends on the physiological accuracy of the plasticity mechanisms itself, but also on a realistic modeling of neuronal activity, e.g. since exact spike timing contains information on causal relations between pre- and postsynaptic activity. Experiments have found evidence for a strong heterogeneity among the average firing rates of cortical neurons, approximately following a log-normal distribution. In the context of synaptic plasticity it has been suggested that this property of neuronal firing has functional role in the formation of stable subnetworks. Furthermore, log-normal distributions are also known to well describe the statistics of synaptic efficacies in cortical networks. 
+%
+%We here present a self-organizing recurrent spiking network that exhibits log-normal statistics among the distribution of both synaptic weights, as well as of neuronal firing rates. To our knowledge, it is the first model that achieves this by means of a set of basic biologically motivated mechanisms, without the need for modifications that target specific experimental findings. Our model also comprises other features of synaptic connectivity that have been reported in experimental studies, such as an over representation of bidirectional connectivity.
+%
+%The presented network model is a combination of a self-organizing spiking neural network (LIF-SORN) and a recently proposed mechanism known as diffusive homeostasis, which has been shown to allow for a heavy-tailed, log-normal distribution of firing rates. Further investigating this concept, we found that the spatial configuration of neurons could determine individual homeostatic targets of activity in our network model, raising the question whether this effect might play a role in real cortical networks.
+%NEW_NEW_VERSION
+Firing rates of cortical neurons are very heterogeneous, approximately following a log-normal distribution. A similar log-normal like distribution is also known to describe the efficacies of synapses connecting these neurons. It is presently unclear how these features of cortical activity and wiring come about.
 
-We here present a self-organizing recurrent spiking network that exhibits log-normal statistics among the distribution of both synaptic weights, as well as of neuronal firing rates. To our knowledge, it is the first model that achieves this by means of a set of basic biologically motivated mechanisms, without the need for modifications that target specific experimental findings. Our model also comprises other features of synaptic connectivity that have been reported in experimental studies, such as an over representation of bidirectional connectivity.
+Here we present a self-organizing recurrent spiking neural network that exhibits log-normal like statistics of both synaptic efficacies and neuronal firing rates. In addition, the model reproduces a range of structural and dynamic features of synaptic connectivity that have been found experimentally, such as an over-representation of bidirectional connectivity and power-law life-times of newly created synapses.
 
-The presented network model is a combination of a self-organizing spiking neural network (LIF-SORN) and a recently proposed mechanism known as diffusive homeostasis, which has been shown to allow for a heavy-tailed, log-normal distribution of firing rates. Further investigating this concept, we found that the spatial configuration of neurons could determine individual homeostatic targets of activity in our network model, raising the question whether this effect might play a role in real cortical networks.
-
+The model is a member of the family of self-organizing recurrent neural network models with leaky integrate-and-fire neurons (LIF-SORN) and explains the above phenomena through the interaction of different plasticity mechanisms shaping network structure and dynamics. In particular, it incorporates a recently proposed mechanism for firing rate homeostasis based on the diffusion of nitric oxide. This mechanism supports a heavy-tailed, log-normal like distribution of firing rates. Interestingly, we find that the spatial configuration of neurons determines individual homeostatic firing rate targets in the network. The model therefore predicts a systematic relationship between firing rates and local neuron density in cortical tissue.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -245,8 +250,9 @@ The presented network model is a combination of a self-organizing spiking neural
 \section*{Author summary}
 %We improved a model of self-organizing cortical network by implementing a model known as \textit{diffusive homeostasis}, which is capable of controlling neuronal activity based on the diffusion of a neurotransmitter. Previously reported non-random features of the network structure were preserved while allowing for a broader distribution of neuronal firing rates. Our modifications also led to the accumulation of strong synapses to a small subgroup of highly active neurons. By further analyzing the diffusive control, we found that the statistics of firing rates within the network are strongly affected by the structure of the neurons' positions. This raised the question whether the spatial structure of a cortical network, in particular fluctuations of neuronal densities, can influence activity not only by means of distance-dependent synaptic connection probabilities, but also through diffusive interaction.  
 %% NEW VERSION
-Using a combination of a self-organizing recurrent network model and a mechanism known as diffusive homeostasis, we could reproduce experimental findings on the statistics of synaptic connectivities, as well as on the distribution of neuronal firing rates. It is the first recurrent network model to achieve this by means of a set of basic biological mechanisms, allowing the observed network structure and activity to develop autonomously without ad-hoc modifications targeting a particularly desired result. Moreover, by analyzing the diffusive control, we found that the statistics of firing rates within the network are strongly affected by fluctuations of neuronal spatial densities, which raised the question whether this effect could also be observed in real cortical networks.
-
+%Using a combination of a self-organizing recurrent network model and a mechanism known as diffusive homeostasis, we could reproduce experimental findings on the statistics of synaptic connectivities, as well as on the distribution of neuronal firing rates. It is the first recurrent network model to achieve this by means of a set of basic biological mechanisms, allowing the observed network structure and activity to develop autonomously without ad-hoc modifications targeting a particularly desired result. Moreover, by analyzing the diffusive control, we found that the statistics of firing rates within the network are strongly affected by fluctuations of neuronal spatial densities, which raised the question whether this effect could also be observed in real cortical networks.
+%NEW_NEW VERSION
+Neurons in the neocortex have a very broad distribution of firing rates such that most neurons fire very little while a few are highly active. Similarly, the distribution of the strengths of synapses connecting these neurons is also very broad. How these and other features of cortical networks arise is currently unknown. Here we present a model that explains a whole range of such phenomena as a consequence of network self-organization driven by the interaction of a few plasticity mechanisms. Furthermore, the model makes the novel prediction that a diffusive mechanism stabilizing the network’s firing rates induces a systematic relationship between a neuron’s average activity and the density of neurons in its vicinity.
 
 \linenumbers
 
@@ -262,22 +268,19 @@ Using a combination of a self-organizing recurrent network model and a mechanism
 
 %%% NEW VERSION
 It has been shown experimentally that highly skewed, log-normal statistical distributions are present in cortical networks in the context of neuronal firing rates \cite{Battaglia_2005,Mizuseki_2013} as well as synaptic efficacies \cite{Song_Connectivity_2005, Lefort_2009}. 
-
-This heterogeneity of firing rates and synaptic efficacies is thought not to be involved in the preservation of stable synaptic structures while still allowing synaptic rewiring in order to adapt to changes in external stimuli \cite{Buzsaki_2004, Buzsaki_Fir_Rates_2014}. Furthermore, a broad distribution of firing rates may serve to improve encoding of external stimuli \cite{Marsat_2010}. Although the functional role of these statistical features have been investigated, the fundamental mechanisms required to give rise to these properties are still a point of debate. Combinations of additive STDP and multiplicative dynamics have been proposed as well as modified, weight dependent STDP rules in order to explain the heavy-tailed distribution of synaptic weights \cite{Statman_Synapses_2014,Gilson_2011}. Furthermore, while synaptic efficacies do certainly affect neuronal activity, it is not clear whether a heavy-tailed distribution of weights is a necessary condition for the emergence of a correspondingly heavy-tailed distribution of neuronal firing rates, or if e.g. the intrinsic nonlinearity of the activation function of biological neurons is a sufficient explanation \cite{Koulakov_2009, Roxin_Firing_Rate_Distribution}. 
+This heterogeneity of firing rates and synaptic efficacies is thought to be involved in the preservation of stable synaptic structures while still allowing synaptic rewiring in order to adapt to changes in external stimuli \cite{Buzsaki_2004, Buzsaki_Fir_Rates_2014}. Furthermore, a broad distribution of firing rates may serve to improve encoding of external stimuli \cite{Marsat_2010}. Although the functional role of these statistical features have been investigated, the fundamental mechanisms required to give rise to these properties are still a point of debate. Combinations of additive STDP and multiplicative dynamics have been proposed as well as modified, weight dependent STDP rules in order to explain the heavy-tailed distribution of synaptic weights \cite{Statman_Synapses_2014,Gilson_2011}. Furthermore, while synaptic efficacies do certainly affect neuronal activity, it is not clear whether a heavy-tailed distribution of weights is a necessary condition for the emergence of a correspondingly heavy-tailed distribution of neuronal firing rates, or if e.g. the intrinsic nonlinearity of the activation function of biological neurons is a sufficient explanation \cite{Koulakov_2009, Roxin_Firing_Rate_Distribution}. 
 
 The interplay between synaptic connectivity and neuronal is further affected by homeostatic mechanisms that regulate neuronal firing rates on different timescales. Experimental studies have indicated that populations of neurons do not only exhibit broad distributions of firing rates, but also that these distributions are maintained on a single-cell level by means of individual homeostatic targets of activity \cite{Mizuseki_2013,Hengen_2016}. However, the biological origin of these intercellular differences in target activity are still to be explored. Furthermore, homeostatic mechanisms should not interfere with transient, momentary changes, since it could potentially disturb information processing and transmission. 
 
-A model of diffusive homeostasis was introduced by Sweeney et al. \cite{Sweeney_Paper}, suggesting that diffusive signaling via nitric oxide (NO) could resolve this dichotomy between overall stability of firing activity and the need to allow a certain amount flexibility among individual neurons’ activities. Through the diffusive signal, each neurons receives---intuitively speaking---a mixture of its own activity and its neighboring neurons. The overall population activity is thereby kept at a constant level, while allowing the overall distribution of firing rates to be approximately log-normal distributed. 
+A model of diffusive homeostasis was introduced by Sweeney et al. \cite{Sweeney_Paper}, suggesting that diffusive signaling via nitric oxide (NO) could resolve this dichotomy between overall stability of firing activity and the need to allow a certain amount flexibility among individual neurons’ activities. Through the diffusive signal, each neuron receives---intuitively speaking---an estimate of the local network activity. The diffusive homeostasis aims to keep this at a constant level, while allowing individual neurons to have firing rates that differ strongly from the mean. 
 
-We believe that a combination of diffusive homeostasis and the recurrent network model that has been investigated previously and referred to as LIF-SORN provides a realistic model of cortical activity and self-organization. This paper presents and discusses the results of this approach with respect to the aforementioned aspects: Developing a recurrent network structure that gives rise non-random statistical features found in experiments while at the same time exhibiting stable neuronal activity, resembling a log-normal distribution of firing rates. Furthermore, we predicted excitatory activity on the level of individual cells by an analytic approach, thereby gaining an understanding of the relation between spatial structure and firing rates. In the face of possible new features within the network’s structure, we clarify the causal relation between diffusive spatial interaction and synaptic topology.
+Here we present a spiking neural network model that combines this diffusive homeostasis mechanism with other plasticity mechanisms to reproduce a range of structural and dynamic features of cortical wiring. The model is a member of the family of self-organizing recurrent neural network models with leaky integrate-and-fire neurons (LIF-SORN). The model give rise to log-normal like distributions of firing rates and synaptic efficacies as observed experimentally. Furthermore, it reproduces an over-representation of bidirectional connections and power-law life-times of newly created synaptic connections. Furthermore, we predict excitatory activity on the level of individual cells by an analytic approach, thereby gaining an understanding of the relation between spatial structure and firing rates. In the face of possible new features within the network’s structure, we clarify the causal relation between diffusive spatial interaction and synaptic topology.
 
 
 \section*{Materials and methods}
 \subsection*{Network simulation} \label{network simulation}
 
-400 excitatory LIF neurons and 80 inhibitory LIF neurons were assigned random positions across a square area of $\rm 1000$ $\times$  $1000 \, \rm \upmu m$. All except recurrent excitatory synapses were randomly generated before the start of the simulation until a desired connection fraction was reached. The connection probability between two neurons was calculated from a distant dependent Gaussian function with a standard deviation of $\rm 200 \upmu m$. For excitatory to inhibitory (EI) and inhibitory to excitatory (IE) synapses, the connection fraction was set to 0.1, and 0.5 for recurrent inhibitory synapses (II). These connections were kept at a fixed connection strength throughout the simulation. Furthermore, all synapses were simulated with a fixed (distance independent) conduction delay. See Table \ref{syn_conn_params} for a summary of parameters.
-
-Recurrent excitatory synapses were subject to a number of plasticity mechanisms to be described in the following. 
+Our model consists of a two-dimensional layer of 400 excitatory and 80 inhibitory  leaky integrate and fire (LIF) model neurons. The neurons were assigned random positions across a square area of $\rm 1000$ $\times$  $1000 \, \rm \upmu m^2$. All except recurrent excitatory synapses were randomly generated before the start of the simulation until a desired connection fraction was reached. The connection probability between two neurons was calculated from a distant dependent Gaussian function with a standard deviation of $\rm 200\, \upmu m$. For excitatory to inhibitory (EI) and inhibitory to excitatory (IE) synapses, the connection fraction was set to 0.1, and 0.5 for recurrent inhibitory synapses (II). These connections were kept at a fixed connection strength throughout the simulation. Furthermore, all synapses were simulated with a fixed (distance independent) conduction delay. See Table \ref{syn_conn_params} for a summary of parameters. Recurrent excitatory synapses were subject to a number of plasticity mechanisms to be described in the following. 
 
 \begin{table}
 \caption{\bf Parameters of synaptic connections.}
@@ -292,47 +295,13 @@ conduction delay & $\rm 1.5\, ms$ & $\rm 0.5\, ms$ & $\rm 1.0\, ms$ & $\rm 1.0\,
 \label{syn_conn_params}
 \end{table}
 
-\subsubsection*{Synaptic plasticity}\label{Section_Methods_Syn_Plast}
-\textbf{Synaptic Growth:} New synapses are generated at an average rate of $920$ per second. For efficiency, this was implemented by drawing an integer number from a normal distribution with mean 920 and standard deviation $\sqrt{920}$ once per second and simultaneously inserting this number of synapses. This growth rate was tuned to achieve the desired target concentration of 0.1 (see Table \ref{syn_conn_params}).
-
-\textbf{Synaptic Pruning:} The process of synaptic pruning was similarly carried out by checking for EE synapses below a threshold of $\rm 10^{-6}\, mV$ once each second (same instant as growth) and removing them simultaneously, and thus adding them again to the set of ``potential" connections from which the growth process draws new connections.
-
-\textbf{Spike Timing Dependent Plasticity:} An additive STDP rule was used as described e.g. in \cite{Zhang_STDP}. The change of weight between two neurons due to a pre- and postsynaptic spike ($i$ $\rightarrow$ $j$) is defined as:
-\begin{align}
-\Delta w_{ji} &= \sum_k \sum_l W(t_j^l - t_i^k) \label{STDP_rule} \\
-W(\Delta t) &= A_{+} \exp(-\Delta t / \tau_{+}), & \Delta t \geq 0 \label{STDP_pos} \\
-W(\Delta t) &= A_{-} \exp(\Delta t / \tau_{-}), & \Delta t < 0 \label{STDP_neg}
-\end{align}
-Indexes $k$ and $l$ refer to the $k$-th and $l$-th pre- and postsynaptic spike respectively. Parameters were chosen to approximate data from \cite{Bi_Poo_STDP} and \cite{Froemke_STDP}, namely $\tau_{+} = \rm 15\, ms$, $A_{+} =\rm 15\, mV$, $\tau_{-} =\rm 30\, ms$ and $A_{-} =\rm -7.5\, mV$. However, we used the ``nearest neighbor" approximation for the sake of reduction of computational effort, only calculating the effect of the most recent pre-post pair of spikes for potentiation and post-pre pair for depression, yielding roughly the same value as the full summation due to the fast decay times $\tau_{+}$ and $\tau_{-}$ of the STDP-window.
-
-\textbf{Synaptic Normalization:} For the same reasons of efficiency, synaptic normalization was applied at the same rate as synaptic growth/pruning, updating each $w_{ji}$ from neuron $i$ to neuron $j$ as follows:
-
-\begin{equation}
-w_{ji} \rightarrow w_{ji} \frac{w_{\rm total}}{\sum_i w_{ji}}
-\label{Synnnorm}
-\end{equation}
-$w_{\rm total}$ was set to different values for each of the four types of connections between the excitatory and inhibitory pool of neurons. Except for the dynamically populated EE-synapses these values could be directly set in accordance with the previously given parameters of desired mean individual connection strength, size of the presynaptic population and connection fraction, by calculating $w_{\rm total} = w_{\rm mean} N_{\rm presyn.} p_{\rm conn.}$, where $w_{\rm mean}$ is given by the initial synaptic strength in Table \ref{syn_conn_params}, $N_{\rm presyn.}$ is the number of neurons and $p_{\rm conn.}$ is the synaptic connection probability given in Table \ref{syn_conn_params}. This yielded $w_{\rm total,EI} = \rm 60\, mV$, $w_{\rm total,IE} =\rm -12\, mV$, $w_{\rm total,II} = \rm -60\, mV$. $w_{\rm total,EE}$ was set to $\rm 40\, mV$,  corresponding to a mean synaptic weight of $\rm 1\, mV$, given a targeted EE-connection fraction of $\rm 0.1$ and a population of $400$ excitatory neurons.
-
-\textbf{Short Term Plasticity:} A short term plasticity (STP) mechanism acting on recurrent excitatory connections was implemented as presented in \cite{Markram_STP} as an additional stabilization of network activity. It modulates the effective synaptic weights by multiplying the value stored in the weight matrix $w_{ji}$ by two dynamic variables $x$ and $u$, $w^{\rm effective}_{ji} = w_{ji}\cdot x \cdot u$, each synapse owning a pair $(x,u)$. The dynamics of these variables are given by:
-
-\begin{equation}
-\dot{x} = \frac{1-x}{\tau_d},\; \dot{u} = \frac{U-u}{\tau_f}
-\label{STP_dynamics1}
-\end{equation}
-Each presynaptic spike furthermore causes a change of $x$ and $u$ by
-\begin{equation}
-x \rightarrow x - x\cdot u,\; u \rightarrow u + U(1-u)
-\label{STP_dynamics2}
-\end{equation}
-We chose $U=0.04$, $\tau_d =\rm 0.5\, s$ and $\tau_f =\rm 2\, s$ as a rough approximation of the values that were experimentally observed \cite{Markram_STP}. For our choice of variables, a Poisson input with a constant rate achieves the best synaptic transmission at a rate of $\sim \rm 4.5\, Hz$, corresponding to $x\cdot u \approx 0.2$. \textit{Potentiation} in this context refers to the fact that stronger input strengthens synaptic transmission compared to close to zero incoming spikes.
-
 \subsubsection*{Neuron model}
 We used a leaky integrate-and-fire-model with a simple additive synaptic transmission model for all neurons in the network, whose dynamics are described by a stochastic differential equation:
 \begin{equation}
 {\tau_m}dV_i = -\left( V_i-E_l \right) dt + \sqrt{\tau_m} \sigma dW_i + \tau_m \sum_{j,k} w^{\rm effective}_{ij}\delta \left( t^k_{\mathrm{spike},j} + t_{\rm delay} - t \right)
 \label{LIF_Dynamics}
 \end{equation}
-where $V$ is the membrane potential, $E_l$ is the equilibrium membrane potential, $\tau_m$ is the membrane time constant, $\sigma$ is the standard deviation of the noise term and $dW$ is the standard Wiener process. A neuron is generates a spike when its membrane potential reaches the threshold voltage $V_t$. The voltage is then reset to $V_r$. A refractory period was not implemented. A presynaptic spike causes a simple (delayed, see Table \ref{syn_conn_params}) increment of the membrane potential of the postsynaptic neuron by $w^{\rm effective}_{ji}$. Table \ref{LIF_neuron_params} summarizes the aforementioned set of parameters.
+where $V$ is the membrane potential, $E_l$ is the equilibrium membrane potential, $\tau_m$ is the membrane time constant, $\sigma$ is the standard deviation of the noise term and $dW$ is the standard Wiener process. A neuron generates a spike when its membrane potential reaches the threshold voltage $V_t$. The voltage is then reset to $V_r$. A refractory period was not implemented. A presynaptic spike causes a simple (delayed, see Table \ref{syn_conn_params}) increment of the membrane potential of the postsynaptic neuron by $w^{\rm effective}_{ji}$. Table \ref{LIF_neuron_params} summarizes the aforementioned set of parameters.
 \begin{table}
 \caption{\bf Parameters of LIF neuron.}
 \begin{tabular}{|l|l|l|}
@@ -346,23 +315,58 @@ $\mathrm{V_t}$ & subject to IP & $\mathrm{-58\;mV}$ \\
 \hline
 \end{tabular}
 \label{LIF_neuron_params}
-\end{table}   
+\end{table}
+
+
+\subsubsection*{Synaptic plasticity}\label{Section_Methods_Syn_Plast}
+\textbf{Synapse Generation:} New synapses were generated at an average rate of $920$ per second. For efficiency, this was implemented by drawing an integer number from a normal distribution with mean 920 and standard deviation $\sqrt{920}$ once per second and simultaneously inserting this number of synapses. This growth rate was tuned to achieve the desired target connection fraction of 0.1 (see Table \ref{syn_conn_params}).
+
+\textbf{Synaptic Pruning:} The process of synaptic pruning was similarly carried out by checking for EE synapses below a threshold of $\rm 10^{-6}\, mV$ once each second (same instant as growth) and removing them simultaneously, and thus adding them again to the set of ``potential" connections from which the growth process draws new connections.
+
+\textbf{Spike Timing Dependent Plasticity:} An additive STDP rule was used as described e.g. in \cite{Zhang_STDP}. The change of weight between two neurons due to a pre- and postsynaptic spike ($i$ $\rightarrow$ $j$) is defined as:
+\begin{align}
+\Delta w_{ji} &= \sum_k \sum_l W(t_j^l - t_i^k) \label{STDP_rule} \\
+W(\Delta t) &= A_{+} \exp(-\Delta t / \tau_{+}), & \Delta t \geq 0 \label{STDP_pos} \\
+W(\Delta t) &= A_{-} \exp(\Delta t / \tau_{-}), & \Delta t < 0 \; . \label{STDP_neg}
+\end{align}
+Indexes $k$ and $l$ refer to the $k$-th and $l$-th pre- and postsynaptic spike respectively. Parameters were chosen to approximate data from \cite{Bi_Poo_STDP} and \cite{Froemke_STDP}, namely $\tau_{+} = \rm 15\, ms$, $A_{+} =\rm 15\, mV$, $\tau_{-} =\rm 30\, ms$ and $A_{-} =\rm -7.5\, mV$. However, we used the ``nearest neighbor" approximation for the sake of reduction of computational effort, only calculating the effect of the most recent pre-post pair of spikes for potentiation and post-pre pair for depression, yielding roughly the same value as the full summation due to the fast decay times $\tau_{+}$ and $\tau_{-}$ of the STDP-window and the low average firing rates in the network.
+
+\textbf{Synaptic Normalization:} For the same reasons of efficiency, synaptic normalization was applied at the same rate as synaptic growth/pruning, updating each $w_{ji}$ from neuron $i$ to neuron $j$ as follows:
+
+\begin{equation}
+w_{ji} \rightarrow w_{ji} \frac{w_{\rm total}}{\sum_i w_{ji}} \; .
+\label{Synnnorm}
+\end{equation}
+$w_{\rm total}$ was set to different values for each of the four types of connections between the excitatory and inhibitory pools of neurons. Except for the dynamically populated EE-synapses these values could be directly set in accordance with the previously given parameters of desired mean individual connection strength, size of the presynaptic population and connection fraction, by multiplying the average synaptic efficacy for this connection type from Table \ref{syn_conn_params} with the average number of connections of this type projecting to a neuron. This yielded $w_{\rm total,EI} = \rm 60\, mV$, $w_{\rm total,IE} =\rm -12\, mV$, $w_{\rm total,II} = \rm -60\, mV$. $w_{\rm total,EE}$ was set to $\rm 40\, mV$,  corresponding to a mean synaptic weight of $\rm 1\, mV$, given a targeted EE-connection fraction of $\rm 0.1$ and a population of $400$ excitatory neurons.
+
+\textbf{Short Term Plasticity:} A short term plasticity (STP) mechanism acting on recurrent excitatory connections was implemented as presented in \cite{Markram_STP} as an additional stabilization of network activity. It modulates the effective synaptic weights by multiplying the value stored in the weight matrix $w_{ji}$ by two dynamic variables $x$ and $u$, $w^{\rm effective} = w\cdot x \cdot u$, each synapse owning a pair $(x,u)$. The dynamics of these variables are given by:
+\begin{equation}
+\dot{x} = \frac{1-x}{\tau_d},\; \dot{u} = \frac{U-u}{\tau_f}
+\label{STP_dynamics1}
+\end{equation}
+where $\tau_d$ and $\tau_f$ are the time constants of depression and facilitation, respectively.
+Each presynaptic spike furthermore causes a change of $x$ and $u$ by
+\begin{equation}
+x \rightarrow x - x u,\; u \rightarrow u + U(1-u) \; .
+\label{STP_dynamics2}
+\end{equation}
+We chose $U=0.04$, $\tau_d =\rm 0.5\, s$ and $\tau_f =\rm 2\, s$ as a rough approximation of the values that were experimentally observed \cite{Markram_STP}. For our choice of variables, a Poisson input with a constant rate achieves the best synaptic transmission at a rate of $\sim \rm 4.5\, Hz$, corresponding to $x u \approx 0.2$.   
 
 \subsubsection*{Intrinsic plasticity}
-Apart from dynamic processes within synapses which contribute to a stabilization of the network's activity, neurons possess internal mechanisms capable of maintaining a desired regime of activity. Regular-spiking cells are known to down-(up-)regulate their firing rate upon increased (decreased) input on a timescale of tens of milliseconds \cite{Connors_Gutnick_Spike_Patterns,Benda_Herz_Spike_Frequ_Adaption}. The network itself was not expected to exhibit fast changes of synaptic input since our simulation did not incorporate any rapidly changing external drive, which allowed us to neglect this feature. On the other hand, a similar form of adaption as a reaction on deprived or enhanced input can be observed on a timescale of hours to days \cite{Desai_IP}. In the latter case, a long-term change in excitability can be attributed to an altered number of permeable ionic channels. This contrasts the former short-term adaption, which can be explained by a separation of timescales among different ionic currents in the cell. A simple form of low intrinsic homeostasis was implemented in the original LIF-SORN by altering the neurons' firing threshold based on the deviation from a target firing rate. During the research reported by this paper, we implemented a new model of slow intrinsic homeostasis, based on the work presented in \cite{Sweeney_Paper}. The following section describes both models in further detail.
+Apart from dynamic processes within synapses which contribute to a stabilization of the network's activity, neurons possess internal mechanisms capable of maintaining a desired regime of activity. Regular-spiking cells are known to down-(up-)regulate their firing rate upon increased (decreased) input on a timescale of tens of milliseconds \cite{Connors_Gutnick_Spike_Patterns,Benda_Herz_Spike_Frequ_Adaption}. The network itself was not expected to exhibit fast changes of synaptic input since our simulation did not incorporate any rapidly changing external drive, which allowed us to neglect this feature. On the other hand, a similar form of adaptation as a reaction on deprived or enhanced input can be observed on a timescale of hours to days \cite{Desai_IP}. In the latter case, a long-term change in excitability can be attributed to an altered number of ionic channels. This contrasts the former short-term adaptation, which can be explained by a separation of timescales among different ionic currents in the cell. A simple form of intrinsic homeostasis was implemented in the original LIF-SORN by altering the neurons' firing threshold based on the deviation from a target firing rate. Here, we implemented a new model of slow intrinsic homeostasis, based on the work presented in \cite{Sweeney_Paper}. In the following, we describe both models in detail.
 
 Our original model of homeostatic control was described by the following differential equation:
 \begin{equation}
 \dot{V}_t = \eta_{\rm IP}(r-r_{\rm IP}) \label{can_hom_rate}
 \end{equation}
-with $r$ as the neuron's firing rate and $r_0$ the target firing rate, $\eta_{\rm IP}$ the rate of threshold adaptation and $r$ the estimated firing rate of a single excitatory neuron. In practice, this was implemented in discrete steps of $\Delta t = \rm 0.1\, ms$, estimating the firing rate by $r = N_{\rm spikes} / \Delta t$, with $N_{\rm spikes}$ as the number of spikes within each interval.
+with $r$ as the neuron's firing rate and $r_0$ the target firing rate, $\eta_{\rm IP}$ the rate of threshold adaptation and $r$ the estimated firing rate of a single excitatory neuron. In practice, this was implemented in discrete steps , estimating the firing rate by $r = N_{\rm spikes} / \Delta t$, with $N_{\rm spikes}$ as the number of spikes within each interval.
 
 The new diffusive homeostatic model by Sweeney et al. consists of a set of differential equations:   
 \begin{align}
 \dot{{\rm [Ca^{2+}]}}_i(t) &= -\frac{{\rm [Ca^{2+}]}_i}{\tau_{\rm Ca^{2+}}} + Ca^{2+}_{\rm spike} \sum_{j} \delta(t-t_{\mathrm{spike},i,j}) \label{Ca_dyn}\\
 \dot{{\rm [nNOS]}}_i(t) &= \frac{1}{\tau_{\rm nNOS}} \left(\frac{{\rm [Ca^{2+}]}_i^3}{{\rm [Ca^{2+}]}_i^3+1} - {\rm [nNOS]}_i \right) \label{nNOS_dyn}\\
 \dot{{\rm [NO]}}(\mathbf{r},t)&=-\lambda {\rm [NO]} + D \nabla^2 {\rm [NO]} + \sum_{i} \delta^2(\mathbf{r}-\mathbf{r}_{\mathrm{neur.},i}) {\rm [nNOS]}_i \label{NO_dyn}\\
-\dot{V}_{t,i}(t) &= \frac{{\rm [NO]}(\mathbf{r}_{\mathrm{neur.},i},t)-{\rm [NO]}_0}{{\rm [NO]}_0 \tau_{V_t}} \label{Theta_dyn}
+\dot{V}_{t,i}(t) &= \frac{{\rm [NO]}(\mathbf{r}_{\mathrm{neur.},i},t)-{\rm [NO]}_0}{{\rm [NO]}_0 \tau_{V_t}} \; . \label{Theta_dyn}
 \end{align}
 
 A depolarization within a nerve cell upon a spike-event $t_{\rm spike}$ causes a fixed inflow of ionic current $Ca^{2+}_{\rm spike}$, which is modeled as an instantaneous increase of the $\rm [Ca^{2+}]$ concentration. The concentration decays exponentially by a time constant $\tau_{\rm Ca^{2+}}$. Though $\rm Ca^{2+}$ currents can be described in a much more detailed fashion, it can be considered as a reasonable approximation \cite[p.~198-203]{Theor_Neur_Dayan}. The influence of $\rm [Ca^{2+}]$ onto $\rm [nNOS]$ was modeled by Sweeney et al. through \eqref{nNOS_dyn} using the Hill equation \cite{Hill_Equ} to model a cooperative binding mechanism. The rate of $\rm [nNOS]$ is then fed into the ``pool" of nitric oxide via point sources located at the neurons' positions. An additional decay term was added apart from the inflow and the diffusive term to provide a stable finite $\rm [NO]$ concentration under constant neuronal activity.
@@ -417,7 +421,7 @@ with $N_{\rm grid}$ being the grid resolution.
 NO_{i,N_{\rm grid}} &= NO_{i,N_{\rm grid}-2} \label{Neumann_Cond_1} \\
 NO_{N_{\rm grid},i} &= NO_{N_{\rm grid}-2,i} \label{Neumann_Cond_2} \\
 NO_{i,-1} &= NO_{i,1} \label{Neumann_Cond_3} \\
-NO_{-1,i} &= NO_{1,i} \label{Neumann_Cond_4}
+NO_{-1,i} &= NO_{1,i} \; . \label{Neumann_Cond_4}
 \end{align}
 
 3.) Dirichlet boundary conditions with $NO = NO_{\rm bound.}$ at the boundaries.\\
@@ -570,7 +574,7 @@ or, as an operator
 \end{align}
 The problem of finding the steady-state solution of the homeostatic constraint thus reduced to inverting $\hat{\psi}$:
 \begin{equation}
-\mathbf{r} = {\rm [NO]}_0 \hat{\psi}^{-1} \mathbf{n}
+\mathbf{r} = {\rm [NO]}_0 \hat{\psi}^{-1} \mathbf{n} \; .
 \label{NO_euqil_cond_interact_matrix_operator_solve}
 \end{equation}
 
@@ -670,10 +674,10 @@ Recent studies have brought up inhibitory-to-excitatory STDP with respect to sta
 % here. See http://journals.plos.org/plosone/s/latex for 
 % step-by-step instructions.
 % 
-\newpage
+%\newpage
 \bibliography{test_base}
 
-\newpage
+%\newpage
 
 \section*{Supporting information}
 
@@ -712,7 +716,7 @@ The exact solution of this integral can be expressed in terms of the hyper-geome
 nNOS(t) = \frac{1}{\tau_{\rm nNOS}} \uptheta(t) \exp(-t/\tau_{\rm nNOS}) \int_{0}^\infty dt' \frac{\exp(-3t'/\tau_{\rm Ca^{2+}})}{\exp(-3t'/\tau_{\rm Ca^{2+}}) + \frac{1}{{Ca^{2+}_{\rm spike}}^3}}\;.
 \label{nNOS_single_sol_approx1}
 \end{equation}
-In this form, the integral has an easy-to-handle solution, which - with all spike events now included - results in
+In this form, the integral has an easy-to-handle solution, which---with all spike events now included---results in
 \begin{equation}
 nNOS(t) = \frac{{Ca^{2+}_{\rm spike}}^3 \tau_{\rm Ca^{2+}}\ln(2)}{3\tau_{\rm nNOS}} \sum_i \uptheta(t-t^i_{\rm spike}) \exp(-(t-t^i_{\rm spike})/\tau_{\rm nNOS})\;.
 \label{nNOS_single_sol_approx2}
@@ -721,7 +725,7 @@ Fig. \ref{nNOS_approx_plot} compares the approximation given by \eqref{nNOS_sing
 
 Thus, on average, the sum in Eq. \eqref{nNOS_single_sol_approx2} simply reduces to the mean rate $\langle r \rangle$:
 \begin{equation}
-\langle nNOS \rangle = \frac{{Ca^{2+}_{\rm spike}}^3 \tau_{\rm Ca^{2+}}\ln(2)}{3\tau_{\rm nNOS}} \langle r \rangle
+\langle nNOS \rangle = \frac{{Ca^{2+}_{\rm spike}}^3 \tau_{\rm Ca^{2+}}\ln(2)}{3\tau_{\rm nNOS}} \langle r \rangle \; .
 \label{nNOS_single_sol_approx3}
 \end{equation}
 
