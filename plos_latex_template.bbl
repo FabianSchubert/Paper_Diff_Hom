@@ -162,6 +162,13 @@ Alstott J. {powerlaw: A Python Package for Analysis of Heavy-Tailed
 \newblock \url{https://pypi.python.org/pypi/powerlaw}.
 \newblock Available from: \url{http://www.briansimulator.org/}.
 
+\bibitem{Jolivet_2006}
+Jolivet R, Rauch A, L{\"u}scher HR, Gerstner W.
+\newblock {Predicting spike timing of neocortical pyramidal neurons by simple
+  threshold models}.
+\newblock Journal of Computational Neuroscience. 2006;21(1):35--49.
+\newblock doi:{10.1007/s10827-006-7074-5}.
+
 \bibitem{SORN_Paper}
 Miner D, Triesch J.
 \newblock {Plasticity-Driven Self-Organization under Topological Constraints
@@ -186,6 +193,17 @@ Loewenstein Y, Kuras A, Rumpel S.
   Distribution of Spine Sizes in the Neocortex In Vivo}.
 \newblock Journal of Neuroscience. 2011;31(26):9481--9488.
 \newblock doi:{10.1523/JNEUROSCI.6130-10.2011}.
+
+\bibitem{Hoffmann_2017}
+Hoffmann FZ, Triesch J.
+\newblock {Non-random network connectivity comes in pairs}.
+\newblock Network Neuroscience. 2017;.
+
+\bibitem{Pengsheng_2013}
+Zheng P, Dimitrakakis C, Triesch J.
+\newblock {Network Self-Organization Explains the Statistics and Dynamics of
+  Synaptic Connection Strength in Cortex}.
+\newblock PLOS Computational Biology. 2013;.
 
 \bibitem{Effenberger_2015}
 Effenberger F, Jost J.
