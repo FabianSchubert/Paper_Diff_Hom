@@ -59,19 +59,6 @@ Gilson M, Fukai T.
 \newblock PLOS ONE. 2011;6(10):1--18.
 \newblock doi:{10.1371/journal.pone.0025339}.
 
-\bibitem{Koulakov_2009}
-Koulakov AA, Hrom\'{a}dka T, Zador AM.
-\newblock {Correlated Connectivity and the Distribution of Firing Rates in the
-  Neocortex}.
-\newblock The Journal of Neuroscience. 2009;.
-
-\bibitem{Roxin_Firing_Rate_Distribution}
-Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
-\newblock {On the Distribution of Firing Rates in Networks of Cortical
-  Neurons}.
-\newblock Journal of Neuroscience. 2011;31(45):16217--16226.
-\newblock doi:{10.1523/JNEUROSCI.1677-11.2011}.
-
 \bibitem{Hengen_2016}
 Hengen KB, Torrado~Pacheco A, McGregor JN, Van~Hooser SD, Turrigiano GG.
 \newblock {Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted
@@ -161,6 +148,13 @@ Alstott J. {powerlaw: A Python Package for Analysis of Heavy-Tailed
   Distributions (Version 1.4.1) [Computer Software]}; 2017.
 \newblock \url{https://pypi.python.org/pypi/powerlaw}.
 \newblock Available from: \url{http://www.briansimulator.org/}.
+
+\bibitem{Azouz_2000}
+Azouz R, Gray CM.
+\newblock {Dynamic spike threshold reveals a mechanism for synaptic coincidence
+  detection in cortical neurons in vivo}.
+\newblock Proceedings of the National Academy of Sciences of the United States
+  of America. 2000;97(14):8110--8115.
 
 \bibitem{Jolivet_2006}
 Jolivet R, Rauch A, L{\"u}scher HR, Gerstner W.
@@ -253,10 +247,23 @@ Sch\"uz A, Palm G.
 \newblock The Journal of Comparative Neurology. 1989;286(4):442--455.
 \newblock doi:{10.1002/cne.902860404}.
 
+\bibitem{Roxin_Firing_Rate_Distribution}
+Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
+\newblock {On the Distribution of Firing Rates in Networks of Cortical
+  Neurons}.
+\newblock Journal of Neuroscience. 2011;31(45):16217--16226.
+\newblock doi:{10.1523/JNEUROSCI.1677-11.2011}.
+
 \bibitem{Vreeswijk1998}
 van Vreeswijk C, Sompolinsky H.
 \newblock {Chaotic Balanced State in a Model of Cortical Circuits}.
 \newblock Neural Computation. 1998;.
+
+\bibitem{Koulakov_2009}
+Koulakov AA, Hrom\'{a}dka T, Zador AM.
+\newblock {Correlated Connectivity and the Distribution of Firing Rates in the
+  Neocortex}.
+\newblock The Journal of Neuroscience. 2009;.
 
 \bibitem{OConnor_2010}
 O'Connor DH, Peron SP, Huber D, Svoboda K.
