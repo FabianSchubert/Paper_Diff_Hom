@@ -1,18 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Battaglia_2005}
-Battaglia FP, Sutherland GR, Cowen SL, Mc~Naughton BL, Harris KD.
-\newblock {Firing rate modulation: A simple statistical view of memory trace
-  reactivation}.
-\newblock Neural Networks. 2005;18(9):1280 -- 1291.
-\newblock doi:{https://doi.org/10.1016/j.neunet.2005.08.011}.
-
-\bibitem{Mizuseki_2013}
-Mizuseki K, Buzsáki G.
-\newblock {Preconfigured, skewed distribution of firing rates in the
-  hippocampus and entorhinal cortex}.
-\newblock Cell Reports. 2013;4.
-
 \bibitem{Song_Connectivity_2005}
 Song S, Sj\"ostr\"om PJ, Reigl M, Nelson S, Chklovskii DB.
 \newblock {Highly Nonrandom Features of Synaptic Connectivity in Local Cortical
@@ -58,6 +45,12 @@ Gilson M, Fukai T.
   Distributions Solve the Dilemma}.
 \newblock PLOS ONE. 2011;6(10):1--18.
 \newblock doi:{10.1371/journal.pone.0025339}.
+
+\bibitem{Mizuseki_2013}
+Mizuseki K, Buzsáki G.
+\newblock {Preconfigured, skewed distribution of firing rates in the
+  hippocampus and entorhinal cortex}.
+\newblock Cell Reports. 2013;4.
 
 \bibitem{Hengen_2016}
 Hengen KB, Torrado~Pacheco A, McGregor JN, Van~Hooser SD, Turrigiano GG.
@@ -136,18 +129,15 @@ Philippides A, Husbands P, O{\textquoteright}Shea M.
 Brette R, Goodman D, Stirnberg M. {The Brian spiking neural network simulator
   (Version 1.0) [Computer Software]}; 2016.
 \newblock \url{http://www.briansimulator.org/}.
-\newblock Available from: \url{http://www.briansimulator.org/}.
 
 \bibitem{Matplotlib}
 Team MD. {Matplotlib (Version 1.5.3) [Computer Software]}; 2016.
 \newblock \url{https://matplotlib.org/1.5.3/index.html}.
-\newblock Available from: \url{http://www.briansimulator.org/}.
 
 \bibitem{Powerlaw_Package}
 Alstott J. {powerlaw: A Python Package for Analysis of Heavy-Tailed
   Distributions (Version 1.4.1) [Computer Software]}; 2017.
 \newblock \url{https://pypi.python.org/pypi/powerlaw}.
-\newblock Available from: \url{http://www.briansimulator.org/}.
 
 \bibitem{Azouz_2000}
 Azouz R, Gray CM.
@@ -278,25 +268,6 @@ Philippides A, Ott SR, Husbands P, Lovick TA, O{\textquoteright}Shea M.
 \newblock Journal of Neuroscience. 2005;25(28):6520--6532.
 \newblock doi:{10.1523/JNEUROSCI.1264-05.2005}.
 
-\bibitem{Savin_2008}
-Savin C, Triesch J, Meyer-Hermann M.
-\newblock {Epileptogenesis due to glia-mediated synaptic scaling}.
-\newblock Journal of the Royal Society Interface. 2008;.
-
-\bibitem{Dragoi_2003}
-Dragoi G, Harris KD, Buzsáki G.
-\newblock {Place Representation within Hippocampal Networks Is Modified by
-  Long-Term Potentiation}.
-\newblock Neuron. 2003;39(5):843 -- 853.
-\newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
-
-\bibitem{Hartmann_2016}
-Hartmann C, Lazar A, Nessler B, Triesch J.
-\newblock {Where’s the Noise? Key Features of Spontaneous Activity and Neural
-  Variability Arise through Learning in a Deterministic Network}.
-\newblock PLOS Computational Biology. 2016;11(12):1--35.
-\newblock doi:{10.1371/journal.pcbi.1004640}.
-
 \bibitem{Vogels_2011}
 Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.
 \newblock {Inhibitory Plasticity Balances Excitation and Inhibition in Sensory
@@ -310,5 +281,25 @@ Luz Y, Shamir M.
   Inhibitory Synaptic Plasticity}.
 \newblock PLOS Computational Biology. 2012;8(1):1--12.
 \newblock doi:{10.1371/journal.pcbi.1002334}.
+
+\bibitem{Dragoi_2003}
+Dragoi G, Harris KD, Buzsáki G.
+\newblock {Place Representation within Hippocampal Networks Is Modified by
+  Long-Term Potentiation}.
+\newblock Neuron. 2003;39(5):843 -- 853.
+\newblock doi:{http://dx.doi.org/10.1016/S0896-6273(03)00465-3}.
+
+\bibitem{Sweeney_2017}
+Sweeney Y, Clopath C.
+\newblock {Emergent spatial synaptic structure from diffusive plasticity}.
+\newblock European Journal of Neuroscience. 2017;45(8):1057--1067.
+\newblock doi:{10.1111/ejn.13279}.
+
+\bibitem{Hartmann_2016}
+Hartmann C, Lazar A, Nessler B, Triesch J.
+\newblock {Where’s the Noise? Key Features of Spontaneous Activity and Neural
+  Variability Arise through Learning in a Deterministic Network}.
+\newblock PLOS Computational Biology. 2016;11(12):1--35.
+\newblock doi:{10.1371/journal.pcbi.1004640}.
 
 \end{thebibliography}

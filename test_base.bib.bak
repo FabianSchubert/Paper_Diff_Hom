@@ -20,8 +20,29 @@
   Year                     = {2017},
 
   Owner                    = {fschubert},
-  Timestamp                = {2016.10.06},
-  Url                      = {http://www.briansimulator.org/}
+  Timestamp                = {2016.10.06}
+}
+
+@Article{Azouz_2000,
+  Title                    = {{Dynamic spike threshold reveals a mechanism for synaptic coincidence detection in cortical neurons in vivo}},
+  Author                   = {Azouz, R. and Gray, C. M.},
+  Journal                  = {Proceedings of the National Academy of Sciences of the United States of America},
+  Year                     = {2000},
+
+  Month                    = may,
+  Number                   = {14},
+  Pages                    = {8110--8115},
+  Volume                   = {97},
+
+  Abstract                 = {Cortical neurons are sensitive to the timing of their synaptic inputs. They can synchronize their firing on a millisecond time scale and follow rapid stimulus fluctuations with high temporal precision. These findings suggest that cortical neurons have an enhanced sensitivity to synchronous synaptic inputs that lead to rapid rates of depolarization. The voltage-gated currents underlying action potential generation may provide one mechanism to amplify rapid depolarizations. We have tested this hypothesis by analyzing the relations between membrane potential fluctuations and spike threshold in cat visual cortical neurons recorded intracellularly in vivo. We find that visual stimuli evoke broad variations in spike threshold that are caused in large part by an inverse relation between spike threshold and the rate of membrane depolarization preceding a spike. We also find that spike threshold is inversely related to the rate of rise of the action potential upstroke, suggesting that increases in spike threshold result from a decrease in the availability of Na(+) channels. By using a simple neuronal model, we show that voltage-gated Na(+) and K(+) conductances endow cortical neurons with an enhanced sensitivity to rapid depolarizations that arise from synchronous excitatory synaptic inputs. Thus, the basic mechanism responsible for action potential generation also enhances the sensitivity of cortical neurons to coincident synaptic inputs.},
+  Comment                  = {130200797[PII]
+2007[PII]
+10859358[pmid]},
+  ISSN                     = {1091-6490},
+  Owner                    = {fabian},
+  Publisher                = {The National Academy of Sciences},
+  Timestamp                = {2017.06.20},
+  Url                      = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC16678/}
 }
 
 @Article{Battaglia_2005,
@@ -102,8 +123,7 @@
   Year                     = {2016},
 
   Owner                    = {fschubert},
-  Timestamp                = {2016.10.06},
-  Url                      = {http://www.briansimulator.org/}
+  Timestamp                = {2016.10.06}
 }
 
 @Article{Brunel2000,
@@ -1071,6 +1091,21 @@ and Gerstner, W.},
   Timestamp                = {2017.01.19}
 }
 
+@Article{Sweeney_2017,
+  Title                    = {{Emergent spatial synaptic structure from diffusive plasticity}},
+  Author                   = {Sweeney, Y. and Clopath, C.},
+  Journal                  = {European Journal of Neuroscience},
+  Year                     = {2017},
+  Number                   = {8},
+  Pages                    = {1057--1067},
+  Volume                   = {45},
+
+  Doi                      = {10.1111/ejn.13279},
+  ISSN                     = {1460-9568},
+  Keywords                 = {diffusive neurotransmitters, neural networks, synaptic connectivity, synaptic plasticity, volume transmission},
+  Url                      = {http://dx.doi.org/10.1111/ejn.13279}
+}
+
 @Article{Sweeney_Paper,
   Title                    = {{A Diffusive Homeostatic Signal Maintains Neural Heterogeneity and Responsiveness in Cortical Networks}},
   Author                   = {Sweeney, Y. and Kotaleski, J. H. and Hennig, M. H.},
@@ -1090,8 +1125,7 @@ and Gerstner, W.},
   Year                     = {2016},
 
   Owner                    = {fschubert},
-  Timestamp                = {2016.10.06},
-  Url                      = {http://www.briansimulator.org/}
+  Timestamp                = {2016.10.06}
 }
 
 @Article{Tetzlaff_2012,
