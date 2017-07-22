@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.4)  4 JUL 2017 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.4)  22 JUL 2017 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,13 +774,13 @@ Package epstopdf Info: Source file: <PLOS-submission.eps>
 (epstopdf)                    size: 15292 bytes
 (epstopdf)             Command: <repstopdf --outfile=PLOS-submission-eps-conver
 ted-to.pdf PLOS-submission.eps>
-(epstopdf)             \includegraphics on input line 402.
+(epstopdf)             \includegraphics on input line 404.
 Package epstopdf Info: Output file is already uptodate.
 File: PLOS-submission-eps-converted-to.pdf Graphic file (type pdf)
 
 <use PLOS-submission-eps-converted-to.pdf>
 Package pdftex.def Info: PLOS-submission-eps-converted-to.pdf used on input lin
-e 402.
+e 404.
 (pdftex.def)             Requested size: 144.54pt x 23.42201pt.
  [5]
 Package epstopdf Info: Source file: <PLOS-submission.eps>
@@ -809,7 +809,7 @@ Package pdftex.def Info: ../../plots/paper/fir_rate_dist_comp.png used on input
 (pdftex.def)             Requested size: 341.47342pt x 570.30351pt.
 
 
-LaTeX Warning: Float too large for page by 44.94102pt on input line 458.
+LaTeX Warning: Float too large for page by 32.94102pt on input line 458.
 
 Package epstopdf Info: Source file: <PLOS-submission.eps>
 (epstopdf)                    date: 2016-12-21 16:45:06
@@ -1186,7 +1186,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 732.
 Here is how much of TeX's memory you used:
  12785 strings out of 494860
  190799 string characters out of 6177603
- 331797 words of memory out of 5000000
+ 331781 words of memory out of 5000000
  15673 multiletter control sequences out of 15000+600000
  15247 words of font info for 77 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1213,7 +1213,7 @@ ic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marvosym/
 marvosym.pfb>
-Output written on plos_latex_template.pdf (24 pages, 1836824 bytes).
+Output written on plos_latex_template.pdf (24 pages, 1860555 bytes).
 PDF statistics:
  534 PDF objects out of 1000 (max. 8388607)
  463 compressed objects within 5 object streams
