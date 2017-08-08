@@ -83,6 +83,11 @@ Froemke RC, Poo M, Dan Y.
   location}.
 \newblock Nature. 2005;434(7030):221--225.
 
+\bibitem{vanRossum_2000}
+van Rossum MCW, Bi GQ, Turrigiano GG.
+\newblock {Stable Hebbian Learning from Spike Timing-Dependent Plasticity}.
+\newblock Journal of Neuroscience. 2000;20(23):8812--8821.
+
 \bibitem{Markram_STP}
 Markram H, Wang Y, Tsodyks M.
 \newblock {Differential signaling via the same axon of neocortical pyramidal
