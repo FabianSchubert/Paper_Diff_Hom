@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Fabian Schubert}
+\begin{document}
+Reasons for why experimental data was not supportive:
+\begin{itemize}
+\item Spatial proximity between neurons also increases the chance of those neurons to be highly connected, which could lead to ``clique excitation".
+\item Calcium imaging of neurons is only capable of showing a planar section within the tissue. Neurons above or below the focal plane also affect those neurons being recorded.
+\item Moreover, neurons at the border of the image are affected by neurons that are outside the recording frame. For a precise prediction of rates however, those ones should also be taken into account. Actually, one way to handle this would be to reserve outer neurons for a buffer zone, which do not go into the empirical firing rate dataset but are used for the prediction of rates. This, of course, would reduce the size and thus the significance of the overall dataset.
+\item Neurons are not point sources or point sensors of nitric oxide. In fact, in my thesis I addressed this issue by implementing a circular-shaped source kernel that ``blurred" the nitric oxide release. It turned out that this attenuated the tendency of each cell being exactly tuned to the homeoastatic target of nitric oxide concentration. Therefore, a biological network of neurons might also not be tuned as strict as our simple point-source model.
+\item The linear dynamics of thresholds with respect to the nitric oxide concentration is an ad-hoc assumption taken from the Sweeney et al. paper. Maybe nitric oxide affects excitability in a more nonlinear way, preventing extreme deviations from a desired level of activity, but being much less sensitive to subtle changes of concentration. This could be implemented e.g. by a rule like $\dot{\theta} \propto (\mathrm{NO} - \mathrm{NO}_0)^\gamma$ where $\gamma$ is an uneven integer exponent greater than one. I remember that I also looked into the PhD thesis of Y. Sweeney to see if he justifies linear dynamics, which he unfortunately did not. My guess is that he just tried to keep the model simple while suiting the questions that he addressed. 
+\end{itemize}
+
+Actually, I found another freely available dataset that provides estimated firing rates and distance matrices based on Ca2+ imaging recordings and whose current version was published in October 2017: https://crcns.org/data-sets/ssc/ssc-8/about-ssc-8
+
+I downloaded the data and used a gaussian kernel estimate for the local densities. This is what I got:
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{inv_dens_vs_fir_rates_correlation.png}
+\end{center}
+
+I am not to sure if this should be interpreted as a positive result, even though p-values are rather small. By eye, it rather appears as two uncorrelated but skewed distributions. On the other hand, we should not expect a highly significant result anyhow for the above mentioned reasons. 
+\end{document}

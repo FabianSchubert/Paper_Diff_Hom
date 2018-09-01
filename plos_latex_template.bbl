@@ -65,6 +65,12 @@ Sweeney Y, Kotaleski JH, Hennig MH.
   Responsiveness in Cortical Networks}.
 \newblock PLoS Computational Biology. 2015;.
 
+\bibitem{SORN_Paper}
+Miner D, Triesch J.
+\newblock {Plasticity-Driven Self-Organization under Topological Constraints
+  Accounts for Non-Random Features of Cortical Synaptic Wiring}.
+\newblock PLoS Computational Biology. 2016;.
+
 \bibitem{Zhang_STDP}
 Zhang LI, Tao HW, Holt CE, Harris WA, Poo M.
 \newblock {A critical window for cooperation and competition among developing
@@ -158,12 +164,6 @@ Jolivet R, Rauch A, L{\"u}scher HR, Gerstner W.
 \newblock Journal of Computational Neuroscience. 2006;21(1):35--49.
 \newblock doi:{10.1007/s10827-006-7074-5}.
 
-\bibitem{SORN_Paper}
-Miner D, Triesch J.
-\newblock {Plasticity-Driven Self-Organization under Topological Constraints
-  Accounts for Non-Random Features of Cortical Synaptic Wiring}.
-\newblock PLoS Computational Biology. 2016;.
-
 \bibitem{Loewenstein_2015}
 Loewenstein Y, Yanover U, Rumpel S.
 \newblock {Predicting the Dynamics of Network Connectivity in the Neocortex}.
@@ -193,6 +193,26 @@ Zheng P, Dimitrakakis C, Triesch J.
 \newblock {Network Self-Organization Explains the Statistics and Dynamics of
   Synaptic Connection Strength in Cortex}.
 \newblock PLOS Computational Biology. 2013;.
+
+\bibitem{Bauke_2007}
+Bauke H.
+\newblock {Parameter estimation for power-law distributions by maximum
+  likelihood methods}.
+\newblock The European Physical Journal B. 2007;58(2):167--173.
+\newblock doi:{10.1140/epjb/e2007-00219-y}.
+
+\bibitem{Clauset_2009}
+Clauset A, Rohilla CS, Newman MEJ.
+\newblock {Power-Law Distributions in Empirical Data}.
+\newblock SIAM Review. 2009;51(4):661--703.
+\newblock doi:{10.1137/070710111}.
+
+\bibitem{Alstott_2014}
+Alstott J, Bullmore E, Plenz D.
+\newblock {powerlaw: A Python Package for Analysis of Heavy-Tailed
+  Distributions}.
+\newblock PLOS ONE. 2014;9(1):1--11.
+\newblock doi:{10.1371/journal.pone.0085777}.
 
 \bibitem{Effenberger_2015}
 Effenberger F, Jost J.
@@ -242,6 +262,23 @@ Sch\"uz A, Palm G.
 \newblock The Journal of Comparative Neurology. 1989;286(4):442--455.
 \newblock doi:{10.1002/cne.902860404}.
 
+\bibitem{Goncalves_2013}
+Gonçalves JT.
+\newblock {Circuit level defects in the developing neocortex of Fragile X
+  mice}.
+\newblock Nature Neuroscience. 2013;.
+
+\bibitem{Goncalves_2017}
+Gonçalves JT, O’Donnell C, Sejnowski TJ, Portera-Cailliau C. {Two photon
+  calcium imaging recordings of spontaneous activity from mouse somatosensory
+  cortex in wild-type and Fmr1 knock-out mice from three developmental age
+  groups}; 2017.
+\newblock Available from: \url{http://dx.doi.org/10.6080/K0X63K3X}.
+
+\bibitem{AllenBrain}
+{Allen Institute for Brain Science. Allen Mouse Brain Atlas. Available from:
+  maus.brain-map.org}; 2018.
+
 \bibitem{Roxin_Firing_Rate_Distribution}
 Roxin A, Brunel N, Hansel D, Mongillo G, van Vreeswijk C.
 \newblock {On the Distribution of Firing Rates in Networks of Cortical
@@ -260,18 +297,18 @@ Koulakov AA, Hrom\'{a}dka T, Zador AM.
   Neocortex}.
 \newblock The Journal of Neuroscience. 2009;.
 
-\bibitem{OConnor_2010}
-O'Connor DH, Peron SP, Huber D, Svoboda K.
-\newblock {Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object
-  Localization in Mice}.
-\newblock Neuron. 2010;67.
-
 \bibitem{Philippides_2005}
 Philippides A, Ott SR, Husbands P, Lovick TA, O{\textquoteright}Shea M.
 \newblock {Modeling Cooperative Volume Signaling in a Plexus of Nitric Oxide
   Synthase-Expressing Neurons}.
 \newblock Journal of Neuroscience. 2005;25(28):6520--6532.
 \newblock doi:{10.1523/JNEUROSCI.1264-05.2005}.
+
+\bibitem{OConnor_2010}
+O'Connor DH, Peron SP, Huber D, Svoboda K.
+\newblock {Neural Activity in Barrel Cortex Underlying Vibrissa-Based Object
+  Localization in Mice}.
+\newblock Neuron. 2010;67.
 
 \bibitem{Vogels_2011}
 Vogels TP, Sprekeler H, Zenke F, Clopath C, Gerstner W.

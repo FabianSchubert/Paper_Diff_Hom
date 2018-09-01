@@ -3,48 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: plos_latex_template.aux
 The style file: plos2015.bst
 Database file #1: test_base.bib
+Warning--entry type for "Goncalves_2017" isn't style-file defined
+--line 444 of file test_base.bib
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 50 entries,
+Warning--empty author in AllenBrain
+You've used 56 entries,
             3058 wiz_defined-function locations,
-            1010 strings with 16142 characters,
-and the built_in function-call counts, 73706 in all, are:
-= -- 9643
-> -- 600
+            1050 strings with 17326 characters,
+and the built_in function-call counts, 80138 in all, are:
+= -- 10475
+> -- 649
 < -- 0
-+ -- 502
-- -- 150
-* -- 5920
-:= -- 8068
-add.period$ -- 215
-call.type$ -- 50
++ -- 544
+- -- 162
+* -- 6422
+:= -- 8784
+add.period$ -- 237
+call.type$ -- 56
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 50
-duplicate$ -- 6979
-empty$ -- 6819
-format.name$ -- 195
-if$ -- 17255
+cite$ -- 57
+duplicate$ -- 7579
+empty$ -- 7421
+format.name$ -- 210
+if$ -- 18763
 int.to.chr$ -- 0
-int.to.str$ -- 50
-missing$ -- 414
-newline$ -- 272
-num.names$ -- 50
-pop$ -- 710
+int.to.str$ -- 56
+missing$ -- 456
+newline$ -- 302
+num.names$ -- 55
+pop$ -- 784
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 679
+skip$ -- 754
 stack$ -- 0
-substring$ -- 13017
-swap$ -- 999
+substring$ -- 14092
+swap$ -- 1101
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 438
-width$ -- 52
-write$ -- 578
+warning$ -- 1
+while$ -- 477
+width$ -- 58
+write$ -- 642
+(There were 2 warnings)
