@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  31 AUG 2018 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  2 SEP 2018 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1050,14 +1050,15 @@ Package pdftex.def Info: ./figures/std_and_skew_sim_and_analytic.png used on in
 put line 636.
 (pdftex.def)             Requested size: 379.4175pt x 194.00719pt.
 
-<./figures/scatter_density_out_weights_points_comp_new.png, id=348, 379.4175pt 
-x 433.1382pt>
-File: ./figures/scatter_density_out_weights_points_comp_new.png Graphic file (t
-ype png)
- <use ./figures/scatter_density_out_weights_points_comp_new.png>
-Package pdftex.def Info: ./figures/scatter_density_out_weights_points_comp_new.
-png used on input line 650.
-(pdftex.def)             Requested size: 379.4175pt x 433.14375pt.
+<./figures/scatter_density_out_weights_points_comp_new_2.png, id=348, 963.6pt x
+ 1099.9494pt>
+File: ./figures/scatter_density_out_weights_points_comp_new_2.png Graphic file 
+(type png)
+
+<use ./figures/scatter_density_out_weights_points_comp_new_2.png>
+Package pdftex.def Info: ./figures/scatter_density_out_weights_points_comp_new_
+2.png used on input line 650.
+(pdftex.def)             Requested size: 379.4175pt x 433.09059pt.
 Package epstopdf Info: Source file: <PLOS-submission.eps>
 (epstopdf)                    date: 2016-12-21 16:45:06
 (epstopdf)                    size: 283246 bytes
@@ -1106,7 +1107,7 @@ File: PLOS-submission-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: PLOS-submission-eps-converted-to.pdf used on input lin
 e 660.
 (pdftex.def)             Requested size: 144.54pt x 23.42201pt.
- [20 <./figures/scatter_density_out_weights_points_comp_new.png>]
+ [20 <./figures/scatter_density_out_weights_points_comp_new_2.png>]
 <./figures/inv_dens_vs_fir_rates.png, id=381, 361.35pt x 361.35pt>
 File: ./figures/inv_dens_vs_fir_rates.png Graphic file (type png)
 
@@ -1292,8 +1293,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 774.
  ) 
 Here is how much of TeX's memory you used:
  12989 strings out of 493029
- 193439 string characters out of 6136234
- 341696 words of memory out of 5000000
+ 193449 string characters out of 6136234
+ 343475 words of memory out of 5000000
  16080 multiletter control sequences out of 15000+600000
  15776 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1320,7 +1321,7 @@ sfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marvosym
 /marvosym.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on plos_latex_template.pdf (29 pages, 2088174 bytes).
+Output written on plos_latex_template.pdf (29 pages, 2656876 bytes).
 PDF statistics:
  600 PDF objects out of 1000 (max. 8388607)
  521 compressed objects within 6 object streams

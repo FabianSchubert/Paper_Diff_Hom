@@ -548,7 +548,7 @@ Furthermore, we found that the nonlinearity between spiking activity and NO synt
 \end{equation}
 See Appendix S1 for a derivation of the proportionality factor. Given this simplification, the steady state of NO concentration is thus defined by the solution of
 \begin{equation}
-0 =-\lambda {\rm [NO]} + D \nabla^2 {\rm [NO]} + \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{i}) \gamma r_i \label{simple_NO_dyn_with_diff}
+0 =-\lambda {\rm [NO]} + D \nabla^2 {\rm [NO]} + \sum_{i} \delta^2(\mathbf{x}-\mathbf{x}_{i}) \gamma r_i .\label{simple_NO_dyn_with_diff}
 \end{equation}
 which can be reformulated to
 \begin{equation}
@@ -602,7 +602,7 @@ where $\psi_{\rm point}$ is the analytic solution for a point source, $\mathrm{\
 \psi_0 = \gamma \frac{1-h\sqrt{\frac{\lambda}{\pi D}} K_1\left( h\sqrt{\frac{\lambda}{\pi D}}\right) }{h^2 \lambda}
 \label{Numeric_Grid_Bessel_Approx}
 \end{equation}
-where $\mathrm{h}$ is the spatial resolution of the grid cells and $K_0$ the first modified Bessel function.
+where $\mathrm{h}$ is the spatial resolution of the grid cells and $K_1$ the first modified Bessel function.
 
 By simply calculating all matrix elements of $\mathrm{\hat{\psi}}$ by means of \eqref{interact_matrix_elements}, one would neglect the finite boundaries of the system, which would cause neurons close to the edge to ``bleed" into empty space. We accommodated for zero-flux Neumann boundary conditions by adding appropriately mirrored copies of the neurons' positions, canceling the orthogonal component of the gradient at the boundaries. 
 
@@ -647,8 +647,8 @@ We previously stated that diffusive homeostasis allowed the network to develop f
 %% density_vs_sum_out_weights_points.py
 %\includegraphics[width=0.5\textwidth]{../../plots/scatter_density_out_weights_points_new.png}
 %\end{center}
-\includegraphics[width=\textwidth]{./figures/scatter_density_out_weights_points_comp_new.png}
-\caption{{\bf Mean outgoing excitatory weights vs. reciprocal neuron density.} \textbf{A}: Illustration of excitatory neurons' positions and local neuron density (calculated by convolution with a Gaussian kernel with $\mathrm{\sigma = 50\, \upmu m}$). \textbf{B}: Decadic logarithm of outgoing excitatory weights. Note the spatial correlation between \textbf{A} and \textbf{B} in high/low-density regions. \textbf{C}: Firing rate of excitatory neurons (averaged over $\mathrm{ 1000\,s} \leq t \mathrm{\leq 1500\,s}$) versus reciprocal neuronal density (same estimation method as in\textbf{A}). Coefficient of correlation $\rho = 0.798$. \textbf{D}: Decadic logarithm of mean outgoing excitatory weights versus reciprocal neuronal density. Coefficient of correlation $\rho = 0.513$.}
+\includegraphics[width=\textwidth]{./figures/scatter_density_out_weights_points_comp_new_2.png}
+\caption{{\bf Mean outgoing excitatory weights vs. reciprocal neuron density.} \textbf{A}: Illustration of excitatory neurons' positions and local neuron density (calculated by convolution with a Gaussian kernel with $\mathrm{\sigma = 50\, \upmu m}$). \textbf{B}: Decadic logarithm of mean outgoing excitatory weights (mean over nonzero outgoing excitatory connections). Note the spatial correlation between \textbf{A} and \textbf{B} in high/low-density regions. \textbf{C}: Firing rate of excitatory neurons (averaged over $\mathrm{ 1000\,s} \leq t \mathrm{\leq 1500\,s}$) versus reciprocal neuronal density (same estimation method as in \textbf{A}). Coefficient of correlation $\rho = 0.798$. \textbf{D}: Decadic logarithm of mean outgoing excitatory weights (mean over nonzero outgoing excitatory connections) versus reciprocal neuronal density. Coefficient of correlation $\rho = 0.513$.}
 \label{Inverse_Dens_vs_Sum_Out_Weights}
 \end{figure}
 

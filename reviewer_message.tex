@@ -6,7 +6,68 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \begin{document}
-\section{Response to Reviewer #1}
-Comment regarding synaptic normalization: We added a paragraph in the subsection on synaptic normalization, explaining that s.n. does not act as a strict control mechanism of firing rates of individual neurons since it is not sensitive to the actual postsynaptic firing rate.
-Parameter tuning: Parameters were taken from a previous publication that used the LIF-SORN (Plasticity-Driven Self-Organization under Topological Constraints Accounts for Non-random Features of Cortical Synaptic Wiring, Miner & Triesch 2016). Furthermore, including short-term plasticity into the model made network activity more robust with respect to parameter changes.
+We thank the reviewers for their remarks and suggestions. As a major change, we included the result of our analysis of publicly available experimental data, which supports our hypothesis of a relation between firing rates and neural density. Furthermore, we tried to comply with the requests of the reviewers wherever possible, explaining our reasons in the cases where these could not be met.
+
+Line numbers given in the responses refer to the current version of the manuscript.
+
+\section{Response to Reviewer 1}
+\begin{itemize}
+\item Comment regarding synaptic normalization: We added a paragraph in the subsection on synaptic normalization, explaining that s.n. does not act as a strict control mechanism of firing rates of individual neurons since it is not sensitive to the actual postsynaptic firing rate, see line 109.
+
+\item Parameter tuning: Parameters were taken from a previous publication that used the LIF-SORN (Plasticity-Driven Self-Organization under Topological Constraints Accounts for Non-random Features of Cortical Synaptic Wiring, Miner \& Triesch 2016), see l. 50. Furthermore, including short-term plasticity into the model made network activity more robust with respect to parameter changes, see l. 116.
+
+\item STDP-rule: As given by the parameters, the STDP branches were calibrated such that depression and potentiation balance. Uncorrelated firing has no net effect on synaptic weights.
+
+\item Poisson Input/STP: We changed the passage to make clear that this was just meant as a theoretical/hypothetical side note, which was meant to give an idea of the optimal firing rate for transmission (l. 124).
+
+\item Intrinsic Plasticity/Threshold: As described in the method section, one mechanism was replaced by the other. At no time were both dynamics for the threshold applied.
+
+\item Fig. 3: We added a brief explanation of the results for instantaneous diffusion in the respective part of the results section (l. 347). The fact that the scatter plot is concentrated at 3 Hz for D=0 is another depiction of the effect already shown and discussed in Fig. 1A, where the D=0 case also corresponds to a very sharply peaked distribution around 3 Hz.
+
+\item Highly active neurons form subgroups: We added a statement that summarizes the take-home message of this part (l. 374).
+
+Fig. 7 (formerly Fig.6): We corrected the labels in Fig. 7B and 7D and the according captions.
+\end{itemize}
+\section{Response to Reviewer 2:}
+\begin{itemize}
+\item We added a section to the manuscript that described our results with respect to our attempts of testing our predicted relation between neural density and firing rates. While the data from the Allen Brain Institute did not help to support our hypothesis, we did find a dataset containing preprocessed data from calcium imaging recordings in L2/3 mouse somatosensory cortex, which revealed a significant relation between neural density and firing rates. Given the fact that there are a number of factors that could make this relation hard to detect in experimental data (we address these factors in the discussion section, starting l. 548), we believe that the presented result provides a strong support for our prediction.
+
+\item We also added an interpretation (l. 339-349) of the differences between finite and infinite diffusion constants as seen in Fig. 3A. However, we believe that a further investigation of the functional implications of this effect would surpass the scope that we were aiming for in this paper.
+
+\item We included a more detailed description of our powerlaw fitting process (starting l. 283).
+
+\item We acknowledge the reviewer's request for further exploration of the network functionality under different conditions. Indeed, the network properties presented in the manuscript suggest that the model would be suitable for testing its behavior under external stimuli. However, our main motivation for the implementation of the diffusive mechanisms was to provide a biologically plausible mechanism giving rise to already known statistical properties of cortical networks. As such, it justifies the use of simpler models of neural homeostasis, e.g. drawing individual target firing rates from a given distribution, and such simplified models would serve as a better starting point for investigating the dynamic, non-autonomous behavior of cortical networks.
+\end{itemize}
+
+\subsection{Minor comments}
+
+\begin{itemize}
+\item Parameter choice: The set of parameters was taken from an earlier publication using the LIF-SORN . We included a reference to this publication in the methods section (l. 51).
+
+\item We clarified the description of the synapse insertion process (starting l. 67). We also pointed out that we compared distance-dependent with uniform connection probabilities and that we only found a marginal difference in the resulting connection fraction. Furthermore, changing the insertion rate caused a proportional change in the stationary connection fraction.
+
+\item Table 2: 'IP' was replaced by 'Intrinsic Plasticity'
+
+\item 'This contrasts...' (l. 137): The sentence was modified to clarify the difference between IP and STP.
+
+\item Line 178, 'Neurons placed close to...': We added a sentence further explaining the reasons for this effect. Indeed, the connection probabilities are fixed throughout the entire simulation since the neurons do not move anymore. Neurons at the edge of the tissue are further away from all other neurons than those situated in the inner part of the square. This results in lower probabilities for these neurons to connect to others, since these probabilities are used as proportionality factors in the random synapse insertion process. The fact that the total insertion rate is fixed does not affect this.
+
+\item Eq. 10: We included $\lambda$, $D$ in the following description. Since the description of the model follows the order of the corresponding equations, $\rm [NO]_0$ is explained a little later in line 159.
+
+\item Fig. 2C / line 261-269: The observed left-skewness is in line with theoretical results by Statman et al.. A Kesten process is good first approximation of the dynamic process underlying the weight dynamics, since it is a combination of a random additive and multiplicative process, corresponding to additive STDP and synaptic normalization.
+
+\item We added an explicit definition of synaptic lifetimes (l. 271).
+
+\item Even though the analytic derivation presented in the section \textit{Spatial configuration of neurons allows for the precise prediction of firing rates} is a bit lengthy, we decided to leave in the results section since a purely methodological description of the mathematical derivation would prevent readers from understanding the the undertaken steps, or would require a lot of redundant explanations of the background.
+
+\item We included a definition of the terms used in Eq. 33 (l. 415).
+
+\item It was made explicit that $K_1$ in Eq. 34 is the first modified Bessel function (l. 422).
+
+\item We added a legend in Fig. 9 (formerly Fig. 7) and corrected the caption with respect to the colors.  
+
+\item Changing the density of neurons: We explicitly stated that changing neural densities is mathematically equivalent to changing diffusion constants (l. 480). Furthermore, we systematically altered the diffusion constant in the 2D case to investigate the effect on variance and skewness of the distribution (Fig. 6). Unfortunately, a similar systematic testing of the 3D case was not possible due to the computational effort.
+
+\item We made some further remarks about the results shown in Fig. 7 (formerly Fig. 6) starting in line 496, which is followed by the section that relates these theoretic predictions to tests that were performed on experimental data.
+\end{itemize}
 \end{document}
